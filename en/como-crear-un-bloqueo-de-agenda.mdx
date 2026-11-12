@@ -1,0 +1,140 @@
+---
+title: "How to create a calendar block"
+---
+
+Calendar blocks let you reserve time on the calendar when a clinician won't be seeing patients: a conference, an outside surgery, a leave of absence, an internal meeting, and so on. Once created, the block shows up on the grid with a padlock and nobody can book an appointment on top of it. OCLÜ gives you two ways to create them, depending on the use case. This guide shows you both.
+
+## When to use it
+
+- When a clinician has a one-off event that keeps them from seeing patients (conference, training, trip).
+- When someone is going to be away for one or more days for personal reasons or on vacation.
+- When there is an internal team meeting during office hours.
+- When the practice closes for maintenance or a public holiday.
+- When an operating room is reserved for a long procedure.
+
+## The two ways, at a glance
+
+| Way | When it's best | Where you create it |
+| --- | --- | --- |
+| From the calendar | Same-day or upcoming events. Short, one-off blocks. | Calendar daily view |
+| From Administration → Staff | Future events, long absences, scheduling several blocks ahead of time. | The clinician's schedule settings |
+
+Both ways create the same kind of block. The difference is practical: the first one is quick and visual; the second one lets you add blocks for dates far ahead without having to jump from day to day on the grid.
+
+---
+
+## Way 1: From the calendar (quick and visual)
+
+Ideal for blocks today or over the next few days, when you're already working on the calendar.
+
+### How to get there
+
+1. In the left sidebar, click the calendar icon to open the **Daily view**.
+2. Go to the day you want to block using the date field or the `<` and `>` arrows.
+
+### Steps
+
+1. Click a **free cell** on the grid, in the column of the clinician who will be away and at the start time of the block.
+2. The **What do you want to book?** window opens, with two options: **New appointment** and **Calendar block**. Click **Calendar block**.
+
+<Frame>
+  ![Image](/images/image-421.png)
+</Frame>
+
+3. The **Calendar block** form opens. Fill in:
+   - **Scope of the block:** choose **This clinician only** (blocks only the calendar of the clinician in that column) or **The whole calendar** (blocks every clinician at the clinic during that time).
+   - **When:** date and time range, prefilled with the cell you clicked. Use **Edit** to adjust them by hand, or drag directly across the calendar to pick the range without opening this panel.
+   - **Category** (optional): block categories are set up under Administration → Appointment statuses → Block categories, and they give the block its color on the grid.
+   - **Reason for the block** (optional but recommended): a short text describing why the time is blocked. Examples: "Endodontics conference", "Vacation", "Outside surgery", "Team meeting". It helps the team understand the block when they see it on the grid.
+4. Click the **Add block** button.
+
+<Frame>
+  ![Image](/images/image-429.png)
+</Frame>
+
+### Result
+
+The block automatically appears on the calendar grid, in the clinician's column (or in every column if you chose "The whole calendar"), with a **padlock** and the text **Calendar block** (plus the reason, if you entered one). Nobody can book an appointment on top of a block.
+
+<Frame>
+  ![Image](/images/image-430.png)
+</Frame>
+
+---
+
+## Way 2: From Administration → Staff (scheduling ahead)
+
+Ideal for events far in the future, long absences, or when you're going to add several blocks in a row.
+
+### How to get there
+
+1. In the left sidebar, expand the **Administration** menu and click **Staff**.
+2. In the staff list, find the clinician you want to block.
+3. In the clinician's **Actions** column, click the calendar icon ("Set schedules").
+4. Scroll down the settings screen, below the **Working hours and breaks** table. You'll find the **Calendar blocks** card.
+
+### Steps
+
+1. In the **Calendar blocks** card, click **Add block**.
+2. Fill in the fields (the same as in Way 1: scope, date and time, category, reason).
+3. Confirm with **Add block**.
+
+The block is saved and automatically appears on the clinician's calendar when the date comes. If anyone later tries to book an appointment at that time, the system will reject it.
+
+<Frame>
+  ![Image](/images/image-431.png)
+</Frame>
+
+### When this way is best
+
+- When the clinician already knows they'll be at a conference in three months.
+- When someone is going on a planned vacation for a couple of weeks.
+- When you're going to schedule several blocks at once (for example, every Friday next month).
+- When you don't want to move day by day through the calendar to create the block.
+
+---
+
+## Expected result (both ways)
+
+- The block appears on the calendar grid in the clinician's column, with a padlock and the text "Calendar block" (plus the reason, if you entered one).
+- Nobody can book an appointment on top of the block (unless they have advanced permissions and force the action).
+- If someone tries to drag an existing appointment into the blocked range, the system rejects the move.
+
+## Common errors
+
+**The "Calendar block" option doesn't appear when I click a cell:** check your permissions. If you don't have permission to create blocks, the window may show only the "New appointment" option. Ask your administrator to grant you the permission from Administration → Staff → Permissions.
+
+**I added the block but the system let me book an appointment on top of it:** check whether the clinician has appointment overlapping enabled. With that option on, blocks don't work as a hard barrier. Turn off overlapping from Administration → Staff → Schedule settings if you want blocks to be strict.
+
+**The block doesn't appear on the calendar:** refresh the page. If it still doesn't appear after refreshing, check that the date and time were saved correctly (open the block's details from the list in Schedule settings).
+
+**I deleted a block by mistake:** you can create it again using either of the two ways. Deleting is permanent; there's no automatic "undo".
+
+## Tips and variations
+
+- **Blocks for the whole team:** if the whole practice closes (public holiday, full day of training), you have to add the block for each clinician one by one. There's no automatic "block the whole clinic" button.
+- **Descriptive reason:** even though it's optional, always add a reason. The team sees it on the grid, and it helps them explain to the patient why that day can't be booked ("The doctor is at a conference").
+- **Short vs. long blocks:** a 1-hour block during the day and a 2-week block are handled the same way. The system supports both with no difference.
+- **Deleting a block:** from the calendar, click the block and you'll have the option to delete it. You can also delete blocks from the list under Administration → Staff → Schedule settings → Calendar blocks.
+- **It doesn't block the whole day automatically:** if you want to block the entire day (8:00 to 20:00), you have to set that range in the form. There's no "full day" checkbox.
+
+## Estimated time
+
+- From the calendar: 30 seconds per block.
+- From Administration → Staff: 1 minute for the first block (plus navigation), 30 seconds for each additional one once you're on the screen.
+
+## Frequently asked questions
+
+**Can I create a recurring block (every Monday morning)?** For now you have to create each block individually. For recurring events, adjust the clinician's working hours from Schedule settings (more efficient than adding repeated blocks).
+
+**Do patients see blocks when they book through the portal?** Yes. The patient portal respects blocks: it doesn't offer those times when the patient picks an appointment.
+
+**Can I book an appointment on top of a block if the patient insists?** Only if you have advanced permissions or the clinician has appointment overlapping turned on. By default, a block is a hard barrier.
+
+**Does the block affect clinician payments or reports?** No. Blocks only affect the calendar. They have no direct financial impact.
+
+**What's the difference between a block and an appointment with the "Cancelled" status?** A cancelled appointment stays as a record of a booking that was cancelled. A block is unavailable time that never had a patient assigned. They're different things.
+
+## Permissions
+
+Creating, editing and deleting blocks depends on the staff member's permissions, set under Administration → Staff → Permissions. If you don't see the "Calendar block" option in the calendar window or you can't access the staff schedule settings, check with your administrator.

@@ -1,0 +1,135 @@
+---
+title: "Roles and Permissions"
+---
+
+In **OCLÜ**, access to the system is managed through **roles and permissions**, which let you define precisely what each team member can see and do on the platform.
+
+---
+
+## Roles
+
+OCLÜ has **three roles with special behavior** — Admin, Doctor and Secretary — and six other roles meant for specific staffing needs: Hygienist, Receptionist, Manager, CEO, Director and Assistant. It's important to understand that roles are labels inside the system (they don't necessarily reflect each person's actual job at the clinic). For example, the clinic owner, the CEO or the clinical director can be set up as Admin in the system even if in real life they are also doctors or have several roles.
+
+> _Roles can't be edited once assigned. If the wrong role was assigned when the user was created, you need to contact the support team to fix it._
+
+---
+
+#### Admin
+
+The Admin role is meant for whoever manages and sets up the clinic in the system. It's the role with the most control and responsibility over the platform.
+
+All users with the Admin role have 100% of permissions enabled permanently, and they can't be edited or restricted. They can access the entire system with no exceptions.
+
+The system won't let you leave the clinic without an enabled admin: as long as there are two or more enabled admins, any of them can disable another (even the one who signed up first). The block only appears when there's a single enabled admin left — that one can't be disabled until someone else takes on that role.
+
+By default, the Admin role doesn't include clinical functions. It's meant for managing the system: setting up the clinic, creating and managing users, defining treatments, managing cash and bank accounts, setting up automations and accessing the business reports. If they also work as a healthcare professional, you can enable doctor duties for them — see below.
+
+---
+
+#### Doctor
+
+The Doctor role is meant for the healthcare professionals who work at the clinic. It's the system's main clinical role.
+
+Unlike the Admin, when you create a user with the Doctor role, the system automatically asks for their professional details: national licence, provincial licence, ID number, profession and speciality. These details are needed for the professional to work properly in the system.
+
+Users with the Doctor role can:
+
+- Have their own schedule in the Calendar module
+- Be assigned to treatment plans as the responsible professional — when creating a treatment plan, the system asks which doctor is doing it
+- Sign digital informed consents
+- Issue legally valid digital prescriptions
+- Have contracts set up for calculating their fees
+
+The Doctor role is the most common one for professionals joining the clinic's team: general dentists, specialists, residents or any professional who performs treatments and needs their own schedule in the system.
+
+---
+
+#### Secretary
+
+The Secretary role is meant for the clinic's administrative, front desk and management staff. It's a key role for the practice's day-to-day work, and OCLÜ has a large number of tools built specifically for this profile to make their work easier and faster.
+
+Unlike the previous roles, the Secretary doesn't have their own schedule in the system and can't be assigned to treatment plans as the responsible professional. Fee contracts can't be set up for them either. However, they have access to practically all the system's operational and administrative functions, depending on the permissions the admin sets up for them.
+
+Some of the most important tasks a Secretary can handle in OCLÜ:
+
+- **Patient management** — Create records for new patients, search and list patients, fill in and update personal details.
+- **Remote patient registration** — Create registration or update links so patients can fill in their information from their own devices, without the secretary having to enter it manually.
+- **Calendar management** — Create, change and cancel appointments, manage the clinic's daily calendar, send appointment reminders by email or WhatsApp.
+- **Taking payments** — Record payments, assign payments to treatment plans, issue receipts and keep track of each patient's balance.
+- **Patient communication** — Send messages, coordinate appointment confirmations and handle day-to-day communication.
+- **Internal reminders** — Create and manage reminders for the team, including recurring reminders for patients with regular check-ups.
+- **Internal messaging** — Talk to the rest of the team through OCLÜ's internal messaging system.
+- **Lab requests** — Record and keep track of requests for prosthetic work.
+- **Stock management** — Keep track of the clinic's inventory of materials and supplies.
+
+---
+
+#### The other six roles
+
+**Hygienist, Receptionist, Manager, CEO and Director** are roles meant for specific staffing needs: they have no fixed special behavior (unlike Admin, Doctor and Secretary), and everything they can see and do is defined with permissions, just like a Secretary. **Assistant** works the same way, but with one important difference: while the rest of the new roles start with all permissions enabled, **a user with the Assistant role is created with no permissions at all** — you have to set them up manually before giving them access.
+
+Any of these six roles (and also an Admin) can become a doctor in every respect if they "also see patients" — see the next section.
+
+---
+
+## Enabling doctor duties
+
+There are two ways to give someone a Doctor's capabilities without their role being Doctor:
+
+**When creating the user** — if the chosen role is Admin, the sign-up form has a checkbox **"Enable doctor duties"**. Once the user is saved, this option **can't be reversed**. When you turn it on, the system asks for the same professional details as for a Doctor (national licence, provincial licence, ID number, profession, speciality).
+
+**When editing the user** — for any role other than Doctor or Secretary (Admin, Hygienist, Receptionist, Manager, CEO, Director or Assistant), the edit form has an **"Also sees patients"** option. When you turn it on, the system asks for the same professional details and, just like when creating the user, **it can't be turned off afterwards**.
+
+<Frame>
+  ![Image](/images/image-410.png)
+</Frame>
+
+In both cases, the person gets their own schedule, can be responsible for treatment plans, sign consents, issue digital prescriptions and have a fee contract set up — exactly like a user with the Doctor role.
+
+---
+
+## Permissions
+
+Permissions are the real access control tool in OCLÜ. Regardless of the assigned role, each user can have specific permissions enabled or disabled, depending on what the admin sets up. This means a Secretary could have access to more features than a Doctor, or even have every permission enabled, if whoever manages the system decides so.
+
+Permissions are set up from the **Administration** module, in the **Staff** section, on each user's individual page — with quick combinations by profile and two permission trees to fine-tune the details. The full explanation of that screen is on the [Administration](/en/administrador) page.
+
+### Default permissions
+
+When you create a new user, the initial permissions depend on the role:
+
+| Role | Permissions when created |
+| :-- | :-- |
+| Admin, Doctor, Secretary, Receptionist, Manager, CEO, Director | All enabled, including full access to the Administration module |
+| Hygienist | Almost all enabled, except the digital prescription ones |
+| Assistant | None enabled |
+
+That's why it's essential to review permissions before giving the new team member their login details, whatever their role. The recommended flow is: create the user → set up their permissions → give them access.
+
+### What does each permission control?
+
+Permissions are very granular and act specifically on each module and feature of the system. Depending on which permissions a user has enabled, the system adapts visually:
+
+- **Entire modules** — If a user doesn't have access to a module, that module doesn't appear in the side menu. The user doesn't see it and can't access it.
+- **Features within a module** — Inside a module they do have access to, specific actions can disappear. For example, if they don't have permission to edit a patient's information, the save changes button doesn't appear for them.
+- **Specific actions** — The level of detail can be very specific. For example, a user can have permission to create appointments in the Calendar but not to create calendar blocks.
+- **Home screen panels** — If access to a module is removed, the panels for that module also disappear from the home screen. For example, if they don't have access to Lab, the lab panel doesn't appear on their home screen.
+
+**Available permissions** — They're organized module by module. Within each module you can enable or disable specific actions such as listing, viewing, creating, editing, deleting, recording income, entering expenses, approving or rejecting treatment plans, among others.
+
+---
+
+### Best practices for managing permissions
+
+- **Set up permissions before giving access** — Don't share the login details until you've reviewed and adjusted the user's permissions.
+- **Pay special attention to the Administration module** — It's enabled by default for most new roles. Disable it for anyone who shouldn't have access to the system settings.
+- **Define clear criteria for each profile** — Before creating users, decide what each type of person at the clinic can see and do.
+- **Review regularly** — If a team member's responsibilities change, update their permissions from the Administration module.
+
+---
+
+### Now that you know how it works...
+
+the roles and permissions system in OCLÜ, you're ready to start setting up your team. \
+Remember that setting up permissions correctly is the first step so that each staff member only accesses what they need for their daily work. \
+Continue to the next section to learn about each module of the system in detail.

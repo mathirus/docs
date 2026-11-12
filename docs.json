@@ -9,93 +9,204 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "tabs": [
+    "languages": [
       {
-        "tab": "OCLÜ",
-        "pages": [
+        "language": "es",
+        "default": true,
+        "tabs": [
           {
-            "group": "Documentación Principal",
+            "tab": "OCLÜ",
             "pages": [
-              "bienvenido-a-ocl-ue",
-              "introduccion",
-              "modulos-del-sistema",
-              "primeros-pasos",
-              "interfaz-y-navegacion",
-              "mi-perfil",
-              "roles-y-permisos",
-              "add-ons",
-              "modulo-calendario",
-              "modulo-pacientes",
-              "modulo-laboratorio",
-              "modulo-stock",
-              "finanzas",
-              "modulo-connect",
-              "administrador"
+              {
+                "group": "Documentación Principal",
+                "pages": [
+                  "bienvenido-a-ocl-ue",
+                  "introduccion",
+                  "modulos-del-sistema",
+                  "primeros-pasos",
+                  "interfaz-y-navegacion",
+                  "mi-perfil",
+                  "roles-y-permisos",
+                  "add-ons",
+                  "modulo-calendario",
+                  "modulo-pacientes",
+                  "modulo-laboratorio",
+                  "modulo-stock",
+                  "finanzas",
+                  "modulo-connect",
+                  "administrador"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Guías",
+            "pages": [
+              {
+                "group": "Tutoriales Paso a Paso",
+                "pages": [
+                  "tour-por-la-pantalla-principal-de-ocl-ue",
+                  "tutorial-crear-paciente",
+                  "tutorial-agendar-turno",
+                  "tutorial-registrar-pago",
+                  "tutorial-ver-ingresos-y-egresos",
+                  "tutorial-notificar-paciente",
+                  "tutorial-pacientes-links-hc",
+                  "tutorial-crear-presupuesto",
+                  "tutorial-estados-presupuesto",
+                  "como-revocar-un-pago",
+                  "como-ver-y-editar-el-detalle-de-una-cita",
+                  "como-reagendar-una-cita-arrastrandola",
+                  "como-estirar-la-duracion-de-una-cita",
+                  "como-crear-un-bloqueo-de-agenda",
+                  "como-habilitar-sobreturnos",
+                  "como-agregar-una-evolucion-clinica",
+                  "como-cambiar-la-vista-del-calendario-y-filtrar-por-profesional",
+                  "como-cargar-archivos-y-crear-carpetas-en-multimedia-del-paciente",
+                  "como-buscar-y-filtrar-pacientes-en-el-listado",
+                  "como-ocultar-y-mostrar-los-montos-en-finanzas",
+                  "como-personalizar-la-apariencia-del-sistema-y-acceder-a-soporte",
+                  "como-leer-el-balance-financiero-del-paciente",
+                  "como-entender-el-inventario-de-stock",
+                  "como-cambiar-entre-clinicas"
+                ]
+              },
+              {
+                "group": "Referencia",
+                "pages": [
+                  "glosario"
+                ]
+              },
+              {
+                "group": "Herramientas",
+                "pages": [
+                  "index",
+                  "quickstart"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "API",
+            "pages": [
+              {
+                "group": "Referencia",
+                "pages": [
+                  "api-reference/introduction"
+                ]
+              },
+              {
+                "group": "Endpoints",
+                "openapi": "api-reference/openapi.json"
+              }
             ]
           }
         ]
       },
       {
-        "tab": "Guías",
-        "pages": [
+        "language": "en",
+        "tabs": [
           {
-            "group": "Tutoriales Paso a Paso",
+            "tab": "OCLÜ",
             "pages": [
-              "tour-por-la-pantalla-principal-de-ocl-ue",
-              "tutorial-crear-paciente",
-              "tutorial-agendar-turno",
-              "tutorial-registrar-pago",
-              "tutorial-ver-ingresos-y-egresos",
-              "tutorial-notificar-paciente",
-              "tutorial-pacientes-links-hc",
-              "tutorial-crear-presupuesto",
-              "tutorial-estados-presupuesto",
-              "como-revocar-un-pago",
-              "como-ver-y-editar-el-detalle-de-una-cita",
-              "como-reagendar-una-cita-arrastrandola",
-              "como-estirar-la-duracion-de-una-cita",
-              "como-crear-un-bloqueo-de-agenda",
-              "como-habilitar-sobreturnos",
-              "como-agregar-una-evolucion-clinica",
-              "como-cambiar-la-vista-del-calendario-y-filtrar-por-profesional",
-              "como-cargar-archivos-y-crear-carpetas-en-multimedia-del-paciente",
-              "como-buscar-y-filtrar-pacientes-en-el-listado",
-              "como-ocultar-y-mostrar-los-montos-en-finanzas",
-              "como-personalizar-la-apariencia-del-sistema-y-acceder-a-soporte",
-              "como-leer-el-balance-financiero-del-paciente",
-              "como-entender-el-inventario-de-stock",
-              "como-cambiar-entre-clinicas"
+              {
+                "group": "Main documentation",
+                "pages": [
+                  "en/bienvenido-a-ocl-ue",
+                  "en/introduccion",
+                  "en/modulos-del-sistema",
+                  "en/primeros-pasos",
+                  "en/interfaz-y-navegacion",
+                  "en/mi-perfil",
+                  "en/roles-y-permisos",
+                  "en/add-ons",
+                  "en/modulo-calendario",
+                  "en/modulo-pacientes",
+                  "en/modulo-laboratorio",
+                  "en/modulo-stock",
+                  "en/finanzas",
+                  "en/modulo-connect",
+                  "en/administrador"
+                ]
+              }
             ]
           },
           {
-            "group": "Referencia",
+            "tab": "Guides",
             "pages": [
-              "glosario"
+              {
+                "group": "Step-by-step tutorials",
+                "pages": [
+                  "en/tour-por-la-pantalla-principal-de-ocl-ue",
+                  "en/tutorial-crear-paciente",
+                  "en/tutorial-agendar-turno",
+                  "en/tutorial-registrar-pago",
+                  "en/tutorial-ver-ingresos-y-egresos",
+                  "en/tutorial-notificar-paciente",
+                  "en/tutorial-pacientes-links-hc",
+                  "en/tutorial-crear-presupuesto",
+                  "en/tutorial-estados-presupuesto",
+                  "en/como-revocar-un-pago",
+                  "en/como-ver-y-editar-el-detalle-de-una-cita",
+                  "en/como-reagendar-una-cita-arrastrandola",
+                  "en/como-estirar-la-duracion-de-una-cita",
+                  "en/como-crear-un-bloqueo-de-agenda",
+                  "en/como-habilitar-sobreturnos",
+                  "en/como-agregar-una-evolucion-clinica",
+                  "en/como-cambiar-la-vista-del-calendario-y-filtrar-por-profesional",
+                  "en/como-cargar-archivos-y-crear-carpetas-en-multimedia-del-paciente",
+                  "en/como-buscar-y-filtrar-pacientes-en-el-listado",
+                  "en/como-ocultar-y-mostrar-los-montos-en-finanzas",
+                  "en/como-personalizar-la-apariencia-del-sistema-y-acceder-a-soporte",
+                  "en/como-leer-el-balance-financiero-del-paciente",
+                  "en/como-entender-el-inventario-de-stock",
+                  "en/como-cambiar-entre-clinicas"
+                ]
+              },
+              {
+                "group": "Reference",
+                "pages": [
+                  "en/glosario"
+                ]
+              },
+              {
+                "group": "Tools",
+                "pages": [
+                  "en/index",
+                  "en/quickstart"
+                ]
+              }
             ]
           },
           {
-            "group": "Herramientas",
+            "tab": "API",
             "pages": [
-              "index",
-              "quickstart"
+              {
+                "group": "Reference",
+                "pages": [
+                  "en/api-reference/introduction"
+                ]
+              },
+              {
+                "group": "Endpoints",
+                "openapi": "api-reference/openapi.json"
+              }
             ]
           }
-        ]
-      },
-      {
-        "tab": "API",
-        "pages": [
-          {
-            "group": "Referencia",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoints",
-            "openapi": "api-reference/openapi.json"
+        ],
+        "navbar": {
+          "links": [
+            {
+              "label": "Support",
+              "href": "mailto:soporte@oclucrm.com"
+            }
+          ],
+          "primary": {
+            "type": "button",
+            "label": "Go to OCLÜ CRM",
+            "href": "https://www.oclucrm.com"
           }
-        ]
+        }
       }
     ]
   },
@@ -118,15 +229,15 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {

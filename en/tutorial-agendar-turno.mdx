@@ -1,0 +1,132 @@
+---
+title: "How to book an appointment"
+description: "Learn how to create an appointment in the calendar, assign it to a clinician and a treatment room, choose whether it's in person or online, and notify the patient in the same step."
+---
+
+This guide shows you how to add an appointment from the daily view of the OCLÜ calendar. You'll see the three ways to start creating it, what information to fill in on the form and how to notify the patient automatically when you save. It's the most used flow in the system, so it's worth getting comfortable with it.
+
+## When to use it
+
+- When a new patient asks for an appointment and you need to book the time slot for them.
+- When a returning patient comes back to the clinic for a treatment session, a check-up or a consultation.
+- When a patient comes up to the front desk and you want to book the appointment right then.
+- When you're organizing the next day's schedule and filling in the free slots.
+
+## Before you start
+
+- The patient must already be in the system. If they aren't, you can create them on the spot from the appointment form itself with the **Add a new patient** button.
+- The day and time you want to book must fall within the clinician's working hours. If not, OCLÜ shows you a warning and won't let you book (blocks and times outside working hours appear with diagonal lines in the grid).
+
+## How to get to this section
+
+1. Log in to OCLÜ.
+2. In the left sidebar, click the first icon (a calendar). It takes you to the calendar's **Daily view**, which is the module's main working screen.
+
+> In the breadcrumb at the top you'll see **Home → Daily view**.
+
+<Frame>
+  ![Screenshot 2026 04 21 114550](/images/Captura-de-pantalla-2026-04-21-114550.png)
+</Frame>
+
+## Steps to create the appointment
+
+### 1. Go to the right day
+
+The calendar opens on today's date. To move around:
+
+- Change the date in the date field (DD-MM-YYYY format) in the **Date and view mode** card.
+- Use the `<` and `>` arrows above the grid to go forward or back one day.
+- Go back to today with the **Today** button, at the top right of the grid.
+
+### 2. Open the new appointment form
+
+There are three ways to start creating it:
+
+**Option A — Click a free cell (the quickest):** Click an empty cell in the grid, in the clinician's column and at the time you want to book. The **What do you want to book?** window opens, with two options: **New appointment** ("An appointment with a patient and a clinician.") and **Calendar block** ("Reserves the slot without assigning a patient."). Click **New appointment**.
+
+> This option already fills in the clinician for that column and the time you clicked. It saves you picking them by hand.
+
+<Frame>
+  ![Image](/images/image-421.png)
+</Frame>
+
+**Option B — The general `+` button:** At the top right of the grid, next to the **Today** button, there's a button with a `+` icon. Click it. The form opens completely empty (patient, clinician, treatment room, time and description all blank). Useful when the appointment isn't tied to a fixed time or you want to add it without moving around the grid.
+
+**Option C — Drag to set a time range:** If you want the appointment to last longer than the grid's minimum block (half an hour), click and hold on a free cell and drag down to the time you want it to end. When you let go, the window opens and, when you choose New appointment, the form appears with the time range already filled in (for example 11:30 to 13:00 for a 90-minute appointment).
+
+### 3. Fill in the form
+
+Once the **Add appointment** form is open, fill in the following fields. The ones marked with a red asterisk (`*`) are required.
+
+**Patient** (required): Click the field and start typing the patient's surname or first name. OCLÜ suggests matches in a dropdown list. Click the right patient.
+
+> If the patient doesn't appear because they haven't been added yet, click **Add a new patient** below the field. You create them on the spot without leaving the form.
+
+**Treatment plan** (optional): If the appointment is for a treatment in a treatment plan you've already created, you can link it here. That lets you link clinical notes and payments to that same treatment plan later on.
+
+**Assigned clinician** (required): If you opened the form by clicking a cell, the clinician for that column is already selected. If you opened it with the `+` button, choose one from the list.
+
+**Assigned treatment room** (optional): If your clinic works with treatment rooms, choose which one is used for this appointment. If you don't use treatment rooms, leave it empty.
+
+**Appointment status** (required): It's set to **Pending** by default. The system comes with three default statuses: **Pending**, **Confirmed** and **Cancelled**. Any other status you see (for example Rescheduled, In progress, etc.) is a custom one created from Administration → Appointment statuses. When creating a new appointment, you'll usually leave it as Pending.
+
+**Appointment type** (required): Choose **In person** or **Online**. It's set to In person by default. The **Online** option is only enabled if the assigned clinician has their Google Calendar connected — if no clinician has been chosen yet, the tooltip says "Select a clinician to enable virtual appointments"; if the chosen clinician doesn't have it connected, it says "Dr [name] has no Google Calendar connected. They need to connect it from their profile." If you change the clinician and the new one doesn't support Online, the appointment type switches back to In person on its own.
+
+**Time range** (required): Start time and end time. If you opened the form by clicking a cell or dragging, it's already filled in. You can adjust it by typing the time directly or using the clock.
+
+**Description** (optional but recommended): A short note about the reason for the appointment: "Periodontal treatment check-up", "Root canal tooth 4.6", "First consultation", etc. It helps the clinician know what to expect before seeing the patient.
+
+<Frame>
+  ![Image](/images/image-422.png)
+</Frame>
+
+### 4. Decide whether to notify the patient right away
+
+At the bottom of the form there are two checkboxes: **Send email notification now** and **Send WhatsApp notification now**. You can tick one, both or neither. If you tick one, OCLÜ sends the patient the confirmation through that channel as soon as you save the appointment. If you don't tick either, you can let them know manually later from the appointment details.
+
+> If the patient doesn't have an email or phone number on file, the matching checkbox won't be able to send the notification. Add it to their record first.
+
+### 5. Save the appointment
+
+Click the **Add** button, at the bottom right of the form. The window closes and the appointment appears in the calendar grid, in the clinician's column and at the time you set, with the color that matches its status.
+
+## Expected result
+
+The new appointment appears as a colored block in the calendar grid, showing the patient's name and the time. If you ticked one of the notification checkboxes, the patient gets the notice through that channel within a few seconds.
+
+## Common errors
+
+**"Appointments cannot be booked outside working hours.":** you clicked a cell in a striped area (diagonal lines) or on a day the clinician doesn't work. Move the appointment to a time within working hours or adjust the clinician's availability from Administration → Staff → Schedule settings.
+
+**The patient doesn't show up when you search:** check that the surname is spelled correctly. If you confirm they don't exist, use **Add a new patient** from the same form or add them first in Patients.
+
+**The system rejects the appointment because it overlaps:** there's already another appointment at that time for the same clinician or treatment room. Either move it to another time, or allow overlapping appointments (double booking) from Administration → Staff (per clinician) or Administration → Clinics → Treatment room settings (per treatment room).
+
+**I ticked "Notify" but the patient didn't get the notice:** for email, check that the email in the patient's record is spelled correctly and ask them to look in spam or promotions. For WhatsApp, check that the phone number has the right country code and that the clinic has the integration — without the add-on, the WhatsApp checkbox doesn't send anything.
+
+## Tips and variations
+
+- **To see the patient's details without leaving the appointment:** once it's created, open it by clicking the block and you'll see customizable shortcuts to different sections of their record (by default Personal details, Media, Clinical notes and Treatment plans — see the related guide **How to view and edit an appointment's details**).
+- **To reschedule an existing appointment by dragging it:** see the related guide **How to reschedule an appointment by dragging it**.
+- **To make an existing appointment longer or shorter:** see the related guide **How to stretch an appointment's duration**.
+- **To create a block instead of an appointment:** from the same window in step 2, choose **Calendar block** instead of New appointment.
+
+## Estimated time
+
+1 to 2 minutes per appointment, once you're familiar with the flow.
+
+## Frequently asked questions
+
+**Can I book for more than one patient at a time?** No. Each appointment is for one patient. To book several appointments in a row, repeat the flow or use the drag method to reserve long blocks and then split them up.
+
+**What if I make a mistake when saving?** Click the appointment block in the grid and the details panel opens. From there you can edit every field, change the status or delete the appointment.
+
+**Does the Online appointment type create a video call link automatically?** Yes, through Google Meet — but it's only available if the assigned clinician has connected their Google Calendar from their profile. If they haven't, the Online option stays disabled in the form.
+
+**Can I create recurring appointments (every week at the same time)?** For now you have to create them one by one. To speed up repeats, you can copy the information manually.
+
+**Can I create an appointment without a patient?** No. The patient is a required field. If you need to "reserve" a slot without a specific patient, use a Calendar block with a descriptive reason.
+
+## Permissions
+
+Whether you see some buttons (deleting the appointment, changing the status, linking it to a treatment plan) depends on the permissions assigned to each staff member. If you don't see an option described here, check the permission settings in Administration → Staff.

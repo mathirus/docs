@@ -1,0 +1,204 @@
+---
+title: "How to record a payment"
+description: "Learn how to take payment for a treatment plan in one or several steps, with installments, discounts, credit balance and combined payment methods."
+---
+
+This guide shows you how to record a payment in OCLÜ: which treatment plans to apply it to, which payment method to use, and how to generate the receipt. The payment wizard supports multiple combined methods, two currencies with an editable exchange rate, discounts or surcharges, using the patient's credit balance, and installment plans.
+
+## When to use it
+
+- When a patient pays all or part of a treatment that already has a treatment plan.
+- When a patient leaves a deposit on approving the treatment plan.
+- When the treatment plan has an installment plan and the patient comes in to pay one or more installments.
+- When you combine payment methods (for example, part in cash and part by wire transfer).
+- When you want to record a payment that the patient hasn't yet assigned to any treatment plan (credit balance).
+
+## Before you start
+
+- The patient needs to have at least one treatment plan. If they don't, first create the treatment plan from **Patients → profile → Treatment plans → Add treatment plan** (see the guide **How to create a treatment plan**).
+- The cash and bank accounts where you'll deposit the payment need to be set up for your clinic under **Administration → Cash and bank accounts**. Each account has the payment methods it accepts (for example, a cash account only accepts cash; a bank account accepts wire transfers).
+
+## How to get to this section
+
+1. Sign in to OCLÜ.
+2. In the left sidebar, click the Patients icon.
+3. Find the patient and click their name to open their profile.
+4. On the profile, click the **Treatment plans** tab.
+5. At the top right, click the **Take payment** button and choose one of the two options in the menu:
+
+- **Apply payment to treatment plans:** applies the payment to one or more treatment plans with a balance due. This is the main flow in this guide.
+- **Add patient credit:** records the money as patient credit, without assigning it to any treatment plan. It's covered further down, in the **Alternative flow: Credit balance** section.
+
+<Frame>
+  ![Image](/images/image-448.png)
+</Frame>
+
+## Steps to apply a payment to treatment plans
+
+The wizard has 3 or 4 steps, depending on whether any of the chosen treatment plans has an installment plan: **Treatment plans**, **Instalments** (only if it applies), **Treatments** and **Payment**. An indicator at the top shows which one you're on.
+
+### Step 1: Choose which treatment plans to apply the payment to
+
+OCLÜ shows you the patient's treatment plans with four columns: Treatment plan name, Clinician in charge, Paid and Outstanding. Treatment plans with an installment plan have an **Instalments** tag next to their name.
+
+1. Tick the checkbox for the treatment plan or plans you want to pay off with this payment. You can tick more than one if the patient is paying for several at once.
+2. Click the **Next** button at the bottom right.
+
+<Frame>
+  ![Image](/images/image-449.png)
+</Frame>
+
+> If the treatment plans are in different currencies (one in ARS and another in USD), keep that in mind, because the Treatments step asks you to choose the currency you'll record the payment in.
+
+### Step 2: Instalments (only if the treatment plan has an installment plan)
+
+This step only appears when one of the treatment plans you chose has an installment plan. You'll see the full **Instalment plan** table: installment number, amount, due date and status (paid, charge posted, or pending).
+
+1. In the **Pay** column, tick the installment or installments the patient is paying.
+2. **Instalments due** and **Total due** update at the bottom.
+3. Click **Next**.
+
+<Frame>
+  ![Image](/images/image-450.png)
+</Frame>
+
+> Ticking an installment here posts the corresponding charge to the treatment plan; you only apply the payment to it in the Treatments step.
+
+### Step 3: Select treatments and currency
+
+This screen shows you the treatments in the chosen treatment plans (or the installment you posted in the previous step). At the top there are three key fields:
+
+- **Currency:** the currency you'll record the payment in (Pesos ARS or Dollars USD). Pesos ARS is selected by default.
+- **Exchange rate:** if the payment currency is different from the treatment plan's currency, OCLÜ uses this exchange rate to convert it. The value is pre-filled, but you can edit it to use the right rate for the day.
+- **Amount to pay:** the total of the payment you're recording. It fills in automatically as you tick treatments, but you can also type it in directly.
+
+Below is the treatments table, with the columns **Tooth** (if the treatment is dental and linked to a tooth), **Price**, **Paid**, **Outstanding**, a **Progress** indicator (red/orange/green dot) and **Payment amount**, which you can edit on each row.
+
+1. Tick the treatments this payment covers. OCLÜ fills in the **Payment amount** for each one based on the exchange rate applied, and you can edit it by hand if the patient is paying part of the amount.
+2. Check that the **Total** at the bottom right matches what you're actually going to receive.
+3. Click **Next**.
+
+<Frame>
+  ![Image](/images/image-451.png)
+</Frame>
+
+> If the patient pays "on account" without applying it to a specific treatment, you can enter the amount manually without ticking any treatments. The balance stays as an advance to apply later.
+
+### Step 4: Cash account, payment method and confirmation
+
+This is the final screen. Here you set where the money is recorded and how it's received, and you can apply credit balance, discounts or surcharges.
+
+**Cash account and payment method:**
+
+- **Cash account to use:** choose from the dropdown the account the payment goes into (typical examples: Cash ARS, Bank ARS, Mercado Pago).
+- **Payment method:** the options change depending on the account you chose (for example, Cash ARS only offers Cash; Bank ARS offers Wire transfer).
+- **Total due:** filled in with the amount from the previous step.
+- **Combining payment methods:** if the patient pays with more than one method, click **Add payment method** and a new row is added with its own account, method and amount.
+
+**Use credit balance:** if the patient has credit available, you'll see here how much they have in each currency (**ARS** / **USD** pills) and the **Available** amount. Type how much you want to apply or click **Use maximum**.
+
+**Leave credit balance:** a switch that, when turned on, lets you charge more than is owed on purpose and leave the excess as credit balance for the patient's next payment.
+
+**Discount / Surcharge:** two cards with a **Percentage** or **Fixed amount** selector and a number field, to adjust the total before confirming.
+
+**Payment date:** today's date is set by default. If you're recording a payment after the fact, change it with the calendar.
+
+At the bottom, two comparison cards, **Total due** and **Total paying**, have to show the same amount before you can finish.
+
+<Frame>
+  ![Image](/images/image-452.png)
+</Frame>
+
+Once they match, click the **Finish** button at the bottom right.
+
+### Step 5: Confirm the payment
+
+A **Confirm payment** side panel opens with a summary of everything before anything is recorded:
+
+- **Treatments to pay:** the treatments you're going to pay off with this payment.
+- **Payment methods:** the account, method and amount for each row you set up in the previous step.
+- **Payment summary:** the total due.
+
+Check that everything is correct and click **Confirm payment**. If something's wrong, use **Cancel** and go back to fix it.
+
+<Frame>
+  ![Image](/images/image-453.png)
+</Frame>
+
+## Expected result
+
+When you confirm, OCLÜ automatically takes you to a **Payment receipt**: receipt number, date, the clinic's details, the **Payments made** table (cash account, payment method, amount, exchange rate) and the **Treatments paid** with their treatment plan. From there you can **Export PDF** or **Send** the receipt to the patient.
+
+<Frame>
+  ![Image](/images/image-454.png)
+</Frame>
+
+Also:
+
+- The treatment plan you applied the payment to shows the updated remaining balance.
+- In the patient's **Balance** tab, a new "Payment received" movement appears with the amount, the currency and the cash account it went into.
+- The payment shows up in Finances → Income for the day and is added to the cash closing.
+
+## Alternative flow: Credit balance
+
+If the patient gives you money that you're not going to assign to a specific treatment plan yet (for example, they pay in advance before the treatment plan is defined), use the **Add patient credit** option in the **Take payment** menu. It's a simple form, with no steps:
+
+- **Cash account** and **Payment method**.
+- **Amount** and **Date**.
+- **Comment** (optional).
+
+When you record it, that amount stays as patient credit (you'll see it in Balance and in the "Use credit balance" step of a future payment), and the receipt opens so you can print it or send it.
+
+<Frame>
+  ![Image](/images/image-455.png)
+</Frame>
+
+## Common errors
+
+**The Next button doesn't turn on in step 1:** you haven't ticked any treatment plan. Tick at least one.
+
+**An Instalments step I wasn't expecting shows up:** the treatment plan you chose has an installment plan set up. Tick at least one installment to continue.
+
+**The Finish button is disabled or tells me "Each payment row needs an account and a method.":** fill in the cash account and the payment method on every row before finishing, and check that **Total due** and **Total paying** match.
+
+**I can't find the right cash account in the dropdown:** your clinic sets up the list under Administration → Cash and bank accounts. If an account is missing, add it there or ask your administrator.
+
+**The payment method I need doesn't appear:** methods are filtered by cash account. Check that the account you chose has that method enabled in its settings.
+
+**The exchange rate is out of date:** the exchange rate can be edited in the Treatments step. Change it manually to the day's rate before selecting treatments.
+
+**I can't see any credit balance to use even though the patient has credit:** credit balance is per currency. Check that you're looking at the right pill (ARS or USD).
+
+**I recorded a payment in the wrong cash account or with the wrong method:** you can't "edit" a payment directly. You have to revoke it and record it again correctly. See the guide **How to revoke a payment**.
+
+## Tips and variations
+
+- **Paying several treatment plans at once:** tick the treatment plans in step 1 and choose treatments from each one in the Treatments step.
+- **Paying on account without applying it:** enter an amount in the Treatments step without ticking any treatments, or go straight to **Add patient credit** from the Take payment menu.
+- **Two currencies:** if the treatment plan is in USD but the patient pays in ARS, choose ARS as the currency and check the exchange rate. If they pay in USD, choose USD and make sure you select a USD cash account.
+- **Combined payment in parts:** cash + wire transfer is the most common case. Use **Add payment method** to add as many methods as you need.
+- **Charging more on purpose:** turn on **Leave credit balance** when the patient gives you a round amount higher than what they owe, and the excess stays available for their next payment.
+- **Payment after the fact:** if the patient paid yesterday but you're only entering it today, change the **Payment date** to the actual day. The movement is recorded on the correct date for the financial reports.
+- **Receipt:** it's generated automatically when you confirm. If you need to download it again later, go to the patient's Balance tab and use the receipt icon on the payment's row.
+
+## Estimated time
+
+1 to 2 minutes per payment, once you're familiar with the wizard. Less than 30 seconds for a credit balance.
+
+## Frequently asked questions
+
+**Can I record a payment without linking it to any treatment plan?** Yes, using **Take payment → Add patient credit**. It stays as patient credit to apply later.
+
+**Can I change the exchange rate after recording the payment?** No. Once it's confirmed, the exchange rate is fixed on that movement. If you made a mistake, revoke the payment and record it again with the correct exchange rate.
+
+**When do payments show up in the Finances panel?** Right away. As soon as you confirm the payment, the movement is available in Finances → Income.
+
+**Do USD payments affect the clinic's ARS balance?** Each cash account has its own currency. A USD payment adds up in the USD account; an ARS payment in the ARS account. The consolidated report in Finances lets you see totals by currency.
+
+**Can I split a payment between two patients?** No. Each payment belongs to a single patient and is recorded from their profile.
+
+**Where do I go after confirming the payment?** OCLÜ takes you straight to the Payment receipt, with the option to export it as a PDF or send it. From there you can go back to the patient's profile through the breadcrumb (Home → Balance).
+
+## Permissions
+
+Being able to record payments, change the exchange rate, choose any cash account, apply discounts/surcharges, use credit balance or revoke payments depends on the staff member's permissions. Set them up under Administration → Staff → Permissions. If you don't see the **Take payment** button or some field in the wizard, check with your administrator.

@@ -1,0 +1,425 @@
+---
+title: "Finances"
+---
+
+The Finances module is the clinic's money management hub. It lets you manage the flow of money (income and expenses), run cash and bank accounts in two currencies, keep track of what patients and health insurers owe, settle clinicians' fees, and generate financial and management reports with key indicators. You open it from the left sidebar (bank icon), and it is organized as a main dashboard with quick-access islands that take you to each section.
+
+---
+
+## **Main dashboard**
+
+When you open the module you see a dashboard with islands laid out in three columns. At the very top there is a banner inviting you to open the advanced reports ("Looking for the full picture?"), and in the top-right corner a **Hide amounts** button that masks every amount on the screen to protect the information when other people are looking.
+
+<Frame>
+  ![Image](/images/image-354.png)
+</Frame>
+
+**Left column:**
+- **Filters** — Month and Year. They set the period shown in the rest of the dashboard's islands.
+- **Electronic invoicing** (or **Invoicing**, for clinics in Spain) — an **Open invoicing** button. If the add-on isn't part of your plan, instead of taking you straight to the screen, the button opens a window with a video explaining what it does and a button to talk to sales.
+- **Insurer receivables** — the total owed by the health insurers the clinic works with.
+
+**Center column:**
+- **Balance** — the month's result in each currency you use, with a ring showing what percentage of the expected amount has already come in, plus the Income and Expenses breakdown.
+- **Shortcuts** — three buttons: Income, Expenses and Balance.
+- **Reports** — links to Outstanding balances, Credit balances, Pending clinical notes, Treatment plans and Staff.
+
+**Right column:**
+- **Cash and bank accounts** — the balance of each cash or bank account, grouped by currency, with the total for each one.
+- **Clinician payments** — what has been paid out to each clinician in the period.
+
+Below the three columns there is a wide island, **Cash movements**, with the most recent income and expenses in each currency and a **View every movement for the month** link to see the full list.
+
+<Frame>
+  ![Image](/images/image-355.png)
+</Frame>
+
+---
+
+## **Income report**
+
+Lets you generate detailed reports of every payment collected from patients within a date range.
+
+The left panel has the filters: start date, end date, a cash or bank account selector, and a grouping selector ("By payment" by default). Below them is the Generate button to run the query and two export buttons (PDF and Excel).
+
+The list shows the following columns: date, patient (link to the patient's record), treatment plan (link to the related treatment plan), total paid, the user who recorded the payment, and actions.
+
+In the top-right corner there is a Voided payments button that gives you access to the history of payments that were canceled. The list is paginated.
+
+An information banner explains that to generate a report you first need to select a cash or bank account, a start date and an end date.
+
+<Frame>
+  ![Image](/images/image-356.png)
+</Frame>
+
+## **Expenses**
+
+This section is for recording and looking up all of the clinic's operating expenses (rent, supplies, utilities, etc.).
+
+The left panel has the filters: start date, end date, a cash or bank account selector ("All cash accounts" by default) and a "Show voided" checkbox to include expenses that were reversed. Below them are the Generate button and the PDF and Excel export buttons.
+
+The list shows the following columns: date (sortable), category (with a dropdown filter right in the column header to filter by category), cash account, amount, comment, user and actions.
+
+Available tools:
+
+- Add expense — opens a form in a modal window to record a new expense
+- Categories — a dropdown to manage expense categories
+- Voided expenses — history of canceled expenses
+
+<Frame>
+  ![Image](/images/image-357.png)
+</Frame>
+
+---
+
+### **Adding an expense**
+
+When you click Add expense, a form opens with the following fields:
+
+- Account (required) — choose the cash or bank account the money comes from
+- Payment method (optional) — becomes available after you choose the account
+- Category (required) — chosen from the list of expense categories you have created
+- Amount (required) — the amount of the expense, with the currency symbol
+- Date (required) — the date of the expense, with a calendar picker
+- Exchange rate (required) — the secondary currency's exchange rate at the time of the expense; it comes pre-filled with the current value
+- Comment (optional) — a free-text field to describe the expense
+- Receipt (optional) — lets you attach an image of the receipt. Only one JPG, PNG or PDF file of up to 5MB is accepted
+
+<Frame>
+  ![Image](/images/image-358.png)
+</Frame>
+
+Once you've filled in the fields, click Add expense to the list. You can keep adding more expenses to that list before confirming. When all the expenses you want to enter are there, click Confirm and they are all recorded at once.
+
+---
+
+## **Balance report**
+
+Gives you a single view of every financial movement (income and expenses together) for a given period and cash account, so you can analyze the net flow of money.
+
+The left panel has the filters: start date, end date, a cash or bank account selector and a payment method selector. Below them are the Generate button and the PDF and Excel export buttons.
+
+The list shows the following columns: date (sortable), category, method, amount (sortable), balance in each currency, comment, user and actions. In the top-right corner there is a Voided payments button.
+
+An information banner explains that to generate a report you first need to select a cash or bank account, a start date and an end date.
+
+<Frame>
+  ![Image](/images/image-359.png)
+</Frame>
+
+From each row's actions you can open the **Movement detail**: date, debit, credit, partial balance, source account, category, comment (if there is one) and the user who recorded it.
+
+<Frame>
+  ![Image](/images/image-360.png)
+</Frame>
+
+---
+
+## **Outstanding balances report**
+
+A full list of patients with pending balances, with their contact details to make collecting easier.
+
+The left panel has a search by patient name and an Update button to refresh the data. Below them are the PDF and Excel export buttons.
+
+The list shows the following columns: patient (link to the record), email, phone, total outstanding (broken down by currency when the patient owes in both currencies), plans (the number of treatment plans with a balance due, with a link to the details) and actions.
+
+From the actions column you can contact the patient directly on WhatsApp to follow up on the payment, which speeds things up without having to leave the system.
+
+<Frame>
+  ![Image](/images/image-361.png)
+</Frame>
+
+---
+
+## **Credit balances**
+
+A report showing which patients have money in their favor that hasn't been assigned to any treatment plan at the location. You open it from the Reports island on the dashboard.
+
+It has a currency selector (ARS/USD — each currency is tracked separately; amounts aren't converted or added together), filters by date and by minimum/maximum amount, and buttons to download it as Excel or PDF.
+
+It shows three indicators: total credit, the number of patients with a credit balance, and how many of those patients also have an outstanding balance (a case to sort out, since they have unassigned money in their favor while also owing for something else). Below that is the list of patients with their credit balance, the date of their last movement and their outstanding balance, if any.
+
+<Frame>
+  ![Image](/images/image-362.png)
+</Frame>
+
+---
+
+## **Pending clinical notes**
+
+A clinical quality-control report: it shows appointments that have already taken place, have a treatment plan linked to them, and still don't have a clinical note. You open it from the Reports island on the dashboard.
+
+The filters are: date range, the treatment plan's progress status and clinician, plus a search by patient or treatment plan.
+
+It shows three indicators: appointments without a clinical note, appointments that already have one (out of the total that can be checked), and appointments with no treatment plan linked (the report can't check these because, for an appointment to be included, you have to choose the treatment plan when you create it). Below that is the list of appointments without a clinical note, with the date, patient, treatment plan, clinician and the treatment plan's progress.
+
+<Frame>
+  ![Image](/images/image-363.png)
+</Frame>
+
+---
+
+## **Treatment plans report**
+
+Lets you analyze every treatment plan issued in a period, filtered by status and with payment tracking.
+
+The left panel has the filters: start date, end date and a status selector (Approved by default, but you can filter by other statuses such as Draft, Rejected, etc.). Below them is the Generate button.
+
+The list's top bar has a search by patient or treatment plan name, a Filter by balance due button (shows only treatment plans with a pending balance), and Export to PDF and Export to Excel buttons.
+
+The list shows the following columns: clinician, patient, treatment plan, status, total due and total paid.
+
+An information banner explains that to generate a report you first need to select the statuses, a start date and an end date.
+
+<Frame>
+  ![Image](/images/image-364.png)
+</Frame>
+
+---
+
+## **Staff report**
+
+A report focused on the production and settlement of a specific clinician, linking treatment plans to fee contracts.
+
+The left panel has the filters: a clinician selector (a dropdown with the clinic's clinicians), start date, end date and a **Filter by** selector that sets which treatment plan date the chosen range applies to — the date it was created, approved, the treatment progressed or the payment was collected. Below them is the Generate button.
+
+The list's top bar has a search by treatment plan name, a Filter by status button and an Export report to PDF button.
+
+The list shows the following columns: treatment plan, patient, status (Approved, Draft), total, clinician fee (calculated from the clinician's contract), payment status (shows whether the fees have been paid out), a **History** icon that, when you hover over it, shows the dates the treatment plan was created, approved, progressed and collected, and actions (a button to export an individual detail to PDF).
+
+At the bottom of the table there are two summary indicators: Treatment plans balance (the running total of the clinician's treatment plans in the period) and Fees balance (the total they are owed under their contract).
+
+An information banner explains that you first need to select a clinician with a linked contract and the report dates.
+
+<Frame>
+  ![Image](/images/image-365.png)
+</Frame>
+
+---
+
+## **Cash and bank accounts**
+
+The section for setting up and managing the accounts where money movements are recorded. Each cash or bank account is tied to a currency and to the payment methods it accepts.
+
+When you open it you see two banners: an information banner saying that the cash and bank accounts will receive the movements and transfers, and a warning banner saying that you won't be able to change the currency of a cash or bank account once it is created.
+
+The main list shows the following columns: name, currency, payment methods and actions (edit and delete).
+
+<Frame>
+  ![Image](/images/image-366.png)
+</Frame>
+
+Below the main accounts there is a separate **Adjustment accounts** section, with special accounts for recording accounting corrections. It shows: name, currency and actions.
+
+If the clinic uses discounts that are applied at the time of payment (for example, a prompt-payment discount), a **Discount accounts** section also appears. These are accounts the system creates and uses automatically; you don't add or edit them by hand. There is a button that takes you straight to the **Discounts report**, which shows the date, patient, treatment plans, subtotal, amount collected, discount granted and user for every discounted payment in the period.
+
+<Frame>
+  ![Image](/images/image-367.png)
+</Frame>
+
+<Frame>
+  ![Image](/images/image-368.png)
+</Frame>
+
+Available tools:
+
+- Search — filters cash or bank accounts by name
+- Add cash or bank account — opens the form to create a new account
+- Transfer between accounts — opens the form to move money between accounts
+- Add adjustment account — creates an adjustment-type account
+
+---
+
+### **Adding a cash or bank account**
+
+When you click Add cash or bank account, a form opens with the following fields:
+
+- Organization (optional) — a selector that sets which organization the account belongs to. By default it shows "No organisation set"
+- Name (required) — a name that identifies the cash or bank account (e.g., Bank ARS, Mercado Pago, Cash USD)
+- Currency (required) — chosen from the two currencies set up in the system (main currency and secondary currency). Once saved, the currency can't be changed
+- Payment methods (required) — checkboxes to select the enabled methods: Cash, Credit card, Debit card and Wire transfer
+- Add additional information — a link that opens extra optional fields
+
+Once you've filled in the fields, click Add.
+
+<Frame>
+  ![Image](/images/image-369.png)
+</Frame>
+
+---
+
+## **Transfer between accounts**
+
+When you click Transfer between accounts, a form opens with the following fields:
+
+- Origin cash account (required) — a selector with the available accounts
+- Destination cash account (required) — a selector with the available accounts
+- Amount (required) — the amount to transfer
+- Date (required) — the date of the transfer, pre-filled with today's date
+- Exchange rate (required) — the secondary currency's exchange rate, pre-filled with the current value. It applies when you transfer between accounts in different currencies
+- Comment (optional) — a free-text field
+
+Once you've filled in the fields, click Transfer.
+
+<Frame>
+  ![Image](/images/image-370.png)
+</Frame>
+
+---
+
+## **Cash adjustments**
+
+Lets you record and look up accounting adjustments to the cash accounts (positive or negative corrections to the balance). It's used when there are differences in the cash count, exchange-rate adjustments or other corrections that aren't a regular income or expense.
+
+The left panel has the filters: start date, end date and a cash account selector. Below them are the Generate button and the PDF and Excel export buttons.
+
+The list shows the following columns: date (sortable), cash account, type, amount (sortable), comment and user.
+
+In the top-right corner there is an Add adjustment button to record a new adjustment.
+
+<Frame>
+  ![Image](/images/image-371.png)
+</Frame>
+
+---
+
+## **Insurer receivables**
+
+A module for managing what health insurers owe the clinic for treatments provided to their members. In other words, what the health insurers owe the clinic.
+
+The screen is organized into two tabs: Pending claims (active by default) and Payment history.
+
+The left panel has the filters: a health insurer selector (dropdown), status (Pending by default), start date and end date. Below them are the Generate button to run the query and a Record insurer payment button to record a payment received from the health insurer.
+
+When no health insurer has been selected, a message tells you to select one to see the pending claims.
+
+<Frame>
+  ![Image](/images/image-372.png)
+</Frame>
+
+---
+
+## **Clinician payments**
+
+A central record of every fee settlement paid to the clinic's clinicians.
+
+The top bar has filters: a clinician selector ("All clinicians" by default), from date and to date.
+
+The list shows the following columns: date (sortable), receipt no. (a link to the details, in the format #000001), clinician, how it was paid (Wire transfer, Cash, etc.), the number of treatments included, amount, status ("Paid"), who recorded it and actions (view details).
+
+<Frame>
+  ![Image](/images/image-373.png)
+</Frame>
+
+In the top-left corner there is a **New payment** button that opens a three-step guided wizard:
+
+1. **Clinician and period** — you choose the clinician and the date range to look at. The fields are: clinician (required, with search), completed from and completed to. A note explains that the dates filter by when the treatment was 100% completed, not by when the treatment was created. With no dates, all pending treatments are shown
+
+<Frame>
+  ![Image](/images/image-374.png)
+</Frame>
+
+2. **Treatments** — you select the services to pay from a list of that clinician's pending treatments, split into two tabs: Pending payment and Already paid
+3. **Confirm payment** — here you choose the **currency the clinician is paid in**. If it's different from the currency their treatments are recorded in, an **exchange rate** field also appears, along with a breakdown showing the conversion (for example, from US\$150 to \$150,000 ARS, based on the exchange rate entered). Then you set the source account and the payment method, and the settlement is processed
+
+The list is paginated and you can move through it with the page buttons or the "Go to" field.
+
+---
+
+## **My earnings**
+
+A personal view where each clinician can check their own earnings, payment status and the details of the treatments they performed. You open it from the user menu (top-right corner, by clicking your name). It doesn't appear as a section inside the Finances module but as a personal shortcut.
+
+It has a currency selector (ARS/USD) and date filters. A banner explains that if you get paid in more than one currency, each one is tracked separately and the amounts aren't converted or added together.
+
+Three summary islands are shown:
+
+- Earned — the total fees accrued in the period
+- Collected from patient — the amount already collected directly from patients
+- Pending collection — the amount that hasn't been paid out to the clinician yet
+
+The "Treatments" table shows the following columns: date, patient, treatment, payment (whether the patient has already paid or it's still pending), settlement (whether it has already been paid out to you or is still to be settled) and your fee.
+
+<Frame>
+  ![Image](/images/image-375.png)
+</Frame>
+
+---
+
+## **Advanced reports**
+
+The Advanced reports module offers a complete financial and management analysis with interactive charts, KPIs and artificial intelligence assistance. You open it from the banner on the main Finances screen or from Administration \> Reports. This section is only available to users with the Administrator role; other roles don't have access to it.
+
+The top bar has: three tabs (Finances, Management and Audit), a date range selector (start date — end date), a currency selector (main currency / secondary currency), a Hide amounts button to mask every amount on the screen, an Export button and the Oclü AI button.
+
+---
+
+**Finances tab** — economic indicators for the selected period:
+
+Period summary (with direct links to view the details of Income, Expenses and Balance):
+
+- Result — four cards: Income (green), Expenses (red), Result (the net difference) and Margin (profitability percentage)
+- Payments — two cards: Average payment (the average amount per transaction) and Transactions (the total number of operations)
+- Expenses — two cards: Operating Expenses and Clinician Payments
+
+Charts and tables below the KPIs:
+
+- Financial Trend — a line chart comparing Income, Expenses and Result month by month
+- Expense Composition — a pie (donut) chart that breaks down Operating expenses vs Clinician payments
+- Expenses Over Time — a chart of how expenses change month by month
+
+<Frame>
+  ![Image](/images/image-376.png)
+</Frame>
+
+---
+
+**Management tab** — non-financial indicators of how efficiently the clinic runs:
+
+Management indicators, grouped by block:
+
+- Patients — Seen, New and Returning
+- Treatment plans — Conversion rate (percentage approved out of those presented), Approved and Rejected
+- Calendar — Total appointments, Cancelled and Attendance rate
+
+<Frame>
+  ![Image](/images/image-377.png)
+</Frame>
+
+Charts below the indicators:
+
+- Practice Trends — charts of Patient Trends and Treatment plans over time
+
+---
+
+**Audit tab** — a log of calendar activity: who created, edited or deleted each appointment, when, and what changed. Deleted appointments can be restored right from there. It has filters by user, action and clinician, plus a search by patient or clinician.
+
+---
+
+**Oclü AI** — a built-in button that opens a window where Oclü's artificial intelligence assistant analyzes the financial data for the selected period. It shows progress messages ("Analysing financial data...", "Generating insights...") and then presents an analysis of financial trends that identifies seasonal patterns, strengths (such as a positive net result) and weaknesses (such as relying on just a few months to bring in significant income). You can ask for interpretations and recommendations based on the clinic's financial and management data.
+
+---
+
+**Export** — generates a two-page PDF report that includes: a header with the clinic's logo and details, the period summary with all the KPIs, a chart of income vs expenses trends, a chart of expense composition, a chart of how expenses changed, a full monthly income statement table, and a real-time financial data section with cash account balances and outstanding balances.
+
+---
+
+**Hide amounts** — lets you mask every monetary value on the screen, showing dots instead. It's useful for protecting sensitive information when other people can see the screen. Click the same button to show them again.
+
+---
+
+## **Dual-currency support**
+
+The module supports operations in two currencies: the clinic's main currency and a secondary currency. On the dashboard, the Balance and the Cash and bank accounts are always broken down by each currency that has movements, without you having to choose which one to look at. In the outstanding balances and credit balances reports, amounts are broken down by currency when the patient has activity in both currencies. Each cash and bank account is set up with a fixed currency that can't be changed later. When you record expenses, transfers between accounts in different currencies, or a payment to a clinician in a currency different from that of their treatments, the system asks for the current exchange rate.
+
+---
+
+## **Exports**
+
+Most sections let you export the information in two formats: PDF (a printable document) and Excel (an .xlsx file for analysis outside the system). The export buttons are in the left filter panel, below the Generate button. The Advanced reports module also lets you export the whole dashboard to PDF.
+
+---
+
+## If you don't see some of this
+
+Everything explained in this guide depends on your user's permissions. If a screen or a button is missing, or you can't edit something described here, first check with your clinic's administrator — most likely it's a matter of granting you the right permission. If you still can't after that, write to OCLÜ support and we'll help you.

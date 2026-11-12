@@ -1,0 +1,137 @@
+---
+title: "Treatment plan statuses and how they work"
+---
+
+Every treatment plan in OCLÜ has a **status** that shows which stage of the sales and clinical flow it's in. The status affects what you can do with the treatment plan and how it appears in lists and reports. Understanding the statuses helps you keep your treatment plan portfolio tidy and follow up efficiently. This guide shows you the six available statuses, how to move between them and what each one means.
+
+## When to use it
+
+- When you want to understand why a treatment plan has a certain status and what you can do from there.
+- When you need to change a treatment plan's status manually (for example, from Pending to Approved when the patient confirms).
+- When you're reviewing the portfolio and want to filter by status to see, for example, everything waiting for approval.
+- When a treatment plan is out of date and you want to mark it as Deleted or Closed to keep the list tidy.
+
+## How to get to a treatment plan's status
+
+1. In the left sidebar, click the Patients icon and open the patient's record.
+2. Click the **Treatment plans** tab.
+
+Each treatment plan's status is shown right in the list, as a colored tag next to "Status".
+
+<Frame>
+  ![Image](/images/image-443.png)
+</Frame>
+
+> Tip: from the list, right-click a treatment plan and choose **Change status** to move it to another status without opening its details.
+
+## The six statuses, one by one
+
+### 1. Draft (gray)
+
+**What it means:** the treatment plan has just been created but hasn't been sent to the patient yet. It's a work in progress.
+
+**How it gets to this status:** automatically, when you create the treatment plan. It's the initial status.
+
+**What you can do:** edit it freely (add or remove treatments, change prices, edit comments), send it to the patient, or delete it if you made a mistake.
+
+**When it's useful:** while you're putting the treatment plan together and haven't talked to the patient about costs yet.
+
+### 2. Pending (blue)
+
+**What it means:** the treatment plan was sent to the patient and you're waiting for their answer (approval or rejection).
+
+**How it gets to this status:** there are two ways:
+
+- **Automatic:** when you use **Send by email** or **Send via WhatsApp** from the treatment plan (or from the list's context menu), the system automatically changes the status to Pending. It shows you a message confirming it.
+- **Manual:** you can change it to Pending without sending it, for example if you showed it to the patient on screen or handed it over printed.
+
+**What you can do:** keep editing it, send it again, receive payments (which in practice usually means the patient approved it), or manually move it to Approved, Rejected or Deleted.
+
+**When it's useful:** after you've sent it and while you wait for an answer. It helps you filter the portfolio and see every treatment plan you're following up on.
+
+### 3. Approved (green)
+
+**What it means:** the patient accepted the treatment plan and the plan is going ahead.
+
+**How it gets to this status:** **always manually.** You change it to Approved when the patient confirms, whether verbally, by message, or when they pay the first deposit.
+
+**What you can do:** receive payments, book appointments linked to the treatment plan, record clinical notes, move the treatments forward (with the **0%, 50% and 100%** progress buttons) and manually move it to Closed when everything is finished.
+
+**When it's useful:** this is the "active" status for most treatment plans being carried out.
+
+### 4. Rejected (yellow)
+
+**What it means:** the patient decided not to accept the treatment plan.
+
+**How it gets to this status:** **always manually.** You mark it as Rejected when the patient tells you.
+
+**What you can do:** it stays visible in the list, but you can't add payments or clinical notes to it. It serves as a historical record.
+
+**When it's useful:** to make it clear in the portfolio why a treatment plan didn't go ahead, instead of deleting it. It helps you analyze later why treatment plans get rejected and improve how you present them.
+
+### 5. Deleted (red)
+
+**What it means:** the treatment plan was marked as invalid. That may be because you made a mistake when creating it, because the conditions changed, or because it has to be redone from scratch.
+
+**How it gets to this status:** **always manually.** Before deleting it, **you'll probably have to void payments or delete linked clinical notes** if there was any activity. Whether you can void and delete depends on your permissions.
+
+**What you can do:** it stays on record, but you no longer work with it.
+
+**When it's useful:** when something went wrong (a mistake in the treatments, a change of plan, a duplicate) and you're going to create a new treatment plan from scratch.
+
+### 6. Closed (gray)
+
+**What it means:** all the treatments in the treatment plan have been completed. It's the "successfully finished" status.
+
+**How it gets to this status:** **always manually and optional.** You choose to mark it as Closed when all the treatments are at 100% and the remaining balance is zero.
+
+**What you can do:** it stays as a historical reference. Useful for productivity reports, comparing treatment times, etc.
+
+**When it's useful:** closing completed treatment plans isn't required. It's just an organizational marker. Some clinics close them neatly; others leave them as Approved indefinitely.
+
+## Flow summary
+
+- **The only automatic change:** Draft → Pending when you send it by email or WhatsApp.
+- **Every other change is manual.**
+- **Deleted** can be applied from any status, but it's best to void payments and delete clinical notes first.
+
+## Common errors
+
+**I can't change the status to Approved:** check your permissions. If you don't have permission to change statuses, the dropdown will appear disabled. Ask your administrator to grant you the permission.
+
+**When I sent the treatment plan, it didn't change to Pending:** make sure you used **Send by email** or **Send via WhatsApp** (from the treatment plan or from the list's context menu). The automatic change is triggered by those two sends.
+
+**I need to change an Approved treatment plan back to Draft:** that's not the cleanest option. If the treatments haven't been carried out yet, you can edit it directly without going back to Draft. If there have already been payments or progress, it's better to create a new treatment plan and delete the old one.
+
+**The status says Pending but the patient already paid something:** record the payment; that doesn't change the status automatically. If you want to show that it's approved, change it manually to Approved.
+
+**I can't delete a treatment plan:** if it has payments received or clinical notes, the system may ask you to void those payments and delete the clinical notes first. Do it in that order.
+
+## Tips and variations
+
+- **Recommended workflow:** Draft → send by email or WhatsApp → automatically Pending → change manually to Approved or Rejected depending on the answer → Closed when all the treatments are finished.
+- **To tidy up the portfolio:** use the **Filter by status** filter in the patient's treatment plan list to see only the Approved ones (the active ones being carried out), the Pending ones (the ones waiting for an answer), or the Drafts (the ones still being put together).
+- **Sales audit:** regularly checking how many treatment plans have been Pending for more than X days helps you spot patients who need a follow-up (a call, a new send).
+- **Closed vs. Approved:** if you don't mind having every finished treatment plan as Approved, you can skip the Close step. But if you want a clean list of "active" ones, mark them as Closed when they're finished.
+
+## Estimated time
+
+5 to 10 seconds to change a status manually.
+
+## Frequently asked questions
+
+**Can I undo a status change?** Yes, as long as you have permissions. Go back to the previous status manually from the dropdown.
+
+**Does the patient see their treatment plan's status?** If they have the patient portal enabled, yes, they see the updated status. If not, only your team sees it internally.
+
+**Is there an automatic notification when the status changes?** No. Status changes are internal. If you want to let the patient know, send them a separate message.
+
+**Can I create custom statuses?** No. The six statuses are fixed in the system. Unlike appointment statuses, they can't be customized.
+
+**What happens if I delete an Approved treatment plan with payments?** The system may ask you to void the payments first. Voiding doesn't refund any money; it only invalidates the record. Afterwards you can reassign that payment to another treatment plan.
+
+**Do the statuses look different?** Yes. Each status has a color: Draft (gray), Pending (blue), Approved (green), Rejected (yellow), Deleted (red), Closed (gray). In the list they appear as colored tags that are easy to tell apart.
+
+## Permissions
+
+Changing statuses, deleting treatment plans and voiding payments require specific permissions. Set them up under Administration → Staff → Permissions. If the Status dropdown appears disabled or you don't see the Delete button, check with your administrator.

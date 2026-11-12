@@ -1,0 +1,36 @@
+---
+title: 'API Introduction'
+description: 'Connect OCLÜ with n8n, Make, Zapier or your own system.'
+---
+
+The **OCLÜ public API** lets you connect your clinic with external systems: automate appointments, sync patients, record expenses and read your schedule from n8n, Make, Zapier or your own software.
+
+## Authentication
+
+Generate your **API key** from your dashboard (**Settings → API Keys**). It's shown only once. Send it with every request:
+
+```
+Authorization: Bearer oclu_live_xxxxxxxxxxxxxxxxxxxx
+```
+
+Each key has one permission level: **Read only** or **Read and write**.
+
+## Location (Current-Org-Id)
+
+The appointment, patient and expense endpoints require the `Current-Org-Id` header with the location's ID. Look up your locations with [`GET /me`](/api-reference/general/verificar-conexión).
+
+```
+Current-Org-Id: 1
+```
+
+## Things to keep in mind
+
+- **Clinic local time:** dates and times are not UTC. For appointments, the date is `DD-MM-YYYY` and the time is `HH:MM`.
+- **No clinical data:** the API exposes the schedule, appointments and contact details. Never the clinical record.
+- **No payments:** invoicing and patient payments aren't available in this version. You can, however, record expenses.
+- **Rate limit:** 90 requests per minute per API key.
+- **Audit:** all activity is logged.
+
+## Check your connection
+
+Try `GET /me` with your API key: it returns your tenant, the available locations and the key's permissions.

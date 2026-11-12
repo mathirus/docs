@@ -1,0 +1,127 @@
+---
+title: "How to send appointment notices and reminders"
+description: "Let the patient know they have an appointment booked, or remind them before the day, by email or WhatsApp."
+---
+
+OCLÜ lets you notify the patient about their appointment in two ways: automatically when you create or edit the appointment (by email and/or WhatsApp), or manually from the appointment's detail panel, where besides an email notice you have three different kinds of WhatsApp notice. This guide covers both and shows you when each one is the better choice.
+
+<iframe src="https://www.youtube.com/embed/bXVfYcN6sUg" title="YouTube video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+## When to use it
+
+- Right after you create a new appointment and want the patient to receive the confirmation instantly.
+- One or two days before the appointment, to remind the patient to come.
+- When a patient asks you whether they have an appointment and you want to send them the details in writing.
+- When you reschedule an appointment and want to let them know the new time.
+- When you want to keep a written record of the confirmation, instead of a phone call.
+
+## The difference between a notice and a reminder
+
+- **Notice:** sent at the moment you create or edit the appointment. It confirms the time slot is booked.
+- **Reminder:** sent later, usually one or two days before the appointment. It brings the appointment back to the patient's mind and reduces the no-show rate.
+
+Both are manual or semi-automatic actions that you trigger from the system. OCLÜ doesn't send reminders automatically on its own, unless your clinic has set up a separate Automations flow.
+
+## Prerequisites
+
+- The appointment must already be created (or be in the process of being created). If you don't know how to create an appointment, first read the **How to book an appointment** guide.
+- The patient must have their email entered in their personal record to receive messages by email. For WhatsApp, they need their phone number entered with the correct country code. Check it in **Patients → patient record → Personal details → Information → Contact**.
+
+## Option 1: Notify when creating or editing the appointment
+
+This is the fastest way. It lets you confirm the appointment to the patient as soon as you book it.
+
+### How to get there
+
+1. Log in to OCLÜ.
+2. In the left sidebar, click the calendar icon to open the **Daily view**.
+3. Go to the day of the appointment and open the **Add appointment** form (by clicking an empty cell and choosing **New appointment**, or with the `+` button at the top right of the grid).
+
+### Steps
+
+1. Fill in the appointment details as usual: patient, clinician, time, description, etc.
+2. Before saving, look at the end of the form. You'll see two checkboxes: **Send email notification now** and **Send WhatsApp notification now**.
+3. Tick the one or ones you want to use.
+4. Click the **Add** button to save the appointment.
+5. As soon as it's saved, OCLÜ sends the patient the appointment details (date, time, clinician, modality, description) through the channels you ticked.
+
+> The same checkboxes appear when you edit an existing appointment. If you had already created it without notifying and want to let the patient know when you save the change, tick them before clicking **Save changes**.
+
+## Option 2: Notify the patient from the appointment details
+
+Useful for sending a notice one or two days before the appointment, or when you created the appointment without notifying and later decided to let the patient know.
+
+### How to get there
+
+1. Open the calendar's **Daily view**.
+2. Go to the day of the appointment.
+3. Click the appointment block in the grid. A side panel titled **Appointment** opens on the right, with the **Notify the patient** block below the basic information.
+
+<Frame>
+  ![Image](/images/image-423.png)
+</Frame>
+
+### Email notice
+
+Click **Send email**. OCLÜ sends the email to the patient right then, with the appointment details.
+
+### WhatsApp notice — three options
+
+The **WhatsApp** button opens a menu with three different options:
+
+- **Appointment notice** _(manual)_ — just the appointment details, without asking for a reply. It opens your personal WhatsApp with the message already written, for you to send yourself.
+- **Ask for confirmation** _(manual)_ — the same as the previous one, but it adds a link so the patient can confirm or cancel the appointment with one click. It also opens your personal WhatsApp.
+- **Send confirmation reminder** _(automatic)_ — sent directly from the clinic's official WhatsApp number (not yours), with buttons for the patient to reply. It's only enabled when a reminder is due: you already asked for confirmation, the patient hasn't replied yet (they haven't confirmed or cancelled, either by WhatsApp or by email), you haven't already sent a reminder once, the appointment hasn't happened yet, and your clinic has the WhatsApp add-on with the template approved by Meta. If any of these conditions isn't met, the option stays disabled.
+
+<Frame>
+  ![Image](/images/image-424.png)
+</Frame>
+
+> The two "manual" buttons open your personal WhatsApp — you are the one sending the message. Only **Send confirmation reminder** goes out automatically from the clinic's official number.
+
+> Make sure the patient's phone number has the right country code (for example \+54 for Argentina). Without a valid country code, sending may fail.
+
+## Expected result
+
+The patient receives the message on the corresponding channel, with the date, time, clinician, modality and description of the appointment. The detail panel shows a mark of when the last notice was sent (for example "Patient notified by email a day ago"). You can send it again as many times as you need, except for "Send confirmation reminder", which is sent only once per appointment.
+
+## Common errors
+
+**The email button is disabled:** the patient has no email in their record. Add it in Patients → record → Personal details → Contact and try again.
+
+**The WhatsApp buttons are disabled:** the patient has no phone number, or it's missing the country code. Edit it in their record and add the correct country code (for example \+54).
+
+**"Send confirmation reminder" is disabled:** check the conditions — you need to have asked for confirmation before, the patient must not have replied yet, you must not have already sent a reminder once, the appointment must not have happened yet, and the clinic must have the WhatsApp add-on with the template approved by Meta.
+
+**The patient says they didn't get the email:** check that the email address has no typos. Ask them to check their spam and promotions folders. Some providers (especially corporate accounts) block automated emails.
+
+**I sent several notices and the patient got several messages:** each click on a manual button triggers a new send. The system has no duplicate protection on those two buttons. Use your judgment: the usual is one when confirming and another 24 to 48 hours before.
+
+## Tips and variations
+
+- **Combine channels:** the most common approach is email for the initial confirmation and WhatsApp for the day-before reminder. You get the formality of the first and the immediacy of the second.
+- **Ideal timing for the reminder:** between 24 and 48 hours before the appointment. Any closer and the patient may not read it in time; any earlier and they forget.
+- **Leave the follow-up to the system:** if you already asked for confirmation and the patient didn't reply, wait for "Send confirmation reminder" to become enabled instead of resending the same manual notice — that button goes out from the clinic's official number and usually gets a better response rate.
+- **New patients' appointments:** if it's their first appointment, it's a good idea to add a phone call on the same day on top of the email/WhatsApp.
+
+## Estimated time
+
+10 to 20 seconds per manual send.
+
+## Frequently asked questions
+
+**How many times can I send a manual notice?** As many as you want. Each click on **Send email**, **Appointment notice** or **Ask for confirmation** triggers a new send. Use your judgment so you don't overwhelm the patient. **Send confirmation reminder** is the exception: it's sent only once.
+
+**Does OCLÜ send automatic reminders?** The two notification checkboxes when creating/editing the appointment are manual (you tick them). "Send confirmation reminder" is automatic in the sense that it goes out from the clinic's official number, but it's only enabled under the conditions described above. If your clinic set up separate Automations, there may be other scheduled sends; check with your administrator.
+
+**Can I customize the text of the email or the WhatsApp message?** The clinic defines the template from Administration → Templates. Each staff member sends with the configured template; the body can't be edited at the moment of sending.
+
+**What happens if I reschedule an appointment that was already notified?** The notice already sent isn't deleted. Resend it manually with the new time, or tick the notification checkboxes when you save the change.
+
+**Can the patient confirm attendance from the email or WhatsApp?** By email, it depends on the configured template. By WhatsApp, **Ask for confirmation** and **Send confirmation reminder** do include the option to confirm or cancel (with a link or with buttons, depending on the case); **Appointment notice** is for information only.
+
+**The difference between email and WhatsApp:** email stays as a written record and is asynchronous. WhatsApp is more immediate and has a higher open rate. The most common approach is to combine them depending on the urgency.
+
+## Permissions
+
+Whether you see the notice buttons depends on the permissions assigned to the staff member from Administration → Staff → Permissions. If you don't see the **Notify the patient** block or some of its options, check your settings.

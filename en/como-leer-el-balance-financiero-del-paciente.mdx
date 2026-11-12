@@ -1,0 +1,124 @@
+---
+title: "How to read the patient's financial Balance"
+---
+
+The **Balance** tab in the patient's record shows you the full history of financial movements: the treatments the patient was charged for, the payments you received, the voided payments. It's the screen you go to whenever you want to know how much a patient owes, what they paid and when. This guide explains how to read each column and what each type of movement means.
+
+## When to use it
+
+- When a patient asks how much they owe or how much they've paid.
+- When you need to see the receipt for a specific payment.
+- When you want to void a payment (see the **How to void a payment** guide).
+- When you're doing a financial audit of a patient.
+- When you want to see whether a patient has a credit balance or a debt in a specific currency (ARS or USD).
+
+## How to get to this section
+
+1. Sign in to OCLÜ.
+2. In the left sidebar, click the Patients icon.
+3. Find the patient and click their name.
+4. In the record, click the **Balance** tab (the last one, to the right of Treatment plans).
+
+<Frame>
+  ![Image](/images/image-271.png)
+</Frame>
+
+## What the screen shows
+
+You'll see a table with all of the patient's movements in chronological order (most recent at the top). It has a movement search and the following columns:
+
+- **Date:** when the movement happened.
+- **Detail:** a description of the movement. It can be:
+  - The name of a treatment that was charged (e.g. "Tratamiento de Conducto Unirradicular", "Composite Nanohíbrido Anterior"). It appears in color and sometimes as a clickable link to the treatment plan.
+  - A green **"Payment received"** tag when the patient paid something.
+  - A struck-through **"Payment voided"** tag when a payment was canceled.
+- **Amount:** the value of the movement.
+  - Negative (red) when it's a debt (a treatment charged).
+  - Positive (green) when it's a payment received.
+  - Struck through when it's a voided payment (it doesn't affect the balance).
+- **Exchange rate:** if the movement involves two currencies (for example a payment in USD applied to a treatment plan in ARS), the exchange rate used appears here. If there's no conversion, it shows a dash.
+- **User:** the staff member who recorded the movement. For some payments it may be blank if the payment predates tracking.
+- **ARS balance:** the patient's running balance in pesos up to that movement.
+- **USD balance:** the running balance in dollars.
+- **Actions:** two icons on each payment row.
+
+## The types of movement, one by one
+
+### 1. Treatment charged (debt)
+
+It appears in red with a negative amount (for example "−\$400.000,00 ARS"). In the Detail column you'll see the name of the treatment the patient was billed for (sometimes as a link to the treatment plan it was charged to).
+
+> This means: the patient was charged for the treatment but hasn't paid for it yet. It increases their debt.
+
+### 2. Payment received
+
+It appears with a green "Payment received" tag in the Detail column and a positive green amount (for example "\+\$400.000,00 ARS").
+
+> This means: the patient paid that amount. It reduces their debt. If it's more than they owed, it remains as a credit balance.
+
+### 3. Payment voided
+
+It appears struck through in gray, with a "Payment voided" tag and the original payment amount also struck through.
+
+> This means: that payment was canceled in the records. **It doesn't affect the patient's balance** (it's as if it never happened, but it stays visible for auditing). See the **How to void a payment** guide to understand the flow.
+
+## Actions for each payment
+
+In the **Actions** column on the right, each **payment received** has two icons:
+
+- **Document icon (View receipt):** opens the payment receipt in a new window or downloads it. Useful for giving it to the patient or filing it.
+- **Circle with an X icon (Void):** starts the voiding flow. It asks for a reason and the voiding is recorded. There's a dedicated guide for this flow.
+
+Both icons are neutral gray — they don't have different colors.
+
+> A payment **can't be voided** if fees have already been paid out to the clinician based on it. In that case, contact support.
+
+> **Treatments charged** (red rows) and **voided payments** (struck through) don't have these actions, because they aren't individually payable items.
+
+## How to read the ARS balance and USD balance columns
+
+The last two columns show you the patient's running balance up to that movement, split by currency:
+
+- **ARS balance:** adds up all the movements in pesos.
+- **USD balance:** adds up all the movements in dollars.
+
+You'll see on each row how the balance changes:
+
+- If the balance is negative (red), the patient owes money.
+- If it's zero, they're up to date.
+- If it's positive (green), they have a credit balance.
+
+> If the patient has treatment plans in both currencies, look at both columns to understand their full situation. One can be at zero and the other in debt.
+
+## How to find a specific movement
+
+If the list is long, use the **movement search** at the top left. Type part of the name of the treatment or item and the list is filtered instantly.
+
+## Expected result
+
+The Balance tab gives you a complete, chronological view of the patient. For any financial question, this is the reference screen.
+
+## Common errors
+
+**I don't see the Actions icons on some rows:** the icons only appear on payment received rows. Treatments charged and voided payments aren't individual actions.
+
+**The balance doesn't match what I expected:** check whether there are voided payments (struck through) that you're counting by mistake. Voided payments don't affect the final balance.
+
+**The patient says they paid something that doesn't show up:** check the date. If the payment was entered by another staff member, it may be on a different date. If it doesn't show up at all, the payment wasn't recorded and needs to be entered.
+
+**A USD balance shows up but the patient never paid in dollars:** check the patient's treatment plans. If they have a treatment plan in USD even though you've only entered payments in ARS, the USD balance shows the debt in that currency until you adjust it.
+
+## Tips and variations
+
+- **Before taking a payment from a patient:** open Balance to see whether they have a credit balance (it can be applied to the payment) or a previous debt (you add it to today's payment).
+- **To hand out receipts in bulk:** filter by date or item if you need several receipts in a row. Each one is downloaded individually with the document icon.
+- **Monthly audit:** open the Balance of patients you suspect have inconsistencies (for example, a very old debt with no movements). The full history helps you understand what happened.
+- **If you're going to void several payments:** do them one at a time from the void icon. Voiding asks for a reason (at least 10 characters) each time.
+
+## Estimated time
+
+10 to 30 seconds to open and check a patient's balance. 1 minute if you're going to download a specific receipt.
+
+## Permissions
+
+Viewing the balance is usually available to all staff with access to the patient's record. The View receipt and Void payment actions depend on the permissions assigned in Administration → Staff → Permissions. If you don't see the actions icons, check with your administrator.

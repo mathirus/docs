@@ -1,0 +1,211 @@
+---
+title: How to create a treatment plan
+description: Learn how to put together a treatment plan for a patient with the basic details, treatments from the odontogram, discounts and installments, all on a single screen.
+---
+
+This guide shows you how to create a treatment plan from the patient's profile. Unlike other screens in the system, it isn't a multi-step wizard: it's **a single screen** with sections you fill in from top to bottom. Once it's created, the treatment plan is saved as a Draft, and you can send it to the patient, take payments against it and move treatments forward as they're carried out.
+
+## When to use it
+
+- When you need to quote a patient for a treatment or a set of treatments.
+- When you're starting a treatment plan (orthodontics, rehabilitation) that will be carried out over several sessions.
+- When a new patient comes in for their first visit and you put together the plan you're going to follow.
+- When the treatment plan in the odontogram is already defined and you need to put a price on it.
+
+## Full treatment plan vs. express treatment plan
+
+Before you get to the form, OCLÜ asks you what kind of treatment plan you want to create:
+
+- **Full treatment plan** — "Odontogram, instalments, templates and media". This is the one this guide covers: the full screen, with the odontogram, installment payments, comment templates and attached files.
+- **Express treatment plan** — "Quick search and one-click save". A lightweight window for entering and taking payment quickly without going through the odontogram. It has its own shorter flow, designed for one-off treatments that don't need visual planning.
+
+<Frame>
+  ![Image](/images/image-434.png)
+</Frame>
+
+## Before you start
+
+- The patient must already be in the system.
+- The **treatment lists** and their prices must be set up under Administration → Treatments. Treatment plans are built by selecting treatments from those lists.
+- At least one clinician must be added in Staff so you can assign them to the treatment plan.
+
+## How to get to this section
+
+1. Sign in to OCLÜ.
+2. In the left sidebar, click the Patients icon.
+3. Find the patient and click their name to open their profile.
+4. On the patient's profile, click the **Treatment plans** tab.
+5. At the top right, click **Add treatment plan** and choose **Full treatment plan**.
+
+> In the breadcrumb at the top you'll see **Home → Patients → Treatment plans → New treatment plan**.
+
+## Sections of the screen
+
+### Treatment plan details
+
+This is the first card. Only the clinician is required.
+
+**Treatment plan name** (optional): a short, descriptive name. For example "Full-mouth plan", "Lower arch work", "Orthodontics phase 1". If you leave it empty, it's saved as "Treatment plan".
+
+**Clinician assigned to the plan** (required): choose from the dropdown the professional responsible for the plan. Payments received and payments to clinicians can later be filtered by this field.
+
+**Valid until** (optional): pre-filled with the default your clinic has set (for example, 7 days from today). It's the date until which the treatment plan is valid. You can change it by typing a new date or using the calendar.
+
+### Treatments
+
+This is the most important card. It has the odontogram at the top and, below it, the table of treatments you add.
+
+**The odontogram:**
+The teeth are organized into the **Primary dentition odontogram** and **Permanent dentition odontogram** tabs (the latter is selected by default). Further down are sextants (S1 to S6), arches (AS, AI) and full mouth (AA), which are used for general treatments that aren't specific to one tooth.
+
+The legend at the top shows the odontogram's color codes:
+- **Diagnosis:** Pathology (purple) and Healthy (red).
+- **Treatment:** In progress (yellow) and Treated (green).
+
+<Frame>
+  ![Image](/images/image-435.png)
+</Frame>
+
+**Adding a treatment:**
+Click **Add treatment**, at the top right of the card. The **Add treatment** window opens, with two ways to search:
+
+- **Quick search** — a single search box by code or name. As you type, it shows results grouped by list, with the price and a **+** button to add them directly.
+- **Classic selector** — three cascading dropdowns: **Select a list** → **Select category** → **Select treatment**. Your clinic sets up the lists under Administration → Treatments → Lists.
+
+<Frame>
+  ![Image](/images/image-436.png)
+</Frame>
+
+Once you've picked the treatment (either way), click **Confirm selection**. You can repeat the process to add as many as you need before closing the window.
+
+> **Linking the treatment to a specific tooth:** some treatments require you to indicate the tooth. After adding it, click the tooth on the odontogram to link it. Others (such as a preventive module or a full-mouth whitening) are full mouth and don't need a tooth.
+
+Each treatment you add goes into the table, with the columns: Category, Treatment, Surfaces, Tooth, Symbol, Patient price (and Insurer price if any treatment has a health insurer linked to it) and Actions (edit, duplicate or delete that row).
+
+<Frame>
+  ![Image](/images/image-437.png)
+</Frame>
+
+> **Important:** you can't create the treatment plan unless at least one treatment has been added. The **Create treatment plan** button stays disabled until you add the first one.
+
+**Discounts:**
+Once at least one treatment has been added, the **Discounts** button appears next to the total. It opens a window where you can:
+
+- **Apply to all** — a discount in % or $ applied to all treatments at once (**Apply** button), or **Remove all** the discounts you've entered.
+- **Adjust each treatment separately** — each row in the table has its own discount field in % or $, with the **Final** column showing the price with the discount already applied.
+
+<Frame>
+  ![Image](/images/image-438.png)
+</Frame>
+
+Confirm with **Save changes**.
+
+### Instalment payments
+
+An optional card with a switch to turn it on. It's only available if **all** the treatments in the treatment plan are in the same currency.
+
+When you turn it on, you set:
+
+- **Number of instalments** — with a stepper (+/−).
+- **With deposits** — an optional switch to separate a larger initial payment from the rest of the installments.
+- **First instalment date** — from there on, OCLÜ builds the rest of the due-date schedule.
+- **Manual split** — a switch to edit the amount of each installment yourself instead of letting the system split it into equal parts.
+
+The sum of all the installments in the **Payment plan** has to match the treatment plan's total.
+
+<Frame>
+  ![Image](/images/image-439.png)
+</Frame>
+
+### Extras
+
+The last card, with two optional blocks:
+
+- **Media** — **Link from gallery** (choose files already uploaded for the patient) or **Upload file** (upload a new one directly here).
+- **Comments** — free text with the same rich-text editor used in the rest of the system, with a **Use a template…** selector if your clinic has comment templates saved under Administration → Templates.
+
+<Frame>
+  ![Image](/images/image-440.png)
+</Frame>
+
+Use comments to:
+- Explain to the patient what the plan includes ("This treatment plan covers the restorations in the upper anterior area...").
+- Clarify payment terms.
+- Note technical specifications for the clinician who will carry out the treatment.
+
+### Saving
+
+At the bottom of the screen, click **Create treatment plan**.
+
+## Expected result
+
+OCLÜ saves the treatment plan and takes you to the patient's Treatment plans tab. You'll see the new treatment plan in the list, identified by its number (assigned automatically, for example #314) and its name. Its initial status is **Draft**.
+
+In the list, each treatment plan has three quick icons (edit, duplicate, change status) and, if you **right-click** the card, a menu with more options: **View treatment plan**, **Open in a new tab**, **Send by email**, **Send via WhatsApp**, **Export PDF**, **History**, **Edit**, **Duplicate** and **Change status**.
+
+<Frame>
+  ![Image](/images/image-441.png)
+</Frame>
+
+To take payment, use the **Take payment** button above the list: **Apply payment to treatment plans** (applies the payment to treatment plans with a balance due) or **Add patient credit** (patient credit not yet assigned to a specific treatment plan).
+
+<Frame>
+  ![Image](/images/image-442.png)
+</Frame>
+
+## Common errors
+
+**The "Create treatment plan" button is disabled:** you're trying to save without any treatments. Click **Add treatment** and add at least one.
+
+**I can't find the treatment I need:** try Quick search first (it searches by code or name across all lists at once). If it doesn't show up there either, it may need to be added to the right list under Administration → Treatments.
+
+**The patient doesn't appear to assign:** you're creating the treatment plan from the right place (you're already on their profile). If the Clinician assigned to the plan field doesn't show any clinicians, check that they're added and enabled under Administration → Staff.
+
+**I can't turn on Instalment payments:** check that all the treatments in the treatment plan are in the same currency — the switch is disabled if there's a mix of ARS and USD.
+
+**The sum of the installments doesn't match the total:** if you used Manual split, check the amounts row by row. If not, turn Instalment payments off and on again so the system splits them automatically again.
+
+## Tips and variations
+
+- **Two currencies:** treatment plans are created in ARS or USD depending on the treatment list you use. If you work with both, it's a good idea to keep separate lists (ARS list, USD list) to avoid confusion — and keep in mind that Instalment payments only works if the whole treatment plan is in a single currency.
+
+- **Multiple treatment plans per patient:** the same patient can have several open treatment plans at once (for example, one for orthodontics and another for cosmetic work). Each one is paid and moves forward separately.
+
+- **Comment template:** if you always write the same text in Comments (payment terms, warranties, etc.), save it as a template under Administration → Templates and choose it later from **Use a template…**.
+
+- **Short vs. long validity date:** your clinic's default pushes the patient to decide quickly and keeps the price up to date. For large treatments (full orthodontics) you can extend it manually.
+
+- **Apply discounts before sending:** if you're running a "20% off for paying in full" promotion, set it up from **Discounts** before sending the treatment plan. Fixing it afterwards treatment by treatment is more work.
+
+- **When to use Express instead:** if you only need to enter one or two one-off treatments and take payment quickly, with no odontogram or installments, the Express treatment plan saves you steps.
+
+## Estimated time
+
+2 to 4 minutes for a small treatment plan (1-3 treatments). 8 to 12 minutes for a full plan with many treatments, discounts and installments.
+
+## Frequently asked questions
+
+**Can I change the treatments after creating it?**
+Yes. From the patient's Treatment plans tab, click the edit icon (or "Edit" in the context menu). Keep in mind that if the treatment plan has already received payments, there may be some limitations.
+
+**Does the patient see the individual price of each treatment or only the total?**
+By default they see the full breakdown (list of treatments with prices and the total).
+
+**Can I create a treatment plan without going through the odontogram?**
+The Treatments section always requires at least one treatment. But full-mouth treatments (preventive module, whitening) don't need to be linked to a specific tooth. If you don't even want to see the odontogram, use the Express treatment plan instead.
+
+**How do I apply a deposit or advance payment?**
+Once the treatment plan is created, use the **Take payment → Apply payment to treatment plans** button from the Treatment plans tab to enter the payment against it.
+
+**Can I duplicate an existing treatment plan so I don't have to rebuild it?**
+Yes, with the duplicate icon in the list, or with **Duplicate** in the context menu (right-click).
+
+**Can the treatment plan be printed or downloaded?**
+Yes, with **Export PDF** in the list's context menu (right-click the treatment plan).
+
+**Can I send the treatment plan to the patient directly on WhatsApp?**
+Yes, with **Send via WhatsApp** in the same context menu — along with the **Send by email** option.
+
+## Permissions
+
+Being able to create treatment plans, edit them, apply discounts or change prices depends on the permissions assigned to the staff member under Administration → Staff → Permissions. If you don't see the **Add treatment plan** button or some field on the screen, check with your administrator.

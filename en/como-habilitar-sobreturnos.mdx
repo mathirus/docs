@@ -1,0 +1,134 @@
+---
+title: "How to enable overbooking"
+---
+
+By default, OCLÜ doesn't let you book two appointments at the same time for the same clinician or the same treatment room. That prevents double-booking mistakes. But there are situations where you do need to allow them to overlap: when the clinician can see two patients at the same time, when a treatment room is shared by several doctors during the same shift, or when your clinic routinely handles "overbooking". This guide shows you how to enable overlapping, in the two places where it's set up: per clinician and per treatment room.
+
+## When to use it
+
+- When the clinician sees one patient while the assistant gets the next one ready in another chair.
+- When a treatment room is shared by several clinicians during the same shift, using different chairs.
+- When the clinic accepts overbooking as a policy so it doesn't have to turn away urgent patients.
+- When a clinician does short consultations alongside other care (a quick check-up while waiting).
+
+> Important: if you turn on overlapping, **calendar blocks no longer work as a hard barrier**. Anyone can book on top of a block. Keep this in mind before you enable it.
+
+## The two settings
+
+OCLÜ has two different places to enable overlapping. They work independently: you can have one turned on and the other off, depending on how your clinic works.
+
+| Setting | Where it's done | What it's for |
+| --- | --- | --- |
+| Per clinician | Administration → Staff → the clinician's Schedule settings | Lets that clinician receive more than one appointment at the same time |
+| Per treatment room | Administration → Clinics → Set up the location's treatment rooms → edit treatment room | Lets the treatment room receive more than one appointment at the same time (for different clinicians in the same room) |
+
+If you want full overlapping, turn on both. If you only want to allow overbooking for the clinician but not sharing the treatment room, turn on only the first one. And so on.
+
+---
+
+## Setting 1: Per clinician
+
+Lets a clinician receive two or more appointments at the same time.
+
+### How to get there
+
+1. In the left sidebar, expand the **Administration** menu and click **Staff**.
+2. In the staff list, find the clinician you want to set up.
+3. In the clinician's **Actions** column, click the calendar icon ("Set schedules").
+
+### Steps
+
+1. In the clinician's **Schedule settings**, below the **Working hours and breaks** table, you'll see a card with the **Allow overlapping appointments** switch ("Several appointments can be booked at the same time for this clinician.").
+2. Turn it on.
+3. Click **Save changes**, at the top right of the screen.
+
+<Frame>
+  ![Image](/images/image-432.png)
+</Frame>
+
+### Result
+
+From the moment you save, OCLÜ will allow more than one appointment to be booked at the same time for that clinician. If you drag an existing appointment onto another one's time slot, it will allow that too.
+
+> To turn it off: uncheck the checkbox and save. Appointments that already overlapped stay where they are, but you won't be able to add new overlapping ones until you turn it back on.
+
+---
+
+## Setting 2: Per treatment room
+
+Lets a treatment room receive two or more appointments at the same time, possibly with different clinicians.
+
+### How to get there
+
+1. In the left sidebar, expand the **Administration** menu and click **Clinics**.
+2. In the list of clinics, find the clinic where the treatment room is.
+3. In the clinic's **Actions** column, click the actions menu.
+4. Go to **Set up the location's treatment rooms**.
+
+### Steps
+
+1. The list of treatment rooms already shows, in the **Overlapping appointments** column, whether each room is **Allowed** or **Not allowed**.
+2. To change it, click the room's **Edit** icon (pencil).
+3. In the edit form you'll find the **Allow overlapping appointments** switch.
+4. Turn it on.
+5. Confirm with **Save**.
+
+<Frame>
+  ![Image](/images/image-433.png)
+</Frame>
+
+### Result
+
+OCLÜ will allow the treatment room to receive more than one appointment at the same time, regardless of which clinician each appointment belongs to.
+
+---
+
+## What it looks like when overlapping is on
+
+In the calendar grid, overlapping appointments appear side by side within the same clinician column (or treatment room column, depending on the view you have on). If there are three or more, OCLÜ shows them squeezed together and you can click any of them to open its details.
+
+<Frame>
+  ![Image](/images/image-257.png)
+</Frame>
+
+## Common errors
+
+**I turned on the checkbox but the system still rejects the overbooked appointment:** check that you saved the changes. Some browsers don't apply the change unless you explicitly click Save. Also check that you're turning on the checkbox in the right place: per clinician AND per treatment room are separate settings.
+
+**I turned it on per clinician but the appointment is still rejected:** the conflict may be with the treatment room, not the clinician. Turn on the treatment room option too.
+
+**I can't find the checkbox in Schedule settings:** make sure you look at the **Calendar settings** section at the very top. Sometimes it's out of view because of the scroll.
+
+**After turning it on, calendar blocks stopped working:** that's expected. With overlapping on, blocks aren't a hard barrier. If you need them to be strict, turn off overlapping for that clinician or treatment room.
+
+**I turned it on by mistake and now there are two appointments at the same time that I didn't want:** turn off the checkbox to prevent future overlaps, and from the calendar manually reschedule the conflicting appointments to different times.
+
+## Tips and variations
+
+- **Overbooking policy:** decide internally when it makes sense to turn on overlapping. "I can take an occasional urgent extra appointment" is not the same as "I work in parallel every day". For the first case, turn it on only when you need it; for the second, leave it on permanently.
+- **Combining with treatment rooms:** if your clinic uses treatment rooms, it's best to have a consistent policy between clinician and room. If you turn on overlapping per clinician but not per treatment room, the system will reject overbooked appointments when the room assignment clashes.
+- **Allowing it only for specific clinicians:** you can have some clinicians with overlapping on and others without it. Each setting is individual.
+- **Auditing:** periodically review who has overlapping turned on. It's a setting worth reviewing to avoid accidents in the calendar.
+- **Combining with blocks:** if you need the clinician to have overbooked appointments during consultations but NOT during a specific event, the cleanest approach is to turn off overlapping for the duration of the event (with a block) and turn it back on afterwards. It takes some work but it prevents mistakes.
+
+## Estimated time
+
+30 seconds per setting (clinician or treatment room) once you're on the screen.
+
+## Frequently asked questions
+
+**Can I turn on overlapping just for a specific day?** Not directly. The setting applies globally to the clinician or the treatment room. For a specific day, you can turn on overlapping, book the extra appointment, and turn it off again if you want to keep the strict rule for the rest of the days.
+
+**How many appointments can I overlap at the same time?** There's no technical limit. The system allows as many as fit visually in the column. But common sense says that more than 2 or 3 overlapping appointments become unmanageable.
+
+**Does the patient know they have an overbooked appointment?** Not automatically. For the patient, the notice is the same as for any other appointment. If you want them to know it's an overbooked appointment, tell them separately in a message.
+
+**Does overlapping affect payments to doctors or reports?** Not directly. Payments and reports are calculated from the recorded appointments and treatments, regardless of whether they overlap or not.
+
+**Why are there two different settings (per clinician and per treatment room)?** Because some clinics only work with clinicians (no treatment rooms) and others share treatment rooms between clinicians. The two settings let you cover both cases without conflict.
+
+**What happens if I have a shared treatment room and a clinician with overlapping schedules?** Both settings are applied independently. If the clinician allows overlapping but the treatment room doesn't, the appointment is rejected because of the treatment room. Both have to allow it for it to work.
+
+## Permissions
+
+Changing staff schedule settings and treatment room settings requires advanced permissions. Set them up from Administration → Staff → Permissions. If you can't access Schedule settings or the treatment room settings, check with your administrator.

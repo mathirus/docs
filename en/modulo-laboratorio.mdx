@@ -1,0 +1,150 @@
+---
+title: "Lab"
+---
+
+The Lab module lets you manage the labs the clinic works with, the work requests and the statuses each request goes through. It is organized into three tabs: **Requests**, **Labs** and **Statuses**.
+
+---
+
+## Requests
+
+This is the module's main tab. It shows the full list of every lab request created at the clinic, with a search by patient and filters by date, lab and status. If the list is long, it is split into pages.
+
+> Requests don't affect the treatment plan: linking them to a treatment is optional and only gives you the context at hand; it doesn't change any amounts or statuses in the treatment plan.
+
+<Frame>
+  ![Image](/images/image-340.png)
+</Frame>
+
+From each row's actions menu you can:
+
+- **View request as PDF**
+- **Email the request to the lab** — it asks you to confirm before sending it. If the lab has no email address on file, the system lets you know and takes you straight to adding one
+- **Edit** the request
+- **Delete** the request
+
+If a patient with requests also has an upcoming appointment, a notice with the count appears above the list ("X with an upcoming appointment"); click it and the list is filtered to show only those requests. And if you open this list from the calendar or from a patient's record, you'll see it already filtered by that patient, with a banner to clear the filter.
+
+## **Creating a request**
+
+The process has two steps.
+
+#### **Step 1 — Request details**
+
+<Frame>
+  ![Image](/images/image-341.png)
+</Frame>
+
+The fields are grouped into three parts:
+
+**Linking**
+- **Patient** (required) — chosen from the list of registered patients
+- **Treatment plan** (optional) — so you have at hand which treatment plan the work comes from
+- **Treatment from the plan** (optional) — linking it doesn't change the treatment plan; it's for reference only
+
+**Assignment**
+- **Lab** (required) — chosen from the list of enabled labs
+- **Status** — the request's initial status
+- **Sent date** and **Delivery date** (required)
+
+**Work description**
+- **Title** (required) — the request's name or description
+- **Description** (optional) — space to detail the work's specifications. For example, if it's an implant, you can state the type, the material, the shade and any other technical instructions relevant to the lab. The more detailed the description, the less chance of errors or misunderstandings when the work is made
+- **Attachments** (optional) — there are two ways to add files: upload them from your computer, or pick them directly from the media the patient already has. This second option only becomes available after you choose a patient
+
+#### **Step 2 — Lab items**
+
+<Frame>
+  ![Image](/images/image-342.png)
+</Frame>
+
+This step is optional. With the **Add item** button you choose an **action** from the price list of the lab (the one chosen in the previous step), enter the quantity, and the price is filled in automatically, although you can change it. You can add multiple items, and the system calculates the total in real time at the bottom. If you add items, that total travels with the request — it doesn't affect the treatment plan or any other part of the system.
+
+Once you're done, click **Add request** and it's recorded in the list.
+
+---
+
+## Labs
+
+This tab shows the list of all the labs registered in the system. It has a search by name and a counter with the total number of labs.
+
+The list shows these columns: name, details, email, price list date and status (enabled/disabled).
+
+<Frame>
+  ![Image](/images/image-343.png)
+</Frame>
+
+From each lab's actions menu you can:
+
+- **Contact on WhatsApp** — opens a direct chat with the lab's phone number on file, if it has one
+- **View price list** — opens the lab's list of items and prices
+- **View details** — opens a window with all the lab's information: name, details, email, address, phone, price list date and whether it is enabled or disabled
+- **Edit lab** — change any of the lab's details
+- **Enable / Disable** — lets you turn the lab on or off with a switch. A disabled lab can't be selected when creating new requests. This option is meant for when you no longer work with a lab but can't delete it because it has requests with information associated with it
+
+#### **Creating a lab**
+
+When you click **Add lab**, a form opens with the following fields:
+
+- **Lab name** (required)
+- **Email** (optional)
+- **Phone** (optional) — entering the phone number with the country code is what enables the WhatsApp button in the list
+- **Address** (optional)
+- **Price list date** (optional) — shows since when the current price list has been in effect. You can update it every time the lab sends you a new list
+- **Details** (optional) — additional information about the lab, such as the specialties it works on
+
+<Frame>
+  ![Image](/images/image-344.png)
+</Frame>
+
+#### **Price list**
+
+When you click **View price list**, the system opens the lab's list of treatments, with their price (showing whether it's in pesos or dollars), status and actions.
+
+<Frame>
+  ![Image](/images/image-345.png)
+</Frame>
+
+From each item's actions menu you can:
+
+- **Edit** — change the name or the price
+- **Disable** — if the item is linked to a request it can't be deleted, but it can be disabled
+- **Delete** — only if the item has no requests associated with it
+
+To **add a new item**, click **Add treatment** and enter the name, price and currency. Once it's created, the currency can't be changed — it stays fixed in the currency selected when it was created.
+
+If you need to add a lot of items at once, the **Import** button lets you upload an Excel or CSV spreadsheet instead of adding them one by one:
+
+<Frame>
+  ![Image](/images/image-346.png)
+</Frame>
+
+First download the template with **Download template** and fill it in with the **Name**, **Price** and **Currency** columns (the valid currencies are ARS and USD). If the spreadsheet has the name of a treatment that already exists in that lab, the system replaces its price — it doesn't create a duplicate.
+
+_From this view there is a button to go back to the list of labs._
+
+---
+
+## Statuses
+
+This tab lets you manage the statuses a lab request can go through. You can edit them, add new ones and set the order in which they are shown.
+
+The list shows: status name, color, show/hide switch and actions menu.
+
+- **Show/hide** — lets you hide requests with that status from the main list without deleting the record
+- **Edit** — lets you change the status's name and color
+- **Delete** — only if the status has no requests associated with it
+
+There is a **search** by name to find statuses quickly when the list is long, and a **Reorder** button to set the position in which each status appears in the list.
+
+<Frame>
+  ![Image](/images/image-347.png)
+</Frame>
+
+**Adding a status** When you click **Add status**, a window opens where you must fill in the new status's name and color. You can create as many statuses as you need.
+
+---
+
+## If you don't see some of this
+
+Everything explained in this guide depends on your user's permissions. If a screen or a button is missing, or you can't edit something described here, first check with your clinic's administrator — most likely it's a matter of granting you the right permission. If you still can't after that, write to OCLÜ support and we'll help you.

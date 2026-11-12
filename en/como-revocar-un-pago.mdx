@@ -1,0 +1,156 @@
+---
+title: "How to void a payment"
+---
+
+Sometimes a payment is recorded by mistake: in the wrong cash account, with the wrong payment method, assigned to the wrong patient or for a different amount. To correct it, OCLÜ lets you **void** the payment. Voiding doesn't move money between cash accounts or give money back to the patient; it only invalidates the original record and keeps a note of the reason. If the patient actually paid something, you then need to enter that payment again in the right place. This guide walks you through the whole flow.
+
+## When to use it
+
+- When you recorded a payment in the wrong cash account (for example, the ARS bank account instead of the cash box).
+- When you chose the wrong payment method while recording it.
+- When you recorded the payment for the wrong patient.
+- When you entered the wrong amount and need to correct it.
+- When the patient asked for a refund and you are going to refund them separately (voiding keeps a record of the cancelled payment; you then record the refund as an expense).
+
+## Before you void: understand what it does and doesn't do
+
+**What voiding does:**
+
+- Marks the payment as **voided** in the system. It appears struck through in the history but stays visible for auditing.
+- Reverses the payment amount on the associated treatments (the remaining balance of the treatment plan goes back up).
+- Records when, who and why it was voided.
+
+**What it does NOT do:**
+
+- **It doesn't give money back to the patient.** If the patient actually paid something, you have to decide what to do with that money (record it in another cash account, mark it as an advance, record a refund expense).
+- **It doesn't reverse cash adjustments.** If the payment affected the cash account balance, that adjustment stays. If you want the balance to go back to what it was, record a manual movement.
+- **It doesn't notify the patient.** If you want the patient to know about the void, contact them separately.
+
+## Prerequisites
+
+- The payment has to be recorded in the system. If the patient paid but you haven't entered it yet, there is nothing to void.
+- To void, you need a reason of **at least 10 characters** that justifies the action. The system requires it and it is saved.
+- The payment **can't be voided** if clinician fees have already been settled on it (see the **When you can't void** section below).
+
+## How to get to this section
+
+1. Log in to OCLÜ.
+2. In the left sidebar, click the Patients icon.
+3. Find the patient and click their name.
+4. In the patient's record, click the **Balance** tab (the last tab, to the right of Treatment plans).
+
+> In the breadcrumb at the top you will see **Home → Patients → \[Patient name\]**.
+
+## Steps to void the payment
+
+### 1. Find the payment to void
+
+In the Balance tab you will see a table with all of the patient's movements: charges as negative amounts (for example "Tratamiento de Conducto -\$400.000 ARS") and payments received (positive and in green, for example "Payment received \+\$400.000 ARS"). Each row has a date, detail, amount, exchange rate if it applies, user and two balance columns (ARS and USD).
+
+Find the payment you want to void. Keep in mind:
+
+- Only **payments received** can be voided (the green rows labeled "Payment received"), not charged treatments.
+- If the payment was already voided before, it appears struck through and labeled "Payment voided". Those can't be voided again.
+
+### 2. Click the Void icon
+
+In the **Actions** column on the right of each payment row there are two icons, both in neutral gray (they don't have different colors):
+
+- A **document** icon (View receipt): shows the payment receipt.
+- A **circle with an X** icon (Void): starts the voiding flow.
+
+Click the void icon of the payment you want to cancel.
+
+<Frame>
+  ![Image](/images/image-446.png)
+</Frame>
+
+### 3. Fill in the Void the payment window
+
+The **Void the payment** window opens with this information:
+
+- A subtitle with the date and amount of the payment you are about to void.
+- A yellow notice (if it applies): for example, "This payment involves a currency conversion. The original exchange rate from the time of the payment will be used.", or a notice if the associated treatments were completed more than 7 days ago. It's a warning so you double-check before confirming.
+- A red box with the explanation: "The payment is marked as voided and stops counting towards the cash account. The treatments it had settled become unpaid again and the patient's outstanding balance is recalculated. This cannot be undone."
+- The **Reason** field (required, at least 10 characters, at most 500), with the placeholder "Why this payment is being voided" and a counter "X / 500".
+
+<Frame>
+  ![Image](/images/image-447.png)
+</Frame>
+
+In the **Reason** field, write a clear description of why you are voiding the payment. Valid examples:
+
+- "Entered in the wrong cash account, it should have gone to the ARS bank account"
+- "Duplicate payment, the same receipt was entered twice"
+- "Wrong amount, a zero was missing"
+- "Assigned to the wrong patient"
+- "Refund requested by the patient"
+
+> **Important:** this reason is saved and shows up in the Voided payments report, together with your user and the date. Be clear and professional; other team members will see it.
+
+### 4. Confirm the void
+
+Click the **Void the payment** button.
+
+OCLÜ applies the void: the payment appears struck through in the table with the label "Payment voided", the remaining balance of the treatment plan is updated, and the movement is recorded in the Voided payments report.
+
+## When you can't void
+
+If clinician fees have already been settled on that payment, the system won't let you void it directly: instead of the Reason field and the confirm button, the window shows a message explaining that the payment was already included in a settlement and can't be voided from here. In that case, contact support or whoever handles fee settlements at your clinic.
+
+## Expected result
+
+In the patient's Balance tab, the payment stays visible but struck through, with the label "Payment voided" and the date of the void. The balance of the treatment plan it was applied to is updated (the remaining balance goes up).
+
+In **Finance → Income → Voided payments**, the payment appears in the list with all its details: original date, patient, amount, reason, who voided it, and the treatments affected.
+
+## If the patient really paid: what to do next
+
+Voiding does NOT give money back. If the patient actually paid something, you have to decide:
+
+- **If the payment was valid but assigned incorrectly:** record it again in the right place (right cash account, right treatment plan, right amount). Use the payment flow from the Treatment plans tab.
+- **If the patient asked for a refund:** record an **expense** from Finance → Expenses for the amount refunded, with the category "Refund" or similar. This one does change the cash account balance.
+- **If the payment was a duplicate:** leave the void and do nothing else. The patient really only paid once; the duplicate was a data-entry mistake.
+
+## Common errors
+
+**The reason is too short:** the system requires at least 10 characters. If you type "Error", it won't let you confirm. Expand the explanation.
+
+**The void icon doesn't appear:** check your permissions. If you don't have permission to void payments, the action icons aren't shown. Ask your administrator to enable it for you.
+
+**The void button is replaced by a message:** it means that payment has already been settled to a clinician and can't be voided from the Balance tab. See the **When you can't void** section above.
+
+**I voided the wrong payment:** it can't be undone. The action is final. You have to enter the original payment again as a new one and leave the corresponding note. That's why the system warns you beforehand.
+
+**I still see the payment in the balance but not struck through:** refresh the page. If it persists, the void may not have been saved correctly; try again or contact support.
+
+**The treatment plan balance didn't update:** voiding returns the amount to the remaining balance. If you don't see it reflected, check whether the payment was applied to a specific treatment or "on account". In the second case, the patient's credit balance goes down; the treatment plan balance may not change.
+
+## Tips and variations
+
+- **Void before deleting a treatment plan:** if you are going to delete a treatment plan that has payments, first void all the payments one by one, and then delete the treatment plan. The system will ask you to.
+- **Voids report:** in Finance → Income there is a **Voided payments** button that takes you to the full report. Useful for monthly audits.
+- **Internal policy:** define a policy at your clinic about when and who can void payments. Some clinics limit it to the administrator; others let any team member do it with a justification. Set it up from permissions.
+- **Traceability:** the void is recorded forever. It's the right tool to correct mistakes **while keeping the history**, instead of deleting payments.
+
+## Estimated time
+
+30 seconds to 1 minute, depending on how long the reason you write is.
+
+## Frequently asked questions
+
+**Can I void a payment from months ago?** Yes. The system doesn't limit it by age, but it shows you a warning if the associated treatments were completed more than 7 days ago, so you confirm that you understand the implications.
+
+**Does voiding affect last month's financial reports?** The void is recorded with the date you made it. But the original payment keeps its original date. Financial reports include voided payments depending on how you filter them (some exclude them automatically, others show them struck through).
+
+**Can I void a payment in USD?** Yes. Voiding works the same regardless of the currency. The reversed amount is applied in the payment's original currency.
+
+**Who gets notified of the void?** Nobody, automatically. The patient doesn't receive a notice. If you want to let them know, contact them separately.
+
+**Can a void be undone?** No. The action is final. If you made a mistake, the only thing you can do is record a new payment equivalent to the voided one, with an explanatory note.
+
+**How does it affect payments to clinicians?** If the clinician has already been paid their commission on that payment (it has already been settled), the system simply won't let you void it from the Balance tab — see **When you can't void**.
+
+## Permissions
+
+Voiding payments requires a specific permission from Administration → Staff → Permissions. If you don't see the void icon in the Actions column of the Balance tab, check with the system administrator.

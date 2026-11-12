@@ -1,0 +1,141 @@
+---
+title: "How to view and edit an appointment's details"
+---
+
+Every appointment on the calendar has a details panel that opens with a single click. From there you can check all of the appointment's information, change its status, assign it a treatment room, send the patient reminders, or jump straight to their personal details, clinical notes and treatment plans. This guide shows you everything that panel offers and when each feature comes in handy.
+
+## When to use it
+
+- When you need to check an appointment's details (patient, clinician, time, description).
+- When you need to change the appointment's status (from Pending to Confirmed, for example).
+- When you want to send the patient a reminder without leaving the calendar.
+- When you want to jump quickly to the patient's details, clinical record or treatment plans.
+- When you need to reschedule an appointment to another date or assign it a treatment room.
+
+## How to get to this section
+
+1. Log in to OCLÜ.
+2. In the left sidebar, click the calendar icon to open the **Daily view**.
+3. Go to the day of the appointment (with the date in the top panel or the `<` and `>` arrows).
+4. Click the appointment's block on the grid.
+
+A panel opens on the right, called **Appointment**.
+
+<Frame>
+  ![Image](/images/image-423.png)
+</Frame>
+
+## What the details panel shows
+
+The panel is split into blocks. From top to bottom:
+
+### Block 1: Summary
+
+Shows the basic read-only details:
+
+- **Time:** start and end time (for example "11:00 - 11:30").
+- **Patient:** the patient's name.
+- **Clinician in charge:** the assigned clinician.
+
+At the top right of this block you have two buttons:
+
+- **History:** shows the appointment's full timeline — status changes, reschedules, field edits and notices sent (with their delivery status) — each with who did it and when.
+- **Reschedule:** opens a form to move the appointment to another date or time, and also lets you change the linked treatment plan and the assigned clinician, without losing the rest of the details. Useful when the patient asks to change the day or switch to another clinician.
+
+### Block 2: Notify the patient
+
+An email button and a WhatsApp button with three options, to send the patient a notice right away:
+
+- **Send email** — sends the email to the address saved in the patient's record.
+- **WhatsApp → Appointment notice** _(manual)_ — just the appointment details, without asking for a reply. Opens your personal WhatsApp.
+- **WhatsApp → Ask for confirmation** _(manual)_ — adds a link so the patient can confirm or cancel. Also opens your personal WhatsApp.
+- **WhatsApp → Send confirmation reminder** _(automatic)_ — goes out from the clinic's official number, with buttons to reply. It's only enabled when confirmation was already requested, the patient didn't reply, no reminder has been sent yet, the appointment hasn't happened, and the clinic has the WhatsApp add-on with the template approved by Meta.
+
+<Frame>
+  ![Image](/images/image-424.png)
+</Frame>
+
+> These buttons send the notice immediately. If the patient doesn't have an email address or phone number saved, the corresponding button may appear disabled. The panel also shows when the last notice was sent (for example "Patient notified by email a day ago").
+
+### Block 3: Details
+
+Here you have three editable fields:
+
+**Status:** a dropdown with the available statuses. By default, OCLÜ comes with three: **Pending**, **Confirmed** and **Cancelled**. If your clinic created custom statuses (for example "Rescheduled", "In progress"), they show up here too. Changing the status updates the appointment's color on the grid.
+
+**Assigned treatment room:** a dropdown to choose the office or treatment room where the patient will be seen. If you don't use treatment rooms, leave it empty.
+
+**Description:** a free-text field with the reason for the appointment ("Periodontal treatment check-up", "Root canal on tooth 4.6", etc.). It's what the clinician reads before seeing the patient.
+
+### Block 4: Shortcuts
+
+Buttons that take you quickly to other screens for the patient, without having to close the calendar and look them up. Unlike the rest of the panel, this block is **customizable**: you choose which ones to show and in what order.
+
+By default it includes **Personal details**, **Media**, **Clinical notes** and **Treatment plans**, but from the gear icon (at the top right of the block) you can choose up to **8** from a catalog of 15: Personal details, Appointments, Comments, History, Clinical record, Odontogram, Periodontogram, Clinical notes, Media, Digital prescriptions (Argentina) or SREP prescriptions (Spain), Consent forms, Treatment plans, Balance and Lab. Drag the selected ones to reorder them.
+
+<Frame>
+  ![Image](/images/image-425.png)
+</Frame>
+
+### Bottom buttons
+
+At the bottom of the panel there are two buttons:
+
+- **Delete appointment** (bottom left): removes the appointment from the calendar. It asks for confirmation before applying.
+- **Save changes** (bottom right): saves any changes you made to the editable fields (status, treatment room, description).
+
+## Steps to edit a field
+
+1. Click the appointment's block to open the panel.
+2. Change the field you need: the Status dropdown, the treatment room dropdown, or the Description text.
+3. Click the black **Save changes** button at the bottom right.
+4. The panel closes and the changes show up on the calendar grid (color change for the status, etc.).
+
+> If you close the panel without saving (with the X at the top right or by clicking outside it), the changes are lost.
+
+## Expected result
+
+The changes you make in the panel apply as soon as you save. For example:
+
+- If you change the status to Confirmed, the appointment's block on the grid turns green.
+- If you assign a treatment room, it's recorded and shows up in reports you can filter by treatment room.
+- If you edit the description, the clinician who opens the appointment next will see the new text.
+- If you send a reminder, the patient gets it within seconds.
+
+## Common errors
+
+**I changed the status but it wasn't applied:** you forgot to click **Save changes**. The system doesn't autosave; you have to confirm the change.
+
+**The Send email button is disabled:** the patient doesn't have an email address saved. Add it from Personal details and try again.
+
+**I don't see all the statuses I expected:** the system comes with three by default (Pending, Confirmed, Cancelled). Each clinic creates the rest from Administration → Appointment statuses. If one is missing, add it there.
+
+**I clicked "Delete appointment" by accident:** the system asks for confirmation before deleting. If you already confirmed, the appointment is deleted. To get it back, you have to create it again.
+
+## Tips and variations
+
+- **To reschedule to another date:** use the **Reschedule** button in the Summary block instead of deleting and creating it again. That keeps the appointment's history traceable.
+- **To reschedule within the same day:** drag the appointment on the grid to another time or column (see the guide **How to reschedule an appointment by dragging it**).
+- **To change the length:** drag the bottom edge of the appointment on the grid (see **How to extend an appointment's length**).
+- **Workflow when the patient arrives:** open the appointment, change the status to Confirmed, assign the treatment room (if it wasn't already), and from **Shortcuts → Clinical notes** record directly what you're going to do in the visit.
+- **Quick audit:** the **History** button shows you every change made to the appointment. Useful when there's confusion about who created it or when it was rescheduled.
+
+## Estimated time
+
+10 to 30 seconds to open the panel and make a simple change. 1 minute if you're going to edit several fields and send a reminder.
+
+## Frequently asked questions
+
+**Can I open the panel without losing what I'm doing elsewhere in the system?** Yes. The panel slides in from the right. When you close it, you're back exactly on the screen you were on.
+
+**If I delete an appointment, is the linked clinical note deleted too?** Clinical notes are saved in the patient's record and are independent of the calendar. Deleting the appointment doesn't delete clinical notes already entered.
+
+**Can I change the clinician in charge from the panel?** Not from the editable fields in Block 3, but you can from the **Reschedule** button in Block 1: there you can choose another clinician as well as the date and time.
+
+**Does the patient get notified when I change the status?** Not automatically. Status changes are internal. If you want to let the patient know, use the buttons in the **Notify the patient** block.
+
+**Why are some fields disabled?** It depends on your staff permissions. Some members can see the panel but can't edit every field. Set this up under Administration → Staff → Permissions.
+
+## Permissions
+
+The ability to edit fields in the panel, delete appointments, send reminders or reschedule depends on the permissions assigned to the staff member. If a button or field appears disabled, check with your administrator.

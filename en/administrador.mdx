@@ -1,0 +1,374 @@
+---
+title: "Administration"
+---
+
+The Administration module is the clinic's general settings hub in OCLÜ. From here you manage the clinics (locations), the team, the system automations, and the treatment lists with their prices and health insurers. You open it from the left sidebar.
+
+This guide covers the **Clinics**, **Staff**, **Automations**, **Treatments**, **Templates**, **Reminders** and **Appointment statuses** sections. The Expenses section will be documented in an upcoming update.
+
+---
+
+## **Clinics**
+
+This section lets you add new locations or branches of the clinic and manage the existing ones. Each clinic has its own opening hours, working days and appointment interval.
+
+When you open it you may see information banners, and if a clinic doesn't have an address entered, a notice warns you that this can cause digital prescriptions to fail.
+
+The list shows the following columns: clinic (logo, name and email), phone, address, opening days (with colored tags), opening hours (hours and appointment interval) and actions.
+
+<Frame>
+  ![Image](/images/image-378.png)
+</Frame>
+
+Available tools:
+
+- Search — filters clinics by name, email or address
+- Add location — opens the form to create a new location
+
+From each clinic's actions menu you can:
+
+- **Set up clinicians** — choose which clinicians work at that location. Only the ones you assign here will appear in that clinic's calendar
+
+<Frame>
+  ![Image](/images/image-379.png)
+</Frame>
+
+- **Set up the location's treatment rooms** — takes you to the management of that location's treatment rooms or chairs: name and actions (edit and delete)
+- **Edit location** — opens the edit form with the details already filled in, including the option to change the logo
+- **Delete location** — removes the clinic from the system
+
+---
+
+### **Adding a clinic**
+
+When you click Add location, a form opens with the following fields:
+
+**Location details**
+- **Logo** (optional) — appears in the system header and on the PDFs you send to patients
+- **Name** (required)
+- **Email** (optional)
+- **Phone** (optional)
+- **Address** (required) — it's printed on digital prescriptions; without it they may fail
+- **Price lists** (optional) — you can link them now or later from Treatments
+
+**Opening hours**
+- **Opening days** (required) — buttons for each day of the week, with a "Mon to Fri" shortcut
+- **Start time** and **End time** (required)
+- **Appointment interval** (required) — 15 min, 30 min, 45 min, 1 h or 1 h 30
+
+If your clinic is in Spain, a **Tax details** section also appears (holder, NIF, tax address, postal code, province and IBAN), which is printed on invoices. And in countries where public holidays vary by region, there is a field to choose the region so the calendar shows them automatically.
+
+Once you've filled in the fields, click Add.
+
+<Frame>
+  ![Image](/images/image-380.png)
+</Frame>
+
+---
+
+## **Staff**
+
+The section for managing the clinic's team. It lets you create members and set up their permissions, schedules, signatures, passwords and fee contracts.
+
+The list shows the following columns: member (photo, name and email), role, signature ("View signature" or "Not set"), enabled (switch) and actions. Disabled members stay visible in the list, marked with a "Disabled" tag, instead of disappearing.
+
+<Frame>
+  ![Image](/images/image-381.png)
+</Frame>
+
+Available tools:
+
+- Search — filters members by name
+- Filter by role
+- Add member
+- Set up contracts — takes you to the fee contracts section
+
+From each member's actions menu you can set up their permissions, edit them, set up their schedule (if they see patients), view or set up their signature, change their password or delete them (administrators can't be deleted).
+
+<Frame>
+  ![Image](/images/image-382.png)
+</Frame>
+
+---
+
+### **Adding a member**
+
+When you click Add member, a form opens with the following fields:
+
+**Personal details**
+- **First name** and **Surname** (required)
+- **Phone** (optional)
+- **Gender** (required)
+- **Date of birth** (optional) — if you enter it, the system automatically sends them a birthday greeting by email
+
+**System access**
+- **Email** (required) — the email they sign in with
+- **Role** (required) — besides **Administrator**, **Doctor** and **Secretary**, there are more roles available for specific staffing needs (Hygienist, Receptionist, Manager, CEO, Director) and a new one: **Assistant**
+- **Password** (required) — at least 9 characters and one uppercase letter
+
+<Frame>
+  ![Image](/images/image-383.png)
+</Frame>
+
+As before, the role is a label inside the system and doesn't define the person's actual permissions — those are set up individually from "Edit permissions". The **Administrator** has every permission enabled permanently. The **Doctor** has their own calendar and can be the clinician responsible for treatment plans. The **Secretary** doesn't have their own calendar and can't be the responsible clinician. If an Administrator also sees patients, you can enable clinician duties for them from their profile.
+
+The edit form includes these same fields plus: ID document, National licence, Provincial licence, Profession and Speciality.
+
+---
+
+### **Each user's permissions**
+
+From the shield icon in each member's actions, you open their permissions screen, where you define exactly what they can see and do in the system.
+
+**Quick presets** — predefined profiles you can apply in one go and then fine-tune: Front desk, Front desk with cash access, Clinician, Clinician without prices, Assistant / Hygienist and Administration. Each one sums up who it's meant for and what it enables.
+
+<Frame>
+  ![Image](/images/image-402.png)
+</Frame>
+
+Below the preset there are two trees for fine-tuning permission by permission: one with the general permissions (Calendar, Patients, Lab, Stock, Finances, Connect) and another with the administrative permissions (Clinics, Staff, Automations, Treatments, Online booking, Templates, Cash and bank accounts, Reports, Appointment statuses, Health Insurers, Connect). Each branch opens up so you can check specific permissions — for example, under Staff you can give someone permission to add members without giving them permission to delete them. Connect only appears if the clinic has that add-on.
+
+<Frame>
+  ![Image](/images/image-403.png)
+</Frame>
+
+Some permissions depend on another one: if you remove someone's "parent" permission (for example, "List staff"), the system automatically removes the permissions that depend on it. Changes are confirmed with **Save changes**.
+
+---
+
+### **Setting up contracts**
+
+The Set up contracts button takes you to a section where you manage the schemes used to settle each clinician's or provider's fees. The list shows the name, contract type, linked clinicians (or a notice if it doesn't have any yet) and description.
+
+<Frame>
+  ![Image](/images/image-404.png)
+</Frame>
+
+It has a search and a filter by type. From each contract's actions you can view its details, link clinicians, edit it or delete it.
+
+**Add contract** — first you choose the type:
+
+- **Per treatment plan** — one overall percentage applied to every treatment
+- **Per treatment** — a different condition for each treatment
+
+Besides the name and an optional description, you set the **Calculation base** separately for what the patient pays and for what the health insurer covers (based on the treatment plan price or on the price list price), and the **lab deduction percentage** that is subtracted from their settlement.
+
+<Frame>
+  ![Image](/images/image-405.png)
+</Frame>
+
+If you chose "Per treatment", you move on to a second step where you enter, treatment by treatment, a percentage or a fixed amount (never both) for the patient side and for the health insurer side. You can filter by list or category, search by name, and use **Apply to all** to overwrite everything you've entered in one go.
+
+<Frame>
+  ![Image](/images/image-406.png)
+</Frame>
+
+**Link clinicians** — from the people icon you assign which clinicians use that contract. A clinician can only have one contract per organization: if you pick someone who is already linked to another one, the system lets you know and gives you the option to replace it.
+
+<Frame>
+  ![Image](/images/image-407.png)
+</Frame>
+
+---
+
+## **Automations**
+
+The section for setting up the system's automatic processes, which run without anyone having to do anything. It has a search and a clinic selector (to set up each automation per location). If the clinic has WhatsApp active, a banner explains that reminders go out through WhatsApp, and that email is kept as an automatic backup if WhatsApp fails.
+
+<Frame>
+  ![Image](/images/image-384.png)
+</Frame>
+
+The available automations are:
+
+**Online booking** — a shortcut to set up online appointment booking: your patients book on their own, at any time, and the appointment goes straight into the calendar or waits for your approval. It's a separate add-on, with its own settings.
+
+**Appointment confirmation by link** — sends the patient a link to confirm or cancel their appointment in one click. It's sent automatically by email before the appointment and is also added to the manual WhatsApp message from the appointment details. Clicking the gear icon lets you set:
+
+- **Send the reminder** — 1, 2 or 3 days before
+- **Only for appointments in these statuses** — Pending, Rescheduled, Absent with notice, Confirmed or Cancelled
+- **When the patient replies from the email** — which status the appointment moves to if they confirm, and which status it moves to if they cancel
+- **Sending hours** — the times of day when the system checks whether there are appointments to send reminders for. The patient only gets one reminder per appointment, so ticking more times doesn't send them more messages; it just shortens the wait until the reminder goes out. If you don't pick any, it uses the suggested ones (07:00, 10:00, 15:00, 18:00, 21:00)
+
+<Frame>
+  ![Image](/images/image-385.png)
+</Frame>
+
+**Appointment rescheduling** — changes the appointment's status when someone at the clinic moves its date or time, so the patient is asked to confirm again. It has no settings of its own.
+
+**Treatment plan expiry** — automatically closes treatment plans that go past their deadline to keep the list tidy. You set it up with a switch to enable it and the number of days until expiry (30 by default).
+
+**Lab work with an appointment coming up** — highlights in the Lab module the requests whose patient appointment is coming up soon, so urgent work can be prioritized. It has no settings of its own.
+
+**Appointment reminder over WhatsApp** — sends a WhatsApp message before the appointment with buttons so the patient can confirm or cancel right from the chat. It's a paid add-on: if it isn't part of your plan, the gear icon opens a promotional window instead of the settings. If you have it active, it's set up just like "Appointment confirmation by link" (the same status, reply and sending-hours fields), only applied to WhatsApp.
+
+---
+
+## **Treatments**
+
+The Treatments section manages the price lists for the treatments and services the clinic offers, and the catalog of health insurers you work with. It is organized into two tabs: **Lists** and **Health insurers**.
+
+### **Lists**
+
+A three-level structure: Lists \> Categories \> Treatments. The main list shows: list, linked health insurer (if any) and actions.
+
+<Frame>
+  ![Image](/images/image-386.png)
+</Frame>
+
+Available tools:
+
+- Search and **Add list**
+- More options — Duplicate list and Import treatments
+
+From each list's actions you can **Edit**, **Enable/Disable** and **Delete** (the last one only if none of the list's treatments has been used yet in a treatment plan, a treatment planning or a contract; and it isn't available for system lists, such as "Facial aesthetics"). If you try to delete one that can't be deleted, the system tells you to disable it instead.
+
+<Frame>
+  ![Image](/images/image-387.png)
+</Frame>
+
+**Adding a list** — List name (required) and Health insurer (optional, more than 40 options). With a health insurer linked, you'll later be able to enter prices split between what the patient pays and what the insurer covers.
+
+<Frame>
+  ![Image](/images/image-388.png)
+</Frame>
+
+Inside a list you can go into its Categories, and inside a category into the list of individual Treatments, each with its name, code, total price, health insurer price, patient price (calculated automatically) and currency.
+
+If a list has a health insurer linked, the **Price increase** (available from categories or from individual treatments) has a "Single / Split" switch: in Single, the percentage you enter is applied equally to the patient price and to the health insurer price. In Split, you enter a separate percentage for each one — useful because insurers usually update their rates at different times from the patient's co-payment.
+
+### **Health insurers**
+
+The catalog of health insurers the clinic works with, to link to the price lists. The list shows the name, insurer ID and actions (delete).
+
+<Frame>
+  ![Image](/images/image-389.png)
+</Frame>
+
+It has a search and an **Add health insurer** button to add one that isn't in the catalog.
+
+---
+
+## **Templates**
+
+Texts the clinic reuses so you don't have to write them from scratch every time: consent forms, treatment plans, medical background and the templates sent by email or WhatsApp. It is organized into five tabs.
+
+### **Consent forms**
+
+The list of the informed consent forms you have patients sign before a treatment. It shows the name and actions (view, edit, delete).
+
+<Frame>
+  ![Image](/images/image-390.png)
+</Frame>
+
+It has a search and an **Add consent form** button. On the same screen there is a second tab, **Surgical reports**, with the same kind of list but for surgery reports.
+
+<Frame>
+  ![Image](/images/image-391.png)
+</Frame>
+
+### **Medical background**
+
+Here you choose which questions are shown in the patient's medical history and which ones are required. It applies both to what the staff fills in and to the medical background links sent to patients so they can fill it in themselves.
+
+The questions are grouped into four blocks — Medical history, Medications, Dental history and Habits — and each one has two checkboxes: **Show** and **Required**. An "All" checkbox in the header of each block lets you check or uncheck every question in that group at once.
+
+<Frame>
+  ![Image](/images/image-392.png)
+</Frame>
+
+If your clinic has more than one location, you can choose which organization the settings apply to from a selector at the top right. The **Discard changes** and **Save changes** buttons are always visible.
+
+### **Treatment plans**
+
+Reusable text templates for the content of treatment plans — for example, the description of a common treatment that you don't want to write out every time you put together a treatment plan. Each one has a title and rich-text content.
+
+<Frame>
+  ![Image](/images/image-393.png)
+</Frame>
+
+It has a search by name and an **Add template** button.
+
+### **Email**
+
+The catalog of every email the system can send automatically: appointment reminders and confirmations, links to fill in medical background or personal details, treatment plans, payment receipts, digital prescriptions, birthday greetings and more. From here you can edit the content of each one; the "Default" status means it still uses OCLÜ's original text.
+
+<Frame>
+  ![Image](/images/image-394.png)
+</Frame>
+
+### **WhatsApp**
+
+Brings together the WhatsApp templates. At the very top you can customize a copy of the automatic appointment reminder (the original is kept; the copy is sent to Meta for approval and applies to all of the clinic's locations). Below, they are split into two groups: the ones **Sent by the clinic** manually from the patient's or the appointment's details, and the ones **Sent by the system** as an automatic reply when the patient answers a reminder (confirm, cancel, invalid link, appointment already processed).
+
+<Frame>
+  ![Image](/images/image-395.png)
+</Frame>
+
+---
+
+## **Reminders**
+
+Internal tasks and notices for the clinic team — they aren't messages sent to the patient. The list is split into three tabs: **Pending reminders**, **Recurring reminders** and **Completed reminders**. Each row shows the date, the users it reaches, the patient (if any), description, category and actions.
+
+<Frame>
+  ![Image](/images/image-396.png)
+</Frame>
+
+Available tools:
+
+- Search by patient or description, and **Filter by category**
+- **New reminder**
+- **Categories** — manage the categories used to tag reminders (see below)
+
+**New reminder** — Reminder date and Category (required), Description (required), Patient (optional, with search) and Users to notify (required). You can also turn on repetition so the reminder is created again automatically.
+
+<Frame>
+  ![Image](/images/image-397.png)
+</Frame>
+
+From **Categories** you manage the colored labels that group reminders (Appointments, Personal, Staff, Visits, etc.): you can add a new one, enable or disable it with the switch, or delete it.
+
+<Frame>
+  ![Image](/images/image-398.png)
+</Frame>
+
+---
+
+## **Appointment statuses**
+
+Defines the statuses an appointment can have (Pending, Confirmed, Cancelled, etc.) and the color each one is shown in on the calendar. The list shows the status, color, whether it's visible on the calendar, and a new column — **Attended** — to mark which statuses count as the patient actually having come in.
+
+<Frame>
+  ![Image](/images/image-399.png)
+</Frame>
+
+A second tab, **Block categories**, separately manages the colors of calendar blocks (for example, "Vacation").
+
+<Frame>
+  ![Image](/images/image-400.png)
+</Frame>
+
+With **Add status** you enter a new name and color.
+
+<Frame>
+  ![Image](/images/image-401.png)
+</Frame>
+
+---
+
+## **Cash and bank accounts**
+
+This section is the same one the Finances module uses to manage the accounts where money movements are recorded, so we don't repeat it here — the full guide (list, adjustment accounts, discount accounts, adding an account, transferring between accounts) is on the [Finances](/en/finanzas#cash-and-bank-accounts) page.
+
+---
+
+## **Advanced reports**
+
+This is also a section shared with Finances: the complete financial and management analysis, with charts, KPIs and Oclü AI. The full guide is on the [Finances](/en/finanzas#advanced-reports) page.
+
+---
+
+## If you don't see some of this
+
+Everything explained in this guide depends on your user's permissions. If a screen or a button is missing, or you can't edit something described here, first check with your clinic's administrator — most likely it's a matter of granting you the right permission. If you still can't after that, write to OCLÜ support and we'll help you.

@@ -1,0 +1,158 @@
+---
+title: "How to view income and expenses"
+description: "Learn how to check the income report by payment or by treatment, record expenses, see voided entries and export everything to PDF or Excel."
+---
+
+OCLÜ splits the clinic's financial tracking into two views: **Income** (the payments you receive from patients) and **Expenses** (the costs you record manually, such as salaries, supplies or rent). Both live in the **Finances** module and share similar filters: date range, cash account and export. This guide shows you how to check them, what information they include and how to add a new expense.
+
+<iframe src="https://www.youtube.com/embed/PjKmpMY5azI" title="YouTube video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+<iframe src="https://www.youtube.com/embed/REtxkblbxM4" title="YouTube video player" frameborder="0" className="w-full aspect-video rounded-xl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+
+## When to use it
+
+- To close out the cash at the end of the day.
+- To prepare the monthly report for your accountant.
+- To see how much the clinic billed in a specific period (week, month, year).
+- To record an expense you've just paid (salary, supplies, rent, lab).
+- To check that a payment you voided is correctly marked as voided.
+- To export the information to PDF or Excel and share it with your accountant or partners.
+
+## Before you start: the Hide / Show amounts button
+
+On the main Finances dashboard (the module's first screen) there's a button at the top right that toggles between **Hide amounts** and **Show amounts**. When amounts are hidden, the values appear as dots (e.g. `●●●●●●`). This is handy when you're going over figures with a client or patient next to you and don't want them to see the numbers.
+
+> The button applies to the whole dashboard. If you leave it on **Hide amounts**, the values on the cards stay covered, but you can show them again at any time. The detailed sub-views (Income, Expenses) always show the amounts.
+
+## How to get to the sub-views
+
+1. Log in to OCLÜ.
+2. In the left sidebar, click the column icon (Finances). It takes you to the main dashboard.
+3. In the **Shortcuts** block in the middle you'll see three buttons: **Income**, **Expenses** and **Balance**. Click the one you need.
+
+<Frame>
+  ![Image](/images/image-445.png)
+</Frame>
+
+Each of these shortcuts opens a specific report. The difference is:
+
+- **Income:** shows the payments received in a period.
+- **Expenses:** shows and lets you add the period's expenses.
+- **Balance:** a consolidated view by cash account (see the separate guide **How to check the balance by cash account**).
+
+---
+
+## View 1: Income
+
+URL: `Finances → Income`. Shows the report of payments received in the period.
+
+### Available filters (left panel)
+
+- **From date / To date:** the report's range. By default it's the first and last day of the current month.
+- **Cash account:** a multi-select filter. By default it's set to **All cash accounts**. To focus on a specific cash account, remove the "All cash accounts" tag with the X and add the ones you need.
+- **View mode:** a dropdown with two options:
+  - **By payment:** one row for each payment received. Useful for reconciling cash.
+  - **By treatment:** one row for each treatment paid for. Useful for clinical analysis (which treatments bring in the most revenue).
+
+Once it's set up, click **Generate** to show the report. The red (PDF) and green (Excel) buttons below export the result.
+
+### Results table
+
+The columns are: **Date**, **Patient**, **Treatment plan**, **Cash account**, **Total paid**, **User** (who recorded the payment) and **Actions**.
+
+### Voided payments
+
+At the top right of the table there's a **Voided payments** button. It takes you to a sub-report with every payment that was voided in the period. The table shows: Date, Patient, Amount, Reason for voiding, who did it (Voided by) and the affected treatments.
+
+> Remember that voiding a payment doesn't move any money: it only invalidates it in the system. To understand how voiding works, see the guide **How to void a payment**.
+
+---
+
+## View 2: Expenses
+
+URL: `Finances → Expenses`. Combines viewing recorded expenses with adding new ones.
+
+### Available filters (left panel)
+
+- **From date / To date:** the report's range.
+- **Cash account:** multi-select, just like in Income.
+- **Show voided:** a checkbox. If you tick it, the report includes expenses that were voided and the table adds a **Status** column (Active / Voided); if you don't, it only shows active ones and that column doesn't appear.
+- **Generate:** shows the report with the filters applied.
+- **Export:** PDF and Excel, just like in Income.
+
+### Extra filters above the table
+
+- **Category:** a dropdown above the table to filter by expense category (Payroll, Supplies, Lab, etc.). Each clinic sets up its categories from the **Categories** button at the top right (see below).
+- **Buttons at the top right:**
+  - **Add expense:** to add a new expense.
+  - **Categories** (dropdown): to create, edit or delete your clinic's expense categories.
+  - **Voided expenses:** a sub-report of the expenses voided in the period.
+
+### Results table
+
+The columns are: **Date**, **Category**, **Cash account**, **Amount**, **Comment**, **User**, **Status** (only if you ticked "Show voided") and **Actions**. If the expense has a comment, the Comment column shows a **View** button so you can read it without taking up space in the row.
+
+---
+
+## How to add a new expense
+
+1. Go to **Finances → Expenses**.
+2. At the top right, click the **Add expense** button.
+3. A form opens where you need to fill in:
+   - **Category:** choose from the dropdown (Payroll, Supplies, Lab, whatever applies). If the category you need is missing, add it first from the **Categories** button.
+   - **Cash account:** choose which cash account the money comes out of. Your clinic sets up the list from Administration → Cash and bank accounts.
+   - **Amount:** the value of the expense, in the currency of the selected cash account.
+   - **Date:** today's date by default. Change it if you're recording an expense after the fact.
+   - **Comment:** optional but recommended. A short note to identify the expense (e.g. "Latex gloves - 100 units").
+4. Confirm with the **Save** or **Add** button.
+
+The expense automatically appears in the sub-view's table, is deducted from the matching cash account's balance and shows up in the clinic's balance.
+
+## Expected result
+
+- In **Income**: you see the list of all the payments received in the period according to the filters applied, with totals and the option to export.
+- In **Expenses**: you see the list of all the recorded expenses, with totals and the option to export. If you added an expense, it shows up in the list right away.
+
+## Common errors
+
+**"To generate a report, first select a cash or bank account, and the start and end dates of the report.":** one of the basic filters is missing. Check that the dates and at least one cash account are selected before you click Generate.
+
+**The report comes out empty when it shouldn't:** check the date range (by default it's only the current month), check that the selected cash account is the right one, and see whether you ticked an extra filter like "Show voided" or the Category filter that's narrowing down the result.
+
+**I added an expense but it doesn't show up:** most often the expense's date is outside the filter's range. Adjust the range and click Generate again.
+
+**I can't find the category I need when adding an expense:** categories are customizable. Click the **Categories** button at the top right, add the new category and open the **Add expense** form again.
+
+**The amount doesn't match the actual cash:** check whether there are voided expenses that aren't being counted (tick the "Show voided" checkbox to see them), and whether there are voided payments (go to Voided payments from Income) that may be affecting your manual calculation.
+
+## Tips and variations
+
+- **For the daily cash close:** filter by the day's cash account and today's range, generate Income and Expenses separately, and export both to PDF to keep on file.
+- **For your accountant each month:** set the range from the first to the last day of the month, all cash accounts, and export Income (By payment) and Expenses to Excel. Add Voided payments separately if you need them.
+- **Clinical analysis:** use Income in **By treatment** mode to see which treatments bring in the most revenue. Useful for business and equipment decisions.
+- **For internal audits:** filter Expenses by Category = Payroll to see staff costs for the period.
+- **Advanced reports:** if you need more complex cross-references, charts or KPIs, go to **Advanced reports** from the main Finances dashboard (the **Go to reports** button at the top right of the dashboard). That view includes Oclü AI to help you interpret your data.
+
+## Estimated time
+
+- Viewing the month's Income or Expenses: 30 seconds to 1 minute.
+- Adding a new expense: 1 minute.
+- Exporting to PDF or Excel: 10 seconds.
+
+## Frequently asked questions
+
+**Why can't I add income manually?** Income is created automatically from the payments received in the patients module (with the payment flow from the Treatment plans tab). There's no manual income entry, to avoid mismatches between payments and the report.
+
+**What's the difference between Income in "By payment" and "By treatment" mode?** **By payment** shows one row for each payment received (useful for reconciling cash). **By treatment** breaks the payment down into the treatments it covers (useful for clinical analysis of which treatments bring in the most revenue).
+
+**Do expense categories come predefined?** No. Each clinic sets up its own from the **Categories** button inside Expenses. The most common ones are Payroll, Supplies, Lab, Rent, Utilities and Other, but it's fully customizable.
+
+**Can I delete an expense I've already added?** You can void it, not delete it. Voiding keeps the record visible (with the "Show voided" filter ticked) and preserves the audit trail. To void it, use the **Actions** column in the expense's row.
+
+**Why are there reports in Finances and also in Advanced reports?** The Finances sub-views (Income / Expenses / Balance) are operational lists for day-to-day work. **Advanced reports** (`Administration → Reports` or the "Go to reports" shortcut) is an analytical view with KPIs, trend charts, comparisons by clinician or patient, and Oclü AI. Use the sub-views for operations and the advanced reports for strategic analysis.
+
+**Can I schedule the report to be emailed automatically?** Not directly from these sub-views. For report automations, check Administration → Automations.
+
+## Permissions
+
+Being able to view Income, view Expenses, add expenses, void expenses, view voided payments and export reports depends on the permissions assigned to each staff member. Set them up from Administration → Staff → Permissions. If you don't see a sub-view or a button, check with your administrator.

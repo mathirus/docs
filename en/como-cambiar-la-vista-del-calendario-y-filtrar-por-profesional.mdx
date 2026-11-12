@@ -1,0 +1,137 @@
+---
+title: "How to change the calendar view and filter by clinician"
+---
+
+The OCLÜ calendar has several controls at the top so you can adapt the screen to the way your clinic works. You can view the schedule one day at a time or the whole week, organized in clinician columns or in treatment room columns, and filter which clinicians are shown. This guide explains each control and when to use it.
+
+## When to use it
+
+- When you're just starting to use the system and want to set up the screen the way you like it.
+- When your clinic works with treatment rooms and you need to see the schedule organized by room.
+- When there are many clinicians and you want to see only a few so the screen doesn't get crowded.
+- When you want to plan the whole week and the daily view isn't enough.
+
+## How to get to this section
+
+1. Log in to OCLÜ.
+2. In the left sidebar, click the calendar icon.
+
+You'll land on the calendar screen, which has four settings cards at the top: **Date and view mode**, **Clinician**, **Appointment statuses** and **Online bookings**.
+
+<Frame>
+  ![Image](/images/image-427.png)
+</Frame>
+
+This guide covers the first three. The **Online bookings** card shows the appointments patients request through your Online booking link — a separate add-on (see the **Add-ons** page).
+
+## Card 1: Date and view mode
+
+This card controls **which day is shown** and **how the grid is organized**. It has three fields.
+
+### Date field
+
+It's the first one, in DD-MM-YYYY format. Click it to open a calendar and choose the day you want to see.
+
+> Tip: above the main grid, the `<` and `>` arrows move you forward or back one day. The **Today** button takes you to the current date.
+
+### View selector (Daily / Weekly)
+
+The second dropdown chooses the time range:
+
+- **Daily view:** shows only the selected day, with one column for each clinician (or for each treatment room, depending on the mode). Ideal for working on the schedule day by day.
+- **Weekly view:** shows the seven days of the week in rows and lets you see the full picture of the week. Useful for planning ahead.
+
+<Frame>
+  ![Image](/images/image-262.png)
+</Frame>
+
+### Mode selector (By clinician / By room)
+
+The third dropdown chooses how the grid's columns are organized:
+
+- **By clinician:** each column is a clinician. This is the most common option and it's useful when clinicians have independent schedules.
+- **By room:** each column is a treatment room. Useful when the clinic shares treatment rooms between several clinicians and you want to see which room is free or busy at any given time.
+
+> If your clinic doesn't use treatment rooms, leave the mode on **By clinician**.
+
+When you're in **By room** mode, the filter card (Card 2) adds a gear icon with a shortcut to the treatment room settings — the same list you'll find in Administration → Clinics, where you edit each room's name and whether it allows overlapping appointments.
+
+<Frame>
+  ![Image](/images/image-263.png)
+</Frame>
+
+## Card 2: Clinician (Filter)
+
+This card lets you filter **which clinicians appear in the grid**. By default, all active doctors are selected.
+
+### How to filter
+
+1. Click the dropdown field.
+2. You'll see the list of active doctors. By default they are all selected (the "All clinicians" tag).
+3. To show only some of them:
+   - Click the X on the "All clinicians" tag to remove them all.
+   - Then select, one by one, the doctors you want to see.
+4. The grid updates instantly: only the columns of the selected clinicians appear.
+
+<Frame>
+  ![Image](/images/image-264.png)
+</Frame>
+
+### When it's worth filtering
+
+- When there are 10\+ clinicians and the grid gets crowded.
+- When you're only going to work with one or two specific doctors.
+- When you want to see only the doctors of one specialty (for example, only the surgeons on a given day).
+
+## Card 3: Appointment statuses
+
+The third card shows the statuses currently visible in the grid. By default, OCLÜ comes with three predefined statuses (**Pending**, **Confirmed**, **Cancelled**), plus any additional ones each clinic has created.
+
+Each status is shown as a colored tag. What you do in this card affects how appointments are shown:
+
+- Click a tag to show or hide that status's appointments in the grid. For example, if you want to hide Cancelled appointments, click that tag and they'll disappear from view (the appointment is still in the database, it's just not shown).
+
+> The gear icon at the top right of this card takes you to the status settings screen (Administration → Appointment statuses), where you can create new statuses, edit them or change their order.
+
+## Preferences: setting your default view
+
+The gear icon on the **Date and view mode** card isn't just a memory of the last view you used — it takes you to a separate screen, **Preferences**, where you explicitly set:
+
+- **Default view** — Day view or Week view, the one that opens every time you go to Calendar from the menu.
+- **Filter mode** — By clinician or By room, by default.
+- **Keep “Notify patient” checked when rescheduling** — whether the checkbox in the confirmation windows (when you drag or stretch an appointment) comes checked or not by default. You can still change it for each individual appointment.
+
+<Frame>
+  ![Image](/images/image-428.png)
+</Frame>
+
+## Expected result
+
+The calendar grid reconfigures instantly with the changes you make in the cards. The default view and filter mode are the ones you've saved in Preferences, not simply "the last one you used".
+
+## Common errors
+
+**I can't see a clinician I expected to see:** check the filter in the Clinician card. If you removed everyone and only added some, the others won't appear. Add "All clinicians" back.
+
+**The calendar is empty:** the selected date may be in the future with no appointments booked. Go back to today with the **Today** button or change the date.
+
+**"By room" doesn't appear as an option:** check that your clinic has treatment rooms set up in Administration → Clinics → Set up the location's treatment rooms. If there are no rooms, the mode doesn't make sense.
+
+**I switched to Weekly view and it looks crowded:** the weekly view shows less detail because of the number of columns. If you need more room for a week, enlarge the browser window or use the Daily view day by day.
+
+## Tips and variations
+
+- **Recommended initial setup to get started:** Daily view \+ By clinician \+ All clinicians selected. It gives you the full picture of the day.
+- **For large clinics with many doctors:** filter by specialty or by shift (morning / afternoon) so the grid doesn't get crowded.
+- **For clinics with shared treatment rooms:** switch between By clinician and By room depending on what you need to see. By clinician when you're organizing a clinician's schedule, By room when you want to see which room is free.
+- **If you always work with the same view:** set it in **Preferences** (gear icon on the Date and view mode card) so the system always starts with your favorite setup, instead of leaving it to whichever one you used last.
+
+## Estimated time
+
+5 to 10 seconds to change any filter or view. One minute to set up your Preferences the first time.
+
+## Frequently asked questions
+
+**Does the system remember my view settings between sessions?** The view and filter mode Calendar starts with are the ones you've saved in **Preferences**, not the last setup you used. Go there (gear icon on the Date and view mode card) to set them.
+
+**Can I see more than one month at a time?** No. The available views are Daily and Weekly. For a monthly overview, use the reports and filters in the financial reports or the patient's history.

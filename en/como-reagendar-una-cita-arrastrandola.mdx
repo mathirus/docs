@@ -1,0 +1,61 @@
+---
+title: "How to reschedule an appointment by dragging it"
+---
+
+OCLÜ lets you change an appointment's time or assign it to another clinician just by dragging it on the grid. It's the quickest way to make a change without opening the details, editing the form and saving. This guide explains how to do it step by step, what checks the system runs and when to use this method instead of rescheduling from the details.
+
+## Before you start
+
+- The appointment has to already exist on the calendar.
+- The new time and the new clinician you want to move the appointment to have to be within working hours and free of blocks. If the target has diagonal lines (closed hours or a block), the system won't let you drop the appointment there.
+- If the target time is taken by another appointment, the system will only allow the change if the clinician or the treatment room has overlapping appointments (double-booking) enabled. Otherwise, it will reject the move.
+
+## How to get to this section
+
+1. Log in to OCLÜ.
+2. In the left sidebar, click the calendar icon to open the **Daily view**.
+3. Go to the day of the appointment you want to reschedule, using the date field or the `<` and `>` arrows.
+
+## Steps to reschedule
+
+### 1. Find the appointment on the grid
+
+Look for the appointment's colored block in the column of the clinician it's assigned to, at the height of its current time. The patient's name appears inside the block.
+
+### 2. Drag the appointment to the new time
+
+Click the appointment's block and, without releasing the mouse button, drag it to the cell for the new time or clinician. While you drag, you'll see a preview of the block in the target position.
+
+- To change **only the time** (same clinician): drag up or down within the same column.
+- To change **the clinician** (same time): drag sideways to the other clinician's column.
+- To change **time and clinician** at once: drag diagonally to the target cell.
+
+Release the mouse button when you're on the right target.
+
+> If the grid has many clinicians and they don't all fit on the screen, you'll probably need to scroll sideways to reach the column you want. Scroll before you start dragging, not while you drag.
+
+### 3. Confirm the change
+
+When you release it, a **Move this appointment** window opens ("Review the change before confirming it.") with a **Notify the patient about the change of time** checkbox. Tick it if you want to let the patient know, and click **Yes, move it** to confirm (or **No, cancel** to leave the appointment as it was).
+
+<Frame>
+  ![Image](/images/image-426.png)
+</Frame>
+
+If the patient has no email on file and the checkbox is ticked, you'll see a warning that they won't receive the notice. If the appointment is online, a note is added saying that the patient receives two notices (one from the clinic and one from Google Meet).
+
+If the target has a conflict (another appointment at the same time without overlapping enabled, or a block), OCLÜ shows you a warning and the appointment goes back to its original position.
+
+> The notify checkbox comes ticked or unticked depending on how you left it the last time — you can set a default value from the calendar's **Preferences** screen (see the **How to change the calendar view and filter by clinician** guide).
+
+## Expected result
+
+The appointment moves to the new time or column. If you ticked **Notify the patient about the change of time**, the patient receives the notice by WhatsApp (if the clinic has that integration) or by email.
+
+## Notes and variations
+
+- **When this method works best:** for small, quick changes (moving it 30 minutes, switching to another available clinician). It's ideal for changes on the go during the day.
+- **When it's better to reschedule from the details:** if you need to move it to a different date (not the same day), if you want to change other details at the same time (description, appointment type, etc.), or if you need to record why it changed. In those cases, open the appointment and use the **Reschedule** button in the details panel.
+- **If the change doesn't apply:** the most common reason is that the target is blocked or already has another appointment. Check for diagonal lines (unavailable areas) and for other appointments at that time.
+- **It doesn't change the date, only the time and clinician:** this method works within the same day. To move it to another date, use the **Reschedule** button from the details.
+- **Permissions:** whether you can move appointments by dragging them depends on the permissions assigned to the staff member under Administration → Staff → Permissions. If you can't drag appointments, check your settings.

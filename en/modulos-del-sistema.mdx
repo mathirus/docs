@@ -1,0 +1,707 @@
+---
+title: "System modules"
+---
+
+OCLÜ is organized into modules, each one designed for a specific job within the clinic. In this section you'll find a full description of what you can do in each of them.
+
+> **If you're setting up OCLÜ for the first time**, we recommend starting with the **Administration** module before using the rest of the system. From there you can set up your clinic, create users, add treatments, and define cash accounts and schedules. Once that's done, the rest of the modules will work with all that information already in place.
+
+<Frame>
+  ![Image](/images/image-1.png)
+</Frame>
+
+---
+
+## Calendar
+
+<Frame>
+  ![Image](/images/image-298.png)
+</Frame>
+
+The **Calendar** module is the hub of the clinic's daily operations. This is where you organize and manage every appointment, each clinician's working hours and the clinic's overall availability.
+
+### Views and grouping
+
+When you open it you can choose between a **daily** or **weekly view**, and group the columns by **clinician** or by **treatment room**. You can change both at any time. From the module's **Preferences** (the settings icon) you set which view and which grouping open by default every time you come in, instead of the last ones you used.
+
+<Frame>
+  ![Image](/images/image-310.png)
+</Frame>
+
+If you group by treatment room, the filter island has a shortcut to the treatment room settings — the same list you'll find in Administration → Clinics — where you edit each room's name and whether it allows overlapping appointments (overbooking).
+
+You can also choose which columns to show (all clinicians/treatment rooms, or just some of them) and move around with the forward and back arrows or the **Today** button.
+
+### Appointment statuses and blocks
+
+Appointment statuses (Pending, Confirmed, Cancelled, etc.) are set up in **Administration → Appointment statuses**, which has two tabs: **Appointment statuses** and **Block categories**. Besides its color and whether it's visible on the calendar, each status has the **Attended** column — it marks which statuses count as the patient actually having come in, something the Finances pending clinical notes report relies on.
+
+<Frame>
+  ![Image](/images/image-288.png)
+</Frame>
+
+**Block categories** work the same way, but they set the color of calendar blocks instead of appointments.
+
+You can choose whether to allow appointments to overlap, separately for each clinician and each treatment room — for example, allowing overbooking per clinician but not per treatment room.
+
+### Managing appointments
+
+You can create an appointment with the **+** button or by dragging over an empty slot on the calendar — right there you can also choose to create a **calendar block** instead of an appointment. The form asks for the patient, treatment plan, assigned clinician, treatment room, status, type (in person or virtual, the latter only if the clinician has Google Calendar connected), time range, description, and two checkboxes to notify the patient by email or WhatsApp as soon as the appointment is saved.
+
+<Frame>
+  ![Image](/images/image-306.png)
+</Frame>
+
+If the patient isn't in the system yet, you can register them right there with first name, last name, phone and ID number — the same quick entry as always, so you don't interrupt the flow of care.
+
+You can move appointments by dragging them to another time, column or clinician, and resize them by stretching the bottom edge. When you move one, the system asks whether you want to let the patient know about the change before confirming.
+
+<Frame>
+  ![Image](/images/image-293.png)
+</Frame>
+
+### Appointment details
+
+Clicking any appointment opens a panel with three cards: the appointment's **information** (with links to **History** — the full record of status changes, reschedules and notices sent, each with who or what triggered it — and **Reschedule**, which only lets you change the date and time), **editing** of the status, treatment room and description, and **shortcuts** to sections of the linked patient's record (Personal details, Media, Clinical notes, Treatment plans, Medical background and Lab).
+
+From **Notify the patient** you can send them an email with the appointment details, or choose among three WhatsApp options: a simple notice, a confirmation request (adds the link for the patient to reply), or a confirmation follow-up — the last one is sent by the system directly from the clinic's official number, not from your personal WhatsApp, and it's only enabled once a follow-up is actually due.
+
+<Frame>
+  ![Image](/images/image-316.png)
+</Frame>
+
+---
+
+## Patients
+
+The **Patients** module is the backbone of OCLÜ. It brings together all of each patient's clinical, administrative and financial information, from the first contact through follow-up after treatment.
+
+### Patient list
+
+<Frame>
+  ![Image](/images/image-474.png)
+</Frame>
+
+When you open the module, you'll see the full list of all registered patients. The columns are: ID, Name (with photo), ID number, Contact (email and phone), MRN, Tags and Actions.
+
+From the list you can:
+
+- **Search for patients** — By name, email, phone, ID number or medical record number.
+- **Filter by incomplete** — To quickly spot patients whose record is missing information.
+- **Send the details update link in bulk** — From **More actions → Data update request**. You can select every patient who has an email on file, or pick them one by one, and send them a link to review and update their information. The system tells you which ones have no email on file.
+- **Add a patient manually** — By filling in the two-step registration form.
+
+<Frame>
+  ![Image](/images/image-472.png)
+</Frame>
+
+- **Register a new patient by link or QR code** — From **Add patient → Share link**, in Single use mode (one-time use, expires after 7 days) or Permanent mode (reusable). It generates a link and a QR code so the patient can fill in their information for the first time from their phone.
+
+<Frame>
+  ![Image](/images/image-471.png)
+</Frame>
+
+- **Import patients in bulk** — By downloading the Excel template, filling it in and uploading it to the system. You can also import clinical notes the same way.
+
+<Frame>
+  ![Image](/images/image-476.png)
+</Frame>
+
+> **Individual details update** — Inside each patient's record, the **Update details** button generates and sends a link with the patient's information already filled in so they can review and update it.
+
+<Frame>
+  ![Image](/images/image-333.png)
+</Frame>
+
+---
+
+### Patient record
+
+Clicking any patient in the list takes you to their full record. The header shows the patient's photo, full name, age, a WhatsApp shortcut and two indicators: whether the patient owes money or not, and the patient's access link to the system.
+
+> **Patient access** — You can give the patient access to their own information inside OCLÜ. With that access they can see their media, appointments, balance, treatment plans and digital prescriptions. How many accesses you can grant depends on your plan; from **My subscription** in the header you can see how many you've used and how many you have left.
+
+<Frame>
+  ![Image](/images/image-504.png)
+</Frame>
+
+### Patient portal
+
+This is what the patient sees when they log in with their own user, with its own side menu: a **dashboard** with upcoming appointments and account status; **My appointments** with the full history; **Digital prescriptions** to download as PDF; **Media** with everything the clinic has uploaded for them; **Invoicing**, the account statement with the history of charges and payments, filterable by currency; and **Family group**, if they have one, with the combined balance of all its members.
+
+<Frame>
+  ![Image](/images/image-146.png)
+</Frame>
+
+---
+
+#### The record is organized into four main tabs:
+
+#### A. Personal details
+
+It holds all of the patient's personal and contact information, organized into the following subsections:
+
+- **Personal information** — First name, last name, date of birth, gender, ID document.
+- **Contact information** — Email, phone.
+- **Address** — Full address.
+- **Health insurer** — Insurer, plan and member number
+- **Additional information** — Referred by, emergency contact.
+- **Family group** — Lets you link patients to each other within the system.
+- **Appointments** — The patient's full appointment history.
+
+<Frame>
+  ![Image](/images/image-317.png)
+</Frame>
+
+- **Comments** — Administrative notes visible to the team.
+- **Tags** — Labels for finding the patient later in specific cases, picked from a catalog the clinic manages.
+
+<Frame>
+  ![Image](/images/image-334.png)
+</Frame>
+
+- **History** — An audit log with every event on the record, grouped by day: treatment plan status changes, clinical notes, payments, uploaded documents, calendar activity and restored deleted appointments, each with the time and who did it.
+
+<Frame>
+  ![Image](/images/image-335.png)
+</Frame>
+
+---
+
+#### B. Clinical record
+
+This is the patient's digital clinical file. It contains:
+
+**Medical background**
+
+<Frame>
+  ![Image](/images/image-505.png)
+</Frame>
+
+All of the patient's relevant medical information: medical history, medications, dental history, habits and additional comments. Every time this section is filled in or changed, the system requires a legal consent to be signed.
+
+> **OCLÜ AI** — Inside medical background you have access to OCLÜ's AI dental assistant. By analyzing the information entered, it gives you clinical recommendations and helps you make decisions during the visit.
+
+**Odontogram**
+
+A visual, interactive representation of the patient's dental status. From here you can record diagnoses and treatment planning for each tooth and surface.
+
+<Frame>
+  ![Image](/images/image-506.png)
+</Frame>
+
+**Periodontal chart**
+
+A tool for recording and tracking the patient's periodontal status, with four views of the arches. Once the measurements are entered, the system automatically calculates a summary: sites with pockets of 5 mm or more, the highest clinical attachment level recorded, and the percentage of sites that bleed on probing.
+
+<Frame>
+  ![Image](/images/image-510.png)
+</Frame>
+
+<Frame>
+  ![Image](/images/image-339.png)
+</Frame>
+
+**Clinical notes**
+
+The clinical record of each visit. You can write the note by hand, dictate it by voice or improve the wording with the built-in artificial intelligence. When you add it you can attach files (choosing their category), add the clinician's and the patient's signatures, and schedule a follow-up reminder to book the patient again. Every clinical note can be exported as a PDF.
+
+<Frame>
+  ![Image](/images/image-320.png)
+</Frame>
+
+**Media**
+
+<Frame>
+  ![Image](/images/image-480.png)
+</Frame>
+
+**Unlimited** storage for the patient's files. Supported formats:
+
+- Images: JPG, PNG, HEIC
+- Videos: MP4, MOV, AVI, WEBM, MKV
+- Documents: PDF, DOCX, XLSX
+- 3D models: STL, PLY
+
+> 3D files come with a **3D viewer developed by OCLÜ**, which lets you open and handle the models right in the browser, with no extra software.
+
+Uploading a DICOM study (the .zip or the folder the CT scanner exports) is a separate action, with its own box so it doesn't get mixed up with regular files — its **DICOM viewer** is an add-on, an extra service not included in the plan by default.
+
+<Frame>
+  ![Image](/images/image-321.png)
+</Frame>
+
+Files can be sorted by date or alphabetically, and there's a built-in photo editor to crop and adjust without leaving the system, plus an annotation tool with the odontogram's symbol palette to mark findings right on the image.
+
+Besides individual files, Media has a **Presentations** tab: visual cases built slide by slide with the patient's photos, to show them their treatment plan during the visit. They can be shown full screen or shared with a public link.
+
+<Frame>
+  ![Image](/images/image-322.png)
+</Frame>
+
+**Digital prescriptions** _(available in Argentina only)_
+
+Creates legally valid medication prescriptions and test requests, digitally signed by the clinician. Creating one takes three steps: you choose the dentist (they need a complete professional profile in Administration), add the medications or tests with their dosage, and confirm the patient's coverage details. When you generate it, the system offers to send it by WhatsApp or email at the same time as it opens the PDF. Any prescription can be cloned to issue it again without entering it from scratch.
+
+<Frame>
+  ![Image](/images/image-507.png)
+</Frame>
+
+**Consent forms**
+
+For each treatment to be performed, you can generate an informed consent form for the patient to sign digitally on the spot — the clinician's signature requires them to have their signature set up in Administration. Consent forms are legally valid, don't expire and can't be revoked once signed. From the consent form templates (in Administration) you can generate an unsigned preview to share with the patient in advance.
+
+<Frame>
+  ![Image](/images/image-508.png)
+</Frame>
+
+**Facial aesthetics**
+
+A set of aesthetic diagnosis tools, built into the clinical record:
+
+- **Facial aesthetics** — aesthetic diagnosis with a radar-style profile (skin, shape, animation, symmetry and proportion) and comparison of the patient's photos from different angles and dates.
+
+<Frame>
+  ![Image](/images/image-324.png)
+</Frame>
+
+- **Aesthetic analysis** — a facial and dental diagnosis protocol, which is also where you open **Smile Design** _(beta)_ to build smile design cases by aligning photos with AI.
+
+<Frame>
+  ![Image](/images/image-325.png)
+</Frame>
+
+- **Biomechanical analysis** — assessment of the temporomandibular joint (TMJ), with charts to compare how it changes over time.
+- **Microbiological analysis** — tracking of the patient's biofilm over time.
+- **Physicochemical analysis** — a record of the patient's biological risk, also comparable across visits.
+
+---
+
+#### C. Treatment plans
+
+From this tab you can create and manage all of the patient's treatment plans. OCLÜ works in the local currency set up for your clinic and in US dollars, so you can manage treatment plans and receive payments in both currencies.
+
+<Frame>
+  ![Image](/images/image-277.png)
+</Frame>
+
+Treatment plans go through the following statuses, and they always move forward — once they leave Draft they can't go back:
+
+| Status | Description |
+| :-- | :-- |
+| **Draft** | Being created, still editable |
+| **Pending** | Shared with the patient, no longer editable |
+| **Approved** | The patient accepted the treatment plan |
+| **Rejected** | The patient didn't accept the treatment plan |
+| **Closed** | All treatments completed |
+| **Deleted** | Treatment plan deleted |
+
+> _A treatment plan in **Pending** status works as a contract between the clinic and the patient, which is why it can't be edited once it's been shared._
+
+**Add treatment plan** lets you choose between two ways of entering it, which end up with the same result: the **Express treatment plan**, a small window to search for treatments and save in one click — with the option to dictate them by voice — designed for everyday use; or the **Full treatment plan**, a separate screen with the odontogram, installment payments, comment templates and media.
+
+<Frame>
+  ![Image](/images/image-329.png)
+</Frame>
+
+When you send it by email or WhatsApp you choose whether to ask the patient to approve or reject it, or just send it for them to look at, and how much price detail the PDF includes.
+
+<Frame>
+  ![Image](/images/image-331.png)
+</Frame>
+
+Right-clicking any card gives you all the quick actions (view it, send it, export it, edit it, duplicate it, change its status) without opening the treatment plan. **Duplicate** is the way to "edit" one that has already left Draft: it creates an editable copy for you to work on.
+
+---
+
+#### D. Balance
+
+<Frame>
+  ![Image](/images/image-509.png)
+</Frame>
+
+It shows the patient's full financial status: everything that has been charged to them as debt and everything they have paid. From here you can see whether they have a credit balance or an outstanding balance, and record new payments — if they have a credit balance in more than one currency, you can choose which of the two to use for the payment.
+
+You can also **void payments already recorded**, as long as no fees have been paid out to the clinician for that payment. This is useful when, for example, a patient made an advance payment on a treatment plan that later needs to be deleted or replaced. When you void a payment, the system asks for a required reason, reverses the amounts in the balance, and the voided payment stays visible with a strikethrough. The amount is then available to reassign to another treatment plan.
+
+<Frame>
+  ![Image](/images/image-171.png)
+</Frame>
+
+---
+
+### Downloading the clinical record
+
+Although the clinical record lives digitally in the system, you can export it as a PDF with all of the patient's information — medical background, clinical notes, diagnoses, medication, tests and the corresponding legal statements — from the **Download** button. To be legally valid, it has to be printed and signed by hand.
+
+---
+
+## Laboratory
+
+The **Laboratory** module lets you manage all the prosthetic work the clinic sends to outside labs, with full tracking of each request's status. It is organized into three tabs.
+
+### Requests
+
+<Frame>
+  ![Image](/images/image-340.png)
+</Frame>
+
+A list of all requests, with a search by patient and filters by date, lab and status. Linking a request to a treatment in the treatment plan is optional and doesn't affect the treatment plan's amounts or statuses — it's just to have the context at hand. If a patient with pending requests has an appointment coming up, a notice appears above the list so you can prioritize that work.
+
+**Creating a request** takes two steps: first the details (patient, reference treatment plan and treatment, lab, send and delivery dates, title, description and attachments — which you can upload from your computer or pick directly from the patient's existing media) and then, optionally, the lab items with their prices.
+
+<Frame>
+  ![Image](/images/image-341.png)
+</Frame>
+
+### Labs
+
+<Frame>
+  ![Image](/images/image-343.png)
+</Frame>
+
+Here you set up the labs the clinic works with: name, contact, address and the date of the last price list received. For each lab you manage its **price list** — the items you can order from it with their prices — which can also be loaded in bulk by importing an Excel or CSV file.
+
+<Frame>
+  ![Image](/images/image-346.png)
+</Frame>
+
+### Statuses
+
+<Frame>
+  ![Image](/images/image-347.png)
+</Frame>
+
+The statuses in the lab workflow (for example, pending shipment, sent, delivered) are fully customizable: you can edit, color, hide and reorder them.
+
+---
+
+## Stock
+
+The **Stock** module brings together the management of the clinic's inventory of materials and supplies. It is organized into three tabs.
+
+### Inventory
+
+<Frame>
+  ![Image](/images/image-348.png)
+</Frame>
+
+If you have a barcode reader connected, you can scan at any time while you're on this screen: if the code already belongs to a product in the system, it finds the product and highlights it in the list; if it isn't registered, it opens the add form directly with the code already filled in.
+
+The system shows a notice above the list when products are below their minimum stock or will expire within the next 30 days.
+
+The same product can have several **batches** with different expiry dates — for example, if two shipments arrived in different months. Each batch is recorded separately, with its own quantity, supplier and expiry date.
+
+<Frame>
+  ![Image](/images/image-350.png)
+</Frame>
+
+### Movements
+
+<Frame>
+  ![Image](/images/image-351.png)
+</Frame>
+
+This tab records every stock-in and stock-out of products. When you record a stock-out of a product with several active batches, you can let the system automatically take from the one that expires first (FIFO) or choose the specific batch yourself.
+
+### Suppliers
+
+<Frame>
+  ![Image](/images/image-352.png)
+</Frame>
+
+A directory of supply vendors. For each supplier you can enter the name, address, phone, email, website and notes. The phone number works as a direct link to WhatsApp. Suppliers can be edited or disabled.
+
+---
+
+## Finances
+
+The **Finances** module is the clinic's financial control center. This is where you record and oversee all of the clinic's income, expenses, debts, cash accounts, fees and reports, with support for two currencies at the same time.
+
+### Dashboard
+
+<Frame>
+  ![Image](/images/image-354.png)
+</Frame>
+
+When you open it you see a dashboard laid out in three columns: on the left, the month and year filters, access to Electronic invoicing (or "Invoicing" for clinics in Spain) and insurer receivables; in the middle, the month's balance with shortcuts to Income, Expenses and Balance, plus the reports; on the right, the status of cash and bank accounts and what was paid to clinicians in the period. A **Hide amounts** button at the top right masks every amount when someone else is looking at the screen.
+
+### Income, expenses and balance
+
+The **Income**, **Expenses** and **Balance** reports list the period's movements, filtered by cash or bank account and date, with export to PDF and Excel. From Expenses you can also manage expense categories, and attach the receipt when you enter one.
+
+<Frame>
+  ![Image](/images/image-357.png)
+</Frame>
+
+### Follow-up reports
+
+Besides Outstanding balances and Treatment plans, there are two reports designed for daily control:
+
+- **Credit balances** — patients with money not yet assigned to any treatment plan, broken down by currency, also flagging those who still have an outstanding balance at the same time.
+
+<Frame>
+  ![Image](/images/image-362.png)
+</Frame>
+
+- **Pending clinical notes** — appointments that already took place, have a treatment plan linked to them, and still don't have a clinical note entered. It's a quality check, not a financial report as such.
+
+<Frame>
+  ![Image](/images/image-363.png)
+</Frame>
+
+### Cash and bank accounts
+
+<Frame>
+  ![Image](/images/image-366.png)
+</Frame>
+
+Each cash or bank account is tied to a fixed currency and to the payment methods it accepts. Besides regular accounts there are **Adjustment accounts** — for accounting corrections, such as a cash withdrawal or a one-off deposit of your own money — and, if your clinic gives discounts when charging, **Discount accounts**: accounts the system creates and uses on its own, with their own report of the discounts given.
+
+<Frame>
+  ![Image](/images/image-367.png)
+</Frame>
+
+### Clinician payments
+
+Based on the contracts set up in Administration, this is where you pay out each clinician's fees.
+
+<Frame>
+  ![Image](/images/image-373.png)
+</Frame>
+
+A three-step wizard guides you: you choose the clinician and the period (by the date the treatment was completed, not the date the treatment plan was created), select which of the pending treatments to pay, and finally choose the currency they're paid in — if it's different from the currency of their treatments, the system asks for the exchange rate and shows you the conversion before you confirm.
+
+<Frame>
+  ![Image](/images/image-374.png)
+</Frame>
+
+Each clinician can check their own fees and payment status from **My fees**, in their user menu.
+
+### Advanced reports
+
+<Frame>
+  ![Image](/images/image-376.png)
+</Frame>
+
+A complete financial and management analysis, for Administrators only, with three tabs: **Finances** (financial KPIs and trend charts), **Management** (operational indicators: patients, treatment plan conversion, attendance) and **Audit** (who created, edited or deleted each calendar appointment, with the option to restore deleted ones). It has an artificial intelligence assistant (**OCLÜ AI**) that interprets the period's data, export to PDF, and the same **Hide amounts** button as the dashboard.
+
+### Additional module: Electronic invoicing _(available in Argentina only)_
+
+**Electronic invoicing** is an additional module that plugs into Finances and lets you issue legally valid electronic tax receipts in Argentina. For more information about this module, get in touch with our team.
+
+<Frame>
+  ![Image](/images/image-419.png)
+</Frame>
+
+---
+
+## Connect
+
+The **Connect** module is the inbox where the clinic's team reads and replies to their patients' WhatsApp messages, all in one place. It's an **add-on**: if your clinic hasn't purchased it, you won't see this icon in the side menu.
+
+### Conversation inbox
+
+<Frame>
+  ![Image](/images/image-485.png)
+</Frame>
+
+Conversations can be filtered by **All**, **Mine** or **Unassigned**, and also by tag or by team member. From **Reminders** you can reach the internal reminders linked to that inbox.
+
+### Settings
+
+You open it with the gear icon inside Connect itself, not from Administration. The **Getting started** tab walks you through the setup: which location receives the WhatsApp messages, the linked official line, whether the clinic's WhatsApp Web is connected, and who on the team handles the inbox. The other tabs (Assistant, Opening hours, Tags and replies) let you set up quick replies, tags, an automatic out-of-hours message, and an optional **virtual assistant** that answers on its own and hands over to the team when needed — it's a separate service within Connect.
+
+<Frame>
+  ![Image](/images/image-498.png)
+</Frame>
+
+---
+
+## Administration
+
+The **Administration** module is the system's central control panel. This is where you set up everything the other modules need to work properly. We recommend restricting access to this module to the clinic owner or highly trusted staff, since it holds the most sensitive information in the system.
+
+The module is organized into the following sections:
+
+### Clinics
+
+<Frame>
+  ![Image](/images/image-378.png)
+</Frame>
+
+Here you set up each clinic or branch you have in the system. When you sign up for OCLÜ, a base clinic is created automatically. If your plan allows it, you can add more locations.
+
+For each clinic you can set up:
+
+- Name, logo, email, address and phone _(this information appears in the headers of the documents shared with patients)_
+- Opening days and hours _(determines the availability shown on the calendar)_
+- Appointment intervals: every 15, 30 or 45 minutes, 1 hour or 1.5 hours
+- **Treatment rooms** — The treatment spaces available at that location
+- **Assigned clinicians** — Which clinicians see patients at that location
+
+<Frame>
+  ![Image](/images/image-379.png)
+</Frame>
+
+### Staff
+
+<Frame>
+  ![Image](/images/image-381.png)
+</Frame>
+
+A list of every team member. There are **three roles with special behavior** — Administrator, Doctor and Secretary — and six others meant for specific staffing needs (Hygienist, Receptionist, Manager, CEO and Director, and Assistant), which are set up entirely through permissions:
+
+| Role | Description |
+| :-- | :-- |
+| **Administrator** | Full access to the whole system. Their permissions can't be restricted. |
+| **Doctor** | A clinician with their own schedule enabled, responsible for treatment plans and with fee contracts. |
+| **Secretary** | Administrative staff. They have no schedule of their own and can't be responsible for treatment plans. |
+
+> Roles are system labels. Each user's actual permissions are set up in detail, independently of the role assigned.
+
+For each staff member you can manage:
+
+- **Personal details** — First name, last name, email, phone and gender. If the staff member has the **Doctor** role or "also sees patients" (see below), you can also enter: ID document, national license number, provincial license number, profession and specialty.
+- **Signature** — The signature is used on consent forms and digital prescriptions.
+- **System access** — You can enable or disable any user's access. The system won't let you leave the clinic without an enabled administrator: if there's only one left, that one can't be disabled.
+- **Schedules** — Setup of each clinician's working days and hours, including a weekly day off and customizable daily breaks.
+- **Permissions** — Detailed control over what each user can see and do, with **Quick presets** by profile (Front desk, Clinician, Administration, etc.) that you apply in one go and then fine-tune in two permission trees. A new user starts with all permissions enabled, except Hygienist (missing the digital prescription permissions) and Assistant (starts with none, so you have to set them up by hand).
+
+<Frame>
+  ![Image](/images/image-402.png)
+</Frame>
+
+- **Enable clinician duties** — Any role other than Doctor or Secretary can have their own schedule, be responsible for treatment plans, sign consent forms and issue prescriptions, just like a Doctor. For an Administrator you choose this when creating them; for the other roles, you turn it on afterwards with the "Also sees patients" option when editing their profile. In both cases, once it's turned on it can't be turned off.
+- **Password change** — You can send them an email so they choose it themselves, or set it yourself directly from here.
+
+<Frame>
+  ![Image](/images/image-409.png)
+</Frame>
+
+> **Important** — A user's role can't be edited once they've been created. If you need to change it, contact support.
+
+#### **Contracts**
+
+<Frame>
+  ![Image](/images/image-404.png)
+</Frame>
+
+Contracts define how each clinician's fees are calculated. There are two types: **Per treatment plan** — one overall percentage applied to every treatment — and **Per treatment** — a different condition for each treatment, with a second step where you enter the percentages or fixed amounts for each one. In both cases you set the calculation base separately for what the patient pays and what the health insurer covers (based on the treatment plan price or the list price), and from the same list you link which clinicians use each contract.
+
+> We always recommend creating a new contract instead of editing an existing one, since contracts can be linked to several clinicians and any change would affect all of them.
+
+---
+
+### Automations
+
+This is where you set up the system's automatic processes:
+
+- **Appointment reminder by email** — The system automatically sends the patient an email with a link to confirm or cancel their appointment. You can set how many days in advance it's sent (1, 2 or 3 days before, or the same day), which appointment status triggers it, and which status the appointment moves to if the patient confirms, cancels or reschedules.
+- **Treatment plan expiry** — You can set a standard number of days until every treatment plan expires. Once expired, the treatment plan shows the **Expired** tag, but only if it's in **Pending** status. This tag is visible in the treatment plans report in Finances, making it easier to follow up with patients who didn't respond. If you need to change it for a particular treatment plan, you can do so directly from that treatment plan.
+- **Appointment reminder over WhatsApp** — Sends a WhatsApp message before the appointment with buttons so the patient can confirm or cancel from the chat. It's a paid add-on: if you don't have it, the setup button opens a promotional window instead of the actual screen.
+
+---
+
+### Treatments
+
+This is where you set up all the treatments the clinic works with. The system comes with three preloaded lists: **ARS list**, **USD list** and **Debt list**. Each list has categories, with treatments inside each category.
+
+We recommend keeping each list to treatments in a single currency so the system works properly.
+
+Within treatments you can:
+
+- Create, edit and organize categories and treatments
+- Set the code, name, final price, list price and patient price for each treatment
+- Enable or disable treatments _(a treatment linked to a treatment plan can't be deleted, but it can be disabled)_
+- Import treatments from Excel
+- Apply percentage price increases to categories or entire sets of treatments
+- Duplicate price lists
+- Add new price lists as needed
+
+### Templates
+
+This is where you set up all of the system's predefined texts and documents, in five tabs:
+
+- **Consent forms** — Legal documents the patient signs before each treatment, plus a second tab for surgical reports. Some come preloaded and you can add or edit the ones you need. From here you can also generate the unsigned PDF to send to the patient in advance.
+- **Medical background** — You choose which questions appear in the patient's clinical record and which are required, grouped into four blocks (medical history, medications, dental history and habits). It applies both to what staff fill in and to the links sent to the patient.
+
+<Frame>
+  ![Image](/images/image-392.png)
+</Frame>
+
+- **Treatment plans** — Texts that are attached to the treatment plan and included in the PDF the patient receives. They're meant to give the patient in writing the information that was explained during the visit, so nothing important gets lost. Some come preloaded and they're fully editable.
+- **Email** — The predefined messages the system sends automatically for each action (appointment reminder, confirmation, etc.). You can edit the text of each one with a real-time preview. They can't be deleted.
+- **WhatsApp** — The same idea as the email ones, for messages sent by WhatsApp, plus the option to customize a copy of the automatic appointment reminder.
+
+---
+
+### Reminders
+
+Internal tasks and reminders for the clinic's team — they aren't messages sent to the patient. You can create one-off or recurring reminders (for example, a monthly check-up for a patient in treatment), assign them to yourself or another staff member, and organize them with your own categories.
+
+<Frame>
+  ![Image](/images/image-396.png)
+</Frame>
+
+---
+
+### Cash and bank accounts
+
+This is where you set up the accounts the clinic uses to record its financial movements. This doesn't involve any real link to bank accounts: it's an internal record for tracking the flow of money within the system.
+
+You can set up cash accounts, bank accounts and payment terminals, separated by currency. For each cash or bank account you can set its name and the payment methods it accepts.
+
+> An account's currency can't be edited once it's been created. Cash and bank accounts can't be deleted — if you need to do that, contact support.
+
+From here you can also:
+
+- **See the current balance of each account** — Check in real time how much is available in each cash or bank account, without having to go into the Finances module.
+- **Record transfers between accounts** — When you move money from one account to another, for example from the cash account to the bank, you record it here so it's logged in the system.
+- **See the transfer history** — Access the full record of all movements between accounts, with the option to also show voided transfers.
+- **Create adjustment accounts** — Special accounts for recording movements that aren't regular operations, such as a cash withdrawal at the end of the week (outgoing adjustment) or a deposit of your own money to cover a one-off expense (incoming adjustment). The adjustments themselves are made from the **Finances** module.
+
+---
+
+### Appointment statuses
+
+Defines the statuses an appointment can have (Pending, Confirmed, Cancelled, etc.) and the color each one shows on the calendar, including whether that status counts as **Attended** for the Finances pending clinical notes report. A second tab, **Block categories**, separately defines the colors of calendar blocks.
+
+<Frame>
+  ![Image](/images/image-399.png)
+</Frame>
+
+---
+
+### Reports
+
+The **Reports** section is designed so the clinic's owner or administrator can analyze the business's performance in depth and make decisions based on real data. It brings all of the clinic's financial and operational information together in one place, with charts, indicators and rankings that help you spot opportunities for improvement, catch problems early and plan the clinic's growth. It's split into two tabs:
+
+#### **Finances**
+
+A financial analysis of the selected period (you can filter by year, month, week and currency):
+
+- Income, expenses, result, margin and margin percentage
+- Average ticket and number of transactions
+- Operating expenses and clinician payments
+- Outstanding receivables, status of cash and bank accounts, insurer debts
+- Financial trend charts and income statement
+
+> **OCLÜ AI** — Inside the Finances tab you have access to the AI management advisor. It analyzes all the period's data and helps you interpret it, spot opportunities for improvement and decide on next steps to optimize the clinic's financial management.
+
+#### **Management**
+
+An operational analysis of the clinic:
+
+- Patients seen, new and returning
+- Treatment plan conversion rate (approved vs. rejected)
+- Total appointments, cancellations and attendance rate
+- Trends in patients, treatment plans and activity
+- Patient retention
+- Ranking of the most approved and most rejected treatments
+- Ranking of the most frequently seen patients
+- Ranking of clinicians with the highest conversion rate
+- Email campaigns: appointment reminders, happy birthday, patient reactivation and bulk sending _(coming soon)_
+- Medical background still to be completed
+
+> **OCLÜ AI** — Inside the Management tab you also have access to the AI advisor. It analyzes the period's operational indicators and helps you understand your patients' behavior, your team's performance and what concrete actions you can take to improve the clinic's management.

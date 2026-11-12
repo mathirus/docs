@@ -1,0 +1,733 @@
+---
+title: "Patients"
+---
+
+The Patients module is at the heart of **OCLÜ**. It brings together all of each patient's clinical, administrative and financial information, and it's where you manage the patient's whole journey through the clinic, from the first contact to follow-up after treatment.
+
+---
+
+## Patient list
+
+When you open the module, the first thing you see is the full list of every patient registered at the clinic. The columns are: ID, Name (with photo), ID number, Contact (email and phone), MRN, Tags and Actions.
+
+<Frame>
+  ![Image](/images/image-474.png)
+</Frame>
+
+### Patient search
+
+The **Search patients** field filters as you type. Next to it there's an **All fields** dropdown that lets you narrow the search to a single field (Name, Phone, Email, ID number, Health insurer, Medical record) instead of searching all of them at once.
+
+### Incomplete patients filter
+
+Next to the search there's an **Incomplete** pill with a number — how many patients have at least one required field left blank. Click it and the list is filtered to show only those patients.
+
+Keep in mind that a patient added through the Calendar's quick add will show up as incomplete, since that flow only records first name, last name and phone.
+
+### Tags filter
+
+A dropdown that lists every tag the clinic has set up (for example "OMINT", "Armonización facial"). Choose one or more to see only the patients that have them.
+
+<Frame>
+  ![Image](/images/image-475.png)
+</Frame>
+
+### Adding a patient manually
+
+The black **Add patient** button opens a dropdown with two options: **Manually** (the two-step form you fill in yourself) or **Share link** (a link and a QR code so the patient can sign up on their own from their phone).
+
+<Frame>
+  ![Image](/images/image-470.png)
+</Frame>
+
+The manual form has two steps — **Basic details** and **Additional details** — with an indicator at the top that shows which step you're on.
+
+<Frame>
+  ![Image](/images/image-472.png)
+</Frame>
+
+<Frame>
+  ![Image](/images/image-473.png)
+</Frame>
+
+### Import / Export
+
+This groups the bulk upload and download actions: **Import patients** (adds several patients at once from Excel), **Import clinical notes** (bulk upload of clinical notes for existing patients) and **Export patients** (downloads the list, with the filters you applied, to a file).
+
+<Frame>
+  ![Image](/images/image-476.png)
+</Frame>
+
+### **More actions → Data update request (bulk send)**
+
+Opens the **Request medical background** window, with counters showing how many patients have an email on file and how many don't. You can pick recipients by searching for them one by one, check "all pending with email" in one go, or go through the section of patients without an email to reach them some other way. The **Send** button sends each selected patient their own update link — it expires after 48 hours.
+
+### Right-click shortcut menu
+
+Right-clicking any row opens a menu with shortcuts so you don't have to open the patient's record: open profile, view odontogram, view media, take payment, view treatment plans, quick treatment plan and manage tags.
+
+<Frame>
+  ![Image](/images/image-478.png)
+</Frame>
+
+---
+
+### Patient record header
+
+When you open a patient's record, the header shows the most important information at a glance: photo, full name, age, a direct link to WhatsApp, an indicator if they have outstanding balances, and the **Patient link** button to manage their access to the portal.
+
+<Frame>
+  ![Image](/images/image-503.png)
+</Frame>
+
+### Patient portal — managing access
+
+The **Patient link** button opens the **Patient access** window. If the patient doesn't have access yet, it asks you to confirm creating their user; once you confirm, the system emails them their login details. If they already have access, the same window shows a **Portal access** switch (to enable or disable it) and the **Resend** button to email them their login details again.
+
+_It's important to tell the patient to check their inbox, since the login details may end up in their_ **_spam_** _folder._
+
+<Frame>
+  ![Image](/images/image-504.png)
+</Frame>
+
+How many patient accesses you have depends on your plan. From **My subscription** in the system header you can see how many accesses have already been granted and how many are still available. If you run out, you can disable access for a patient who hasn't come in for a long time so you can give it to a new one.
+
+---
+
+### Patient portal
+
+The patient portal is a view inside OCLÜ designed so patients can look up their own information on their own. When they log in with their details, they get a panel with an always-visible side menu that includes the following sections:
+
+**Main dashboard** This is the portal's home screen. It shows two islands (upcoming appointments and account statement) and a recent activity history that builds up scheduled appointments, treatments started and treatments completed.
+
+<Frame>
+  ![Image](/images/image-146.png)
+</Frame>
+
+**My appointments** Shows three islands: pending appointments, completed appointments and next appointment. Below them is a list of upcoming appointments with date, time, appointment type, clinician and status. It also includes an appointment history with date, type, clinician, outcome and status.
+
+<Frame>
+  ![Image](/images/image-147.png)
+</Frame>
+
+**Digital prescriptions** The patient can look up all their prescriptions and test requests, and download each one as a PDF.
+
+<Frame>
+  ![Image](/images/image-148.png)
+</Frame>
+
+**Media** Access to every file uploaded to their record: images, videos, 3D files and documents.
+
+<Frame>
+  ![Image](/images/image-149.png)
+</Frame>
+
+**Billing** Shows the patient's account statement with total charges, total payments and remaining balance. It has a currency filter to see the information in pesos or in dollars. It includes a transaction history that records every payment made and every charge generated; each time a treatment is progressed, a charge is added to the patient's balance due. Each transaction shows date, type, description, debit, credit and currency.
+
+<Frame>
+  ![Image](/images/image-150.png)
+</Frame>
+
+**Family group** If the patient has a family group set up, this section lets them see the group's members with their relationship tags, each member's account statement and the consolidated family balance. They can also see the treatment plan history of every member of the group. If they don't have a family group assigned, the section is empty.
+
+<Frame>
+  ![Image](/images/image-151.png)
+</Frame>
+
+---
+
+### Patient record tabs
+
+The patient record is organized into four main tabs:
+
+#### 1. Personal details
+
+Holds all of the patient's personal, contact and administrative information, organized into islands. The **Update details** button generates a link just for this patient: you share it with them and, from their phone, they can review and complete both their personal details and their medical background. Whatever they enter is saved straight to their record.
+
+<Frame>
+  ![Image](/images/image-333.png)
+</Frame>
+
+**Personal information island** First name, last name, ID number, date of birth and gender. All required. The **ID number** identifies the patient uniquely: there can't be two patients with the same ID number at the clinic. If you try to enter a duplicate, the system won't let you save it — that's how duplicate patients are avoided.
+
+**Contact island** Country code and phone (required), email.
+
+**Address island** Street address, city, province/state and country. All required.
+
+**Health insurer island** Optional. If you select a health insurer, health plan or medical insurance, the member number becomes required.
+
+**Additional information island** Optional fields such as referred by and emergency contact.
+
+**Family group island** This is where you manage the patient's family group. When you create a group, the patient you're working on automatically becomes the main member. The group name can be edited and comes pre-filled with that patient's last name. From this island you can:
+
+- Add members to the group by searching for them by name in the system
+- Give each member a relationship tag: main member, spouse, son, daughter, mother, father or others
+- Change the group's main member _(there can only be one main member at a time)_
+- Remove the current patient from the group
+- Delete the whole group
+
+**Appointments** History of all the patient's appointments with their statuses. Each appointment has shortcuts to leave an internal comment, notify the patient by email or WhatsApp, or delete it.
+
+When you notify them by WhatsApp, you can choose between an **appointment notice** — just the details, without asking for a reply — or **ask for confirmation** — which adds a link so the patient can confirm or cancel. In both cases WhatsApp opens in a new tab with the message already written, so you can review it before sending.
+
+<Frame>
+  ![Image](/images/image-317.png)
+</Frame>
+
+Clicking an appointment's status lets you change it and see the appointment's full history: when it was created, and every change after that. The available statuses (this guide shows **Rescheduled** as an example) aren't fixed: each clinic defines and edits its own from **Administration → Appointment statuses**.
+
+<Frame>
+  ![Image](/images/image-318.png)
+</Frame>
+
+**Comments** Internal administrative notes about the patient, visible to the clinic team.
+
+**Tags** Let you label the patient so you can find them later in specific cases. You choose them from the clinic's catalogue (by dragging or clicking the ones under **Available**) and you can assign several at once. The tag catalogue is managed with the **Manage catalogue** button.
+
+<Frame>
+  ![Image](/images/image-334.png)
+</Frame>
+
+**History** An audit log of every event in the patient's record, grouped by day: treatment plan status changes, clinical notes recorded, payments received, documents uploaded, calendar activity and restored deleted appointments, among others. Each event shows the time, a label with the event type and who did it.
+
+<Frame>
+  ![Image](/images/image-319.png)
+</Frame>
+
+<Frame>
+  ![Image](/images/image-335.png)
+</Frame>
+
+---
+
+#### 2. Clinical record
+
+Holds the patient's complete clinical file.
+
+**Medical background** The medical background section is split into four islands that the patient fills in when updating their details, or that the team can fill in manually. Once completed, it requires the patient's signature on a legal consent confirming the information is true. Any later change also requires this signature.
+
+The four islands are:
+
+**Medical history**
+
+- General state of health: excellent, good, fair or poor (required)
+- Whether they're under medical treatment (required) — if they answer yes, they must specify which
+- Disorders and conditions: respiratory, neurological, hematological, infectious diseases, allergies — if they select any, they must describe it
+- Hospitalizations or surgeries (required) — if they answer yes, they must give details
+- Reproductive health (optional)
+
+**Medications**
+
+- Whether they're currently taking any medication (required)
+- If they answer yes, they must enter at least one medication with name, dose, frequency and since when. You can add several medications to the list.
+
+**Dental history**
+
+- Approximate last dental visit — month and year (required)
+- Previous dental treatments (optional)
+- Periodontal history, functional history, sensitivity and pain (optional)
+- Reason for the visit (optional)
+
+**Habits**
+
+- Smoking (required): never smoked, former smoker or current smoker
+  - Former smoker: how many cigarettes a day they smoked, for how many years, and how many years ago they quit
+  - Current smoker: how many cigarettes a day and for how many years they've smoked
+- Alcohol (required): none, social or regular
+- Diet and acid exposure (optional)
+- Oral habits such as nail biting, chewing on objects or ice (optional)
+
+**Comments** A free-text field to record information that doesn't fit any of the fields above. It's optional.
+
+<Frame>
+  ![Image](/images/image-505.png)
+</Frame>
+
+**Alert and comments** Besides the four medical background islands, this card lets you leave an **alert** — a short notice such as an allergy or a medical condition to keep in mind — and general **comments** about the patient.
+
+<Frame>
+  ![Image](/images/image-336.png)
+</Frame>
+
+While the alert is set, every time someone on the team opens the patient's record a notice with that text appears, so it doesn't get overlooked.
+
+<Frame>
+  ![Image](/images/image-337.png)
+</Frame>
+
+---
+
+## OCLÜ AI
+
+**Artificial intelligence assistant** available inside the clinical record, designed to support clinical decision-making. It offers recommendations and suggestions based on the information recorded for the patient.
+
+---
+
+### Odontogram
+
+OCLÜ has two versions of the odontogram:
+
+- **Permanent dentition odontogram** — for adult patients, includes all the teeth
+- **Primary dentition odontogram** — for child patients, includes the primary teeth
+
+Both odontograms are **interactive**. To enter a diagnosis you must select at least one tooth, one arch, one sextant or both arches. You can also select a specific tooth surface: mesial, distal, occlusal, buccal.
+
+Once you've selected the area, you choose the diagnosis from a set of icons organized into three categories:
+
+- **Healthy** — teeth in good condition: crown, provisional crown, root canal, implant, post and core, sealant, removable prosthesis
+- **Pathologies** — caries, periodontitis, gingivitis, abrasion, attrition, erosion, root remnant, mobility, fracture, pulp infection, amalgam, defective restoration, defective amalgam, defective post and core, defective provisional crown, defective crown
+- **Other** — missing tooth, unerupted tooth
+
+You can select several diagnoses on the same area or tooth, and add a comment to each one. All the diagnoses you enter appear in a list below the odontogram with their details.
+
+From that list, using the checkbox to the left of each diagnosis, you can select one or more to delete them or to create a planned treatment from them.
+
+**Planned treatments** Planned treatments can be created in two ways:
+
+- **From selected diagnoses** — the system takes the selected items and, for each one, asks you to choose **one** price list, a category within that list and a treatment. You can also assign an optional symbol.
+- **From scratch** — by clicking to add a new planned treatment, with no need for previous diagnoses. You enter a title _(required)_ and add treatments to the permanent or primary odontogram.
+
+In both cases, the planned treatment's title is required. The planned treatments you create appear in the list on the **Planned treatments** tab, below the odontogram. From a planned treatment you can create a treatment plan directly.
+
+**It's important to note that the diagnosis → planned treatment → treatment plan path is an option, not a requirement**. You can create a treatment plan directly without having entered any diagnoses or planned treatments first. The system is **flexible** and **adapts** to the workflow of each clinic and each clinical case.
+
+<Frame>
+  ![Image](/images/image-506.png)
+</Frame>
+
+**Sending the planned treatment to the patient** Each planned treatment can be emailed to the patient, to the main member of their family group or to another email address, so they can check what their treatment will look like before moving forward. The patient receives a PDF with the proposed treatments, without prices.
+
+<Frame>
+  ![Image](/images/image-338.png)
+</Frame>
+
+> The **Dictate** button for entering diagnoses by voice is an add-on: an extra service, not included in the plan by default.
+
+---
+
+### Periodontal chart
+
+The periodontal chart records the patient's periodontal status. Each time you enter information it's saved with its date, building a history of measurements that lets you follow how the patient's periodontal health evolves over time.
+
+The display shows four views of the jaws:
+
+- Upper jaw, buccal
+- Upper jaw, palatal
+- Lower jaw, buccal
+- Lower jaw, lingual
+
+In each view, and for each tooth, you can record: probing depth, gingival margin, clinical attachment level, furcation, suppuration, bleeding and mobility.
+
+<Frame>
+  ![Image](/images/image-510.png)
+</Frame>
+
+**Periodontal indices** With the measurements entered, the system automatically calculates a summary: how many sites have pockets of 5 mm or more, the highest clinical attachment level (CAL) recorded, and what percentage of sites bleed on probing.
+
+<Frame>
+  ![Image](/images/image-339.png)
+</Frame>
+
+---
+
+### Clinical notes
+
+Clinical notes record what was done at each visit. You can enter them in three ways:
+
+- **Manual** — free text
+- **Dictation** — using the device's microphone. No setup is needed; the first time you use it, the device asks for permission to use the microphone. Once granted, dictation works right away. _It's an add-on: an extra service, not included in the plan by default._
+- **Improve with OCLÜ AI** — the clinical note's text can be improved and enriched with help from artificial intelligence
+
+Clinical notes can be exported as PDF.
+
+When you add a clinical note, a form opens with the visit date, the linked treatment plan, the visit note with its text editor, file attachments — where you can now choose the category when uploading them —, the clinician's and patient's signatures, and the option to schedule a follow-up reminder to book the patient again.
+
+<Frame>
+  ![Image](/images/image-320.png)
+</Frame>
+
+---
+
+### **Media**
+
+Lets you upload and organize the patient's files in the following formats:
+
+- Images: JPG, PNG, HEIC
+- Videos: MP4, MOV, AVI, WEBM, MKV
+- Documents: PDF, DOCX, XLSX
+- 3D models: STL, PLY — **with OCLÜ's own built-in 3D viewer**
+
+Media storage is **unlimited** for all users.
+
+<Frame>
+  ![Image](/images/image-480.png)
+</Frame>
+
+Uploading files and uploading a DICOM study are two separate actions, each with its own box: one for the usual images, videos, PDFs and 3D models, and another made specifically for the .zip or folder exported by the CT scanner.
+
+<Frame>
+  ![Image](/images/image-321.png)
+</Frame>
+
+> The **DICOM file viewer** is an add-on: an extra service, not included in the plan by default. Since it's a different format, its storage is handled separately from the unlimited Media space.
+
+Files can be sorted by date (upload date or date taken) or alphabetically, and you can combine both criteria. When you edit an image, a built-in photo editor lets you crop and adjust it without leaving the system, and the annotation tool — used both for marking up photos and studies — has a palette of odontogram symbols to point out findings right on the image, with zoom and text you can move around freely.
+
+### Presentations
+
+Besides individual files, Media has a tab for building **presentations**: visual cases with the patient's photos to walk them through their treatment plan during the visit.
+
+<Frame>
+  ![Image](/images/image-322.png)
+</Frame>
+
+Each presentation is built slide by slide. For each one you choose a layout (one image, two side by side, or combinations of photo and text) and a background color, and you add **photo** blocks — chosen from the patient's gallery, which you can annotate — or free **text** blocks.
+
+<Frame>
+  ![Image](/images/image-323.png)
+</Frame>
+
+Once it's ready, you can show the presentation full screen in presentation mode or share it with a public link, so it can be viewed from outside the system.
+
+---
+
+### Digital prescriptions
+
+Digital prescriptions are only available in Argentina, are legally valid and are included in the plan. You reach them from the Clinical record tab, in the digital prescriptions section, which is split into two tabs: **Medications** and **Test requests**.
+
+---
+
+#### Medication prescriptions
+
+Shows the full list of every prescription issued for the patient, with these columns: date, code, medications, dentist and actions. If no prescriptions have been issued, the list is empty.
+
+From each prescription's actions menu you can:
+
+- **View** — opens the prescription PDF, which you can download
+- **Send** — lets you send the prescription to the patient by WhatsApp or email
+- **Clone** — duplicates the prescription so you can issue it again without creating it from scratch. Useful when a medication is repeated or when the previous prescription has expired
+- **Delete** — deletes the prescription if it was issued by mistake
+
+There's also a search to find prescriptions by code.
+
+<Frame>
+  ![Image](/images/image-507.png)
+</Frame>
+
+### **Creating a medication prescription** 
+
+The process has three steps:
+
+**Step 1 — Select the dentist** You select the clinician who will sign the prescription. This is required, and the dentist must have a complete profile in the Administration module — including national license number, provincial license number and specialty — to be selectable. If any information is missing, the system won't let you continue.
+
+**Step 2 — Add medications** In a medication search, you type the first three letters of the name to get suggestions from the list. Once you've selected the medication, you fill in the following fields:
+
+- **Quantity** (required) — pre-filled with 1, you can change it
+- **Dosage** (required) — for example, one tablet every 8 hours for 7 days
+- **Diagnosis** (optional)
+- **Long-term treatment** (optional) — turning on this switch enables the option to indicate whether the patient has HIV
+
+Once the fields are filled in, click **Add to prescription**. The medication is added to a list and you can keep adding more. A prescription can include several medications at once.
+
+**Step 3 — Health insurer details** The system automatically brings in the patient's health coverage: health insurer, health plan or medical insurance, plan and member number. You can also select **no health insurer** if the patient pays privately. The general diagnosis field is optional — if you leave it blank, the system uses a legally valid default diagnosis. You can also enter a diagnosis code as free text.
+
+When you create the prescription, the system automatically opens a window with three options: **send by WhatsApp**, **send by email** or **don't send**. At the same time, it opens the PDF in a new tab so you can download it. The window is there so you don't forget to send the prescription to the patient before closing. If you don't want to send it right then, you can close the window with the X.
+
+**PDF format** The generated PDF has the official format valid in Argentina and its design can't be changed. It includes a barcode, a header with the clinic's and the clinician's details, the issue date, the patient's information, the prescribed medications with their dosage, the clinician's signature pre-loaded from their profile, a QR code and a duplicate. Everything needed for it to be legally valid.
+
+---
+
+#### Test requests
+
+Shows the list of all the dental test requests issued for the patient, with these columns: date, code, tests, dentist and actions. There's a search by request code.
+
+From each request's actions menu you can:
+
+- **View request** — opens the PDF
+- **Send** — lets you send it by WhatsApp or email
+- **Clone** — duplicates the request so you can reuse it
+- **Delete**
+
+**Creating a test request** This process also has three steps:
+
+**Step 1 — Select the dentist** Just like with medication prescriptions, the clinician must have a complete profile to be selectable.
+
+**Step 2 — Add tests** For each test you fill in the following fields:
+
+- **Study name** (required) — free text
+- **Quantity** (required)
+- **Diagnosis** (optional)
+- **Notes** (optional)
+
+When you click **Add to request**, the test is added to the list with a counter. You can add several tests to the same request. Once you've finished adding them one by one, there's a **general details** section — diagnosis, notes and instructions — that applies to the whole request. It's useful when you don't want to fill in the diagnosis and notes test by test, but would rather leave one general instruction for all of them.
+
+**Step 3 — Health insurer details** Same as with medication prescriptions: the system brings in the patient's coverage and you can select no health insurer if that applies.
+
+When you create the request, the system opens the same sending window with the three options: WhatsApp, email or don't send, and opens the PDF in a new tab.
+
+**PDF format** The PDF has the official format valid in Argentina. It includes a barcode, a header with the clinic's details, the creation date, the patient's information, the requested tests, the clinician's signature, a QR code and everything needed for it to be legally valid.
+
+---
+
+### Consent forms
+
+Informed consent forms are created and managed from the Clinical record tab, in the consent forms section. To be able to create a consent form, the templates must be set up beforehand from the **Administration → Templates → Consent forms** module. The system comes with default templates that you can edit, delete or replace with the clinic's own templates.
+
+The consent form list shows every document created for the patient, with a date filter and a counter of the total number of documents. The list columns are: date, consent form name, clinician in charge, patient's signature and clinician's signature.
+
+The signature status is shown like this:
+
+- If the signature is pending: **Click to sign**
+- If the signature has been completed: **Completed**
+- If either of the two signatures is missing: **Signature missing**
+- If both signatures are complete: **View document**
+
+<Frame>
+  ![Image](/images/image-508.png)
+</Frame>
+
+Besides **Create consent form**, the tab has a **Create surgical report** button for procedures that require that separate document.
+
+**Creating a consent form** When you click the add button, the creation form opens with the following fields:
+
+- **Template** — you select the template to use. When you select it, the full content of the consent form is shown, and you can review and freely edit it before creating it. Dynamic fields — such as the patient's name, the date or other details that fill in automatically — are set up in the templates in the Administration module and can't be added from here, but the free text can be changed.
+- **Clinician** — the clinician responsible for the consent form
+- **Treatment plan** — the treatment plan linked to the treatment the consent form is for
+
+**Patient's signature** When you click **Click to sign** in the patient's signature column, a window opens with a blank box where the patient signs. This signature is done at the clinic, on the spot — the consent form isn't sent to be signed remotely. Ideally it's done on a tablet, though you can also sign with the mouse on a computer. If the signature didn't come out right, you can clear it and do it again. Once you're happy with it, confirm with the **Sign** button and the signature is recorded as completed.
+
+**Clinician's signature** For the clinician to sign, they must have their signature set up beforehand in their profile under Administration → Staff. If it isn't set up, the system tells you and offers a shortcut to set it up. Once it's set up, they can sign right from here.
+
+When both signatures are complete, the system automatically generates the consent form PDF.
+
+**PDF format** The document includes the clinic's header, the title "Informed Consent", the clinician's name, the creation date and the full content of the consent form. At the bottom of the document are the patient's signature and the clinician's signature, and the page footer shows the clinic's details: address, email and phone.
+
+**Preview without signatures** From the **Administration → Templates → Consent forms** module, each template's actions menu has a **Generate PDF** button. This gives you a version of the consent form without signatures and without legal validity, meant to be shared with the patient in advance so they can read it before the visit.
+
+**Important considerations**
+
+- Consent forms don't expire once signed and remain valid indefinitely.
+- A consent form that has already been signed can't be revoked or voided.
+- The patient's full history of consent forms is recorded in the list with each document's date and name.
+
+### Facial aesthetics
+
+Lets you enter a facial aesthetic diagnosis and compare it with photos of the patient from different angles. The diagnosis shows a radar-style profile with five axes — skin, shape, animation, symmetry and proportion — each with its severity level, plus a free notes field.
+
+<Frame>
+  ![Image](/images/image-324.png)
+</Frame>
+
+It also lets you compare photos of the patient taken on different dates, at the left profile, 45° left, front, 45° right and right profile angles, to follow how the treatment is progressing.
+
+### Aesthetic analysis
+
+A facial and dental aesthetic diagnosis protocol. This is also where you reach **Smile Design**, the tool for creating smile design cases with the patient's photos, aligning them with AI and overlaying the smile and resting positions to plan the aesthetic treatment _(in beta)_.
+
+<Frame>
+  ![Image](/images/image-325.png)
+</Frame>
+
+### Biomechanical analysis
+
+Assessment of the temporomandibular joint (TMJ). Lets you record charts to document the state of the joint and compare how it evolves at later visits.
+
+<Frame>
+  ![Image](/images/image-326.png)
+</Frame>
+
+### Microbiological analysis
+
+Monitoring of the patient's biofilm. Lets you record analyses to document biofilm control and compare how it evolves at later visits.
+
+<Frame>
+  ![Image](/images/image-327.png)
+</Frame>
+
+### Physicochemical analysis
+
+A record of the patient's biological risk, to compare how it evolves at later visits.
+
+<Frame>
+  ![Image](/images/image-328.png)
+</Frame>
+
+---
+
+#### 3. Treatment plans
+
+This tab is where you manage all of the patient's treatment plans. Each treatment plan is a card showing its number, name, the clinician in charge, the status, the total to pay in each currency, how much is still outstanding and the treatment's progress. The ones entered through the quick window also carry the **Express** tag.
+
+<Frame>
+  ![Image](/images/image-277.png)
+</Frame>
+
+**Search and filter** The search at the top narrows the list to the treatment plans that match, searching by name, number or clinician. Next to it is the status filter, which besides the six statuses adds the **Expired** option.
+
+<Frame>
+  ![Image](/images/image-278.png)
+</Frame>
+
+A treatment plan becomes **Expired** when it was sent to the patient, is still Pending and its expiration date has passed. When there are any, a notice with the count appears at the top left: click it and the list shows only those.
+
+**Treatment plan statuses** Treatment plans in OCLÜ work as treatment contracts and follow a status flow with clear rules:
+
+- **Draft** — the only editable status. The treatment plan can be changed freely.
+- **Pending** — the treatment plan can no longer be edited and works as a contract between the clinic and the patient.
+- **Approved** — the patient accepted the treatment.
+- **Rejected** — the patient didn't accept the treatment plan.
+- **Closed** — the treatment was completed.
+- **Deleted** — the treatment plan was deleted from the system.
+
+Statuses only move one way: once a treatment plan moves from Draft to any other status, it can't go back. For example, you can't go from Approved to Pending or from Pending to Draft.
+
+Treatment plans can be in local currency or in dollars, and they can be sent to the patient for approval. Once the treatment plan is approved, you can start recording payments even if the treatments haven't been progressed yet — they work as advance payments. As the treatments are progressed, a balance due builds up in the patient's balance.
+
+**Two ways to create a treatment plan** The **Add treatment plan** button offers two options:
+
+<Frame>
+  ![Image](/images/image-279.png)
+</Frame>
+
+- **Full treatment plan** — opens a separate screen, with odontogram, installment payments, comment templates and media.
+- **Express treatment plan** — opens a small window to add treatments by searching for them and save in one click.
+
+Both create the same treatment plan: what changes is how you enter it, not the result.
+
+**Express treatment plan** You search for the treatment, add it, adjust the price if needed and save. It's for everyday work: a consultation, an emergency, a one-off treatment.
+
+<Frame>
+  ![Image](/images/image-329.png)
+</Frame>
+
+Next to the quick search is **Dictate**: click the microphone and dictate the treatments — for example, "composite on 24 occlusal surface, crown on 26, root canal tooth 36" —, review the transcription and process it so they're added to the treatment plan automatically.
+
+<Frame>
+  ![Image](/images/image-330.png)
+</Frame>
+
+The fields at the top are:
+
+- **Title** (optional) — if you leave it blank, the treatment plan is saved as "Treatment plan".
+- **Clinician** (required) — the clinician in charge of the treatment.
+- **Valid until** (optional) — besides making the treatment plan expire, it sets the deadline for the patient to approve or reject it from the message they receive by email or WhatsApp. If you leave it blank, it never expires.
+
+Each treatment you add keeps an editable price. If the price list belongs to the patient's health insurer, instead of one amount you'll see two: what the patient pays and what the insurer covers. With the buttons on the right you can edit the treatment's details —tooth, surfaces and symbol—, duplicate it or remove it, and the **Discounts** button applies discounts to what you've entered.
+
+There are two buttons for saving. **Save draft** leaves the treatment plan in Draft, so you can keep editing it later. **Save and approve** puts it straight into Approved, ready to take payments.
+
+**Searching for treatments** Type at least two letters of the name or code and the matches appear, grouped by price list. For each one you see the category, the code and the price with its currency. The round button on the right adds it to the treatment plan and it stays checked, so you don't add it twice.
+
+<Frame>
+  ![Image](/images/image-281.png)
+</Frame>
+
+**Full treatment plan: what's required** On the full treatment plan screen, the only required things are the **clinician** and having at least one treatment entered. The name and the expiration date are optional.
+
+<Frame>
+  ![Image](/images/image-282.png)
+</Frame>
+
+> If the clinic has a default expiry set up, the date is filled in automatically with those days and you can change or clear it.
+
+**Adding treatments to the full treatment plan** The **Add treatment** window starts with the same search as the express treatment plan. Further down you'll still find the usual selector —list, category and treatment— for when you'd rather browse the catalogue than search.
+
+<Frame>
+  ![Image](/images/image-283.png)
+</Frame>
+
+**Sending the treatment plan to the patient** When you send it by email or WhatsApp, you first choose what you're asking the patient to do:
+
+- **Have them approve or reject it** — they get buttons to reply, and their answer updates the treatment plan's status automatically.
+- **Just let them see it** — they get the treatment plan to look at. No reply is requested and the status doesn't change.
+
+The approval option is hidden when the treatment plan is already approved, rejected or closed.
+
+Then you choose how much detail they see:
+
+<Frame>
+  ![Image](/images/image-331.png)
+</Frame>
+
+- **Full detail** — prices per treatment and, when it applies, the health insurer breakdown.
+- **Patient total only** — a summary PDF with the patient, the treatments and the total they pay, without the health insurer breakdown.
+- **Patient total only + attachments** — the same summary PDF, plus the treatment plan's comments and attached images.
+
+Finally, you choose who to send it to: the patient, the main member of their family group if they have one, or another email address.
+
+> Treatment plans in Draft move to Pending approval when they're sent asking for approval.
+
+**Quick actions on a treatment plan** Right-clicking any card opens a menu with everything you can do without opening the treatment plan:
+
+<Frame>
+  ![Image](/images/image-285.png)
+</Frame>
+
+From there you can view it, open it in a new tab, send it by email or WhatsApp, export it to PDF, see its history, edit it, duplicate it or change its status. The edit, duplicate and change status buttons are also on the right of each card, and the edit button is only enabled while the treatment plan is in Draft.
+
+**Duplicate treatment plan** Creates an exact copy of the treatment plan in **Draft** status, which you can edit again. It's useful when an approved treatment plan needs a change: instead of editing it directly (which you can no longer do once it has left Draft), you duplicate it to get an editable copy and work on that copy.
+
+---
+
+#### 4. Balance
+
+Shows the patient's full financial status: cards with the balance due and the credit balance (split by currency if the patient uses more than one), and a list of **Movements** you can filter by **All**, **Payments** or **Charges**.
+
+<Frame>
+  ![Image](/images/image-509.png)
+</Frame>
+
+**Recording payments** You can record full or partial payments against an approved treatment plan with the **Take payment** button. Partial payments let the patient pay in installments or advance payments as the treatment progresses.
+
+If the patient has a credit balance in more than one currency, when you take a payment pills appear so you can choose which of the two balances to cover the payment with. The currency that matches the payment's currency is selected by default.
+
+<Frame>
+  ![Image](/images/image-332.png)
+</Frame>
+
+**Voiding payments** OCLÜ lets you void recorded payments, with the following conditions and characteristics:
+
+- You can only void payments for which **no fees have been paid out to the clinician**. If the fees calculated under the clinician's contract have already been paid, the payment can't be voided. In that case, contact support.
+- When you click void payment in the actions menu, the system shows a confirmation window explaining that if the payment involves a currency conversion, the original exchange rate from the time of the payment will be used, and that the action can't be undone.
+- You must enter the **reason for voiding**, with a minimum of 10 characters and a maximum of 500.
+- Once the voiding is confirmed, the payment is unlinked from the corresponding treatment plans and treatments, and the amounts are reversed in the patient's balance.
+- The voided payment doesn't disappear from the balance — it's still visible but shows a gray strikethrough line and is visually dimmed, indicating that it was voided.
+- Voided payments are also recorded in the Finance module reports.
+- Once a payment is voided, the corresponding amount becomes available to be manually reassigned to another treatment plan. The system doesn't show an automatic indicator in the patient's record reminding you that an amount is waiting to be reassigned — it's up to the clinic to do it right then or remember it later. Ideally, reassign it immediately to keep the patient's balance tidy and avoid confusion.
+- This feature has its own permissions — not every user can void payments. Only those the administrator has granted that specific permission.
+
+<Frame>
+  ![Image](/images/image-171.png)
+</Frame>
+
+---
+
+### Downloading the clinical record
+
+Each patient's clinical record is stored digitally in the system, but it can be exported as a PDF when needed. From any of the patient record's tabs — both Personal details and Clinical record — there's a button labeled **Download**.
+
+When you download it, the PDF includes the patient's complete information organized as follows:
+
+- Header with the clinic's details
+- Title: Patient Clinical Record
+- Patient identification
+- Treating clinician identification
+- Patient's medical background
+- Reason for the visit and initial clinical examination
+- Clinical notes and chronological records — with date, clinician's name, procedure and observations
+- Diagnoses and treatments — final diagnoses and procedures performed, with date and clinician's name
+- Prescribed medication — name, dose, route, frequency, duration, date and prescribing clinician
+- Additional tests requested, if any
+- Discharge summary or case summary
+- Observations and additional notes
+- Confidentiality and data protection statement, stating that the clinical record is confidential and protected by Laws No. 26.529 and No. 25.326, that the recorded data is the responsibility of the signing clinician and of the clinical record's holder, and that OCLÜ acts solely as a platform for recording and securely storing the information
+- Space for the handwritten signature of the responsible clinician, with their name, national license number, specialty and print date
+- Footer with the clinic's details: address, email and phone
+
+For the document to be legally valid, it must be printed and signed by hand by the responsible clinician.
+
+---
+
+## If you don't see some of this
+
+Everything explained in this guide depends on your user's permissions. If a screen or a button is missing, or you can't edit something described here, first check with your clinic's administrator — most likely it's a matter of granting you the right permission. If you still can't after that, write to OCLÜ support and we'll help you.

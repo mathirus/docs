@@ -1,0 +1,158 @@
+---
+title: "How to understand the Stock inventory"
+---
+
+The **Stock** module lets you keep track of supplies, medications, clothing and any product your clinic uses or sells. The module's main screen is the **Inventory**, where you see all the products in the system with their current stock, expiry dates and category. Each product's stock is handled by **batches**: every time new stock comes in, that stock-in becomes its own batch with its own expiry date and batch number, so you can hold several different dates for the same product. This guide shows you how to read the screen and make the most of all its features.
+
+## When to use it
+
+- Whenever you need to check how much stock you have of a product before ordering it or using it.
+- When you want to see which products are at minimum stock or about to expire.
+- When you are going to create a purchase order and need a list as a PDF or Excel file.
+- When you are auditing the expired or soon-to-expire batches of a specific product.
+
+## How to get to this section
+
+1. Log in to OCLÜ.
+2. In the left sidebar, click the Stock icon (shaped like a box/file).
+
+## The module's three tabs
+
+At the top of the Stock screen there are three tabs:
+
+- **Inventory** (active by default): a list of all the products.
+- **Movements:** the history of stock-ins and stock-outs (what was bought, what was used, who recorded it), and where you record new stock-ins and stock-outs.
+- **Suppliers:** a list of the suppliers you work with.
+
+This guide focuses on the **Inventory** tab, with a separate section on **Movements** because of its direct relationship with batches.
+
+## What the Inventory shows
+
+<Frame>
+  ![Image](/images/image-456.png)
+</Frame>
+
+### Fixed notices above the table
+
+- **Information:** "Products you add do not affect cash balances"
+- **Warning:** "When a product is created, the matching stock-in movement is recorded in the next section" (that is, in Movements).
+- **Attention alert** (only if it applies): "Some products need attention. Click to filter them." with chips such as **"N at minimum stock"** and **"N expiring soon"** — click either one to apply that filter instantly.
+
+### Filters and search
+
+- **Search by name...:** a field to find a specific product by typing part of its name.
+- **Filter:** a dropdown with **All categories** or a specific category, and further down the **Low stock only** and **Expiring only** toggles.
+
+<Frame>
+  ![Image](/images/image-457.png)
+</Frame>
+
+### Buttons (top right)
+
+- **Add product:** a black button with a dropdown of two modes: **Individual** (a single product) or **In the list** (add several at once).
+
+<Frame>
+  ![Image](/images/image-458.png)
+</Frame>
+
+- **More options:** a dropdown with **Import products** (from Excel), **Manage categories**, **Add category**, and further down **Export to Excel** and **Export to PDF**.
+
+<Frame>
+  ![Image](/images/image-459.png)
+</Frame>
+
+### Product table
+
+The columns are:
+
+- **Name:** of the product (for example "Toothbrush", "Dental floss", "Gown", "Ibuprofen").
+- **Category:** the product's classification (Supplies, Medications, Clothing, etc.). Each clinic sets up its own categories.
+- **Stock:** the quantity currently available, calculated automatically by adding up all of the product's active batches. If it's at 0 or below the Minimum, it's highlighted in red with an alert dot.
+- **Minimum:** the minimum quantity your clinic set for that product (it has an information icon with a tooltip: *"The minimum amount you want available. When the product's stock falls to or below it, it shows up in the ‘Needs attention’ notice so you know to restock."*).
+- **Expiry:** the date of the active batch that expires soonest. If the product has no expiry dates entered, it says "No expiry". If it has more than one active batch, an **"N batches"** chip appears next to it. It's shown in red if any of the batches has expired.
+- **Status:** a switch to enable or disable the product without deleting it.
+- **Actions:** edit (pencil) and delete (trash can, in red).
+
+## How batches work
+
+Click the small arrow to the left of a product's name to expand the **Active batches** panel, with the number of batches in stock. Each batch shows: batch number, expiry (with a struck-through red "Expired" chip if the date has passed, or "Expiring" if it's close), quantity, supplier and the date it was added. From there you can edit or delete a specific batch.
+
+<Frame>
+  ![Image](/images/image-460.png)
+</Frame>
+
+> Deleting a batch also deletes the stock-in movement associated with it and reduces the product's available stock. It can't be undone.
+
+**Expiry and batch number are no longer entered just once on the product**: each stock-in (see the Movements section below) creates its own batch with its own expiry date and number. That's why, when you edit a product, you won't find those two fields anymore — the form tells you so directly.
+
+<Frame>
+  ![Image](/images/image-461.png)
+</Frame>
+
+## Movements: recording stock-ins and stock-outs
+
+In the **Movements** tab you see the full history (Operation, Date, Product, Quantity, Unit price, Supplier, User, Actions) and two buttons at the top right:
+
+### Record stock-in
+
+Adds units to the product's stock. Besides Product, Quantity, Cost price and Comments, it has two fields of its own for the batch created with that stock-in: **This batch's expiry** and **Batch number** (both optional). The form explains it: *"Each stock-in is recorded as a separate batch of the product, so you can hold several expiry dates at once."*
+
+<Frame>
+  ![Image](/images/image-462.png)
+</Frame>
+
+### Record stock-out
+
+Takes units off the stock. If the product has active batches, the **Batch** field appears, with **Automatic (FIFO)** selected by default — it consumes the batch that expires first and then works through by age. If you choose a specific batch instead of Automatic, the units are taken from that batch; if there isn't enough, you have to choose another one or go back to Automatic.
+
+<Frame>
+  ![Image](/images/image-463.png)
+</Frame>
+
+## How to spot products with critical stock
+
+OCLÜ helps you visually:
+
+- **Products with stock at 0 or below the Minimum:** the Stock column shows the number in red with an alert dot.
+- **Expired or soon-to-expire batches:** they are marked with a colored chip in the batch panel, and they turn the Expiry column red in the product's row.
+- **Alert above the table:** if any products are in either of these situations, the "Some products need attention." banner sums it up with clickable chips that filter the table instantly.
+
+## How to export the inventory
+
+1. Apply the filters you want to export (for example, only medications, or only products with critical stock).
+2. Open **More options** and choose **Export to Excel** or **Export to PDF**.
+3. The file downloads automatically in your browser.
+
+> The exported file reflects the filters applied at the time you export. If you want the whole inventory, make sure you have no filters active.
+
+## Expected result
+
+You'll be able to see at a glance which products are fine, which ones have critical stock, which batches are about to expire and which categories there are. The quick actions let you edit, disable or delete products, and see batch details without leaving the screen.
+
+## Common errors
+
+**I don't see any attention alert:** it means no product is below its Minimum and none has batches about to expire. A good sign.
+
+**I see a product with high stock but it still shows in red:** check the Minimum that was set. If it was entered incorrectly (for example 100 when it should be 5), the system considers the actual stock to be low. Edit the product and adjust the Safety stock.
+
+**The filter doesn't filter the way I expected:** the category filter and "Low stock only"/"Expiring only" are combined. Clear the filters and apply them again one at a time.
+
+**I can't find where to enter a product's expiry date:** it's no longer entered from the product's edit form. It's entered for each stock-in (the **Stock-in** button in the Movements tab), or by editing a specific batch from the **Active batches** panel.
+
+**A stock-out didn't take from the batch I expected:** check whether you left the Batch selector on **Automatic (FIFO)** — in that mode, it always takes first from the batch that expires soonest, not necessarily from the one added earliest.
+
+## Tips and variations
+
+- **A realistic Minimum:** set it based on how long it takes you to restock. If your supplier delivers in 3 days and you use 2 units a day, your Minimum should be at least 6.
+- **Organized categories:** keep your categories organized (Supplies, Medications, Clothing, etc.). It helps when filtering and when running reports.
+- **Bulk entry:** if you need to add many products at once, use **Add product → In the list** instead of adding them one by one, or **More options → Import products** if you already have them in an Excel file.
+- **Expiry audit:** always enter the expiry date when you record a stock-in of medications and perishable supplies. The "Expiring only" filter warns you before it expires.
+- **Barcode reader:** if your clinic uses one, you can scan directly from Inventory or Movements — if the code already exists, it takes you to the product; if it's new, it opens the add form with the code already filled in.
+
+## Estimated time
+
+5 to 10 seconds to find a product. 30 seconds to export the inventory. 1 minute to review products with critical stock or to record a stock-in/stock-out.
+
+## Permissions
+
+Viewing the inventory, adding, editing and deleting products, and recording movements require specific permissions. Set them up from Administration → Staff → Permissions. If a button appears disabled, check with your administrator.

@@ -1,0 +1,199 @@
+---
+title: "My profile and settings"
+---
+
+Everything personal about your user —your details, your password, your signature, the notices you receive and the connections with other tools such as Google Calendar— is managed from a single place: your **user menu**, in the black bar at the top.
+
+---
+
+## How to get there
+
+Your name is at the far right of the black bar. Click it and a menu opens:
+
+<Frame>
+  ![Image](/images/image-511.png)
+</Frame>
+
+- **My settings** — opens your profile, with everything explained on this page.
+- **My subscription** — for administrators only. Your plan, limits and billing (explained in [Interface and navigation](/en/interfaz-y-navegacion)).
+- **My fees** — only for clinicians with a schedule and contracts set up (also in [Interface and navigation](/en/interfaz-y-navegacion)).
+- **Connect my AI** — appears if your user has that permission enabled. It's explained at the end of this page.
+- **Log out**.
+
+When you open **My settings**, the **Profile** screen opens, organized into tabs: **Personal details**, **Security**, **Notifications**, **Signature**, **Integrations** and, for the clinic owner, **Data backup**.
+
+---
+
+## Personal details
+
+<Frame>
+  ![Image](/images/image-512.png)
+</Frame>
+
+At the top you can see your roles at the clinic (for example **Admin** and **Doctor**) and, if you are a clinician, your speciality. The rest of the team can see the details you enter here.
+
+- **Profile picture** — click the picture to replace it. It saves instantly, without having to click anything else.
+- **Name**, **Surname**, **Email** and **Phone**.
+- **ID document type** — DNI (Spain), NIE (Spain), Passport, CIF (Spain), CUIT (Argentina) or Other.
+- **ID document number**.
+- **Profession** and **Speciality** — only shown if you are a clinician, and they can't be edited from here: the clinic manages them.
+
+When you change a field, the **Save changes** and **Discard** buttons appear. Nothing changes until you save.
+
+---
+
+## Security
+
+<Frame>
+  ![Image](/images/image-513.png)
+</Frame>
+
+### Password
+
+Type the **new password** in the field and save. It must be at least 8 characters long, with at least one letter and one number.
+
+### Connected devices
+
+Lists every place where your user has an open session: the browser, the operating system, the approximate location and how long ago it was active. The session you are in right now is labeled **This session**.
+
+- **Log out** (on each row) — logs out that specific session, after you confirm.
+- **Log out other sessions** — keeps only the current one open and logs out all the others.
+
+> If you see a device you don't recognize, log it out and change your password.
+
+---
+
+## Notifications
+
+<Frame>
+  ![Image](/images/image-514.png)
+</Frame>
+
+Sets which notices you receive in the system's **bell**.
+
+- **Notify me when a patient confirms or cancels their appointment** — when the patient replies from the reminder email or WhatsApp, you get a notification in the bell.
+
+Depending on your profile, you may also see the option to **include other clinicians' appointments**, so you hear about confirmations and cancellations for the whole clinic and not just your own. This notice is meant for the clinician of each appointment and for the front desk and administration: other profiles don't receive it.
+
+---
+
+## Signature
+
+<Frame>
+  ![Image](/images/image-515.png)
+</Frame>
+
+Your **digital signature** is applied automatically to the **prescriptions** and **consent forms** you issue.
+
+- **Create signature / Change signature** — opens a window where you draw your signature with the mouse, your finger or a stylus. **Clear** erases the stroke so you can start over, and **Save signature** saves it. When you save, it replaces the previous one.
+- **View in full** — shows the signature at a large size.
+
+---
+
+## Integrations
+
+This is where you connect external services to your user. Depending on your role and the add-ons your clinic has, you will see one, two or three cards.
+
+### Google Calendar
+
+<Frame>
+  ![Image](/images/image-516.png)
+</Frame>
+
+Connects your Google account so that OCLÜ appointments show up in your Google Calendar and so that the **Google Meet** link is generated automatically for online visits.
+
+**Who can connect it:** each clinician, from their own profile. If your user isn't a clinician, the card shows the **Clinicians only** label and tells you to ask each clinician to connect their account from **Profile › Integrations**.
+
+**How to connect it**
+
+1. Go to **My settings › Integrations**.
+2. On the **Google Calendar** card, click **Connect with Google**.
+3. The Google screen opens: choose the account you want to use and accept the permissions.
+4. You come back to OCLÜ and the card changes to **Connected**, with the account and the connection date.
+
+**What it does once connected**
+
+- Invites the patient to the event automatically.
+- Instantly generates the Meet link for online appointments.
+- Syncs cancellations and reschedules.
+- **Sync in-person appointments** — this is a switch. When it's on, in-person appointments assigned to you are also added to your Google Calendar and the patient receives the invitation. **Online** appointments are always synced, whether it's on or not.
+
+**To disconnect it,** click **Disconnect**. New appointments stop being sent to your calendar.
+
+> Without Google Calendar connected, you can't book an appointment with the **Online** modality: the option appears disabled. More details in [Calendar](/en/modulo-calendario).
+
+### WhatsApp Business
+
+It's an add-on that lets you send automatic appointment reminders **from the clinic's own WhatsApp number**. The administrator connects it, and it only has to be done once.
+
+Before you start, the card lists what you need to have at hand:
+
+- The personal Facebook account of the owner or administrator.
+- A Facebook page.
+- A Meta Business account (business.facebook.com).
+- An active number on the **WhatsApp Business** app (the green one with the briefcase).
+- Access to that number's phone: Meta sends a code through the WhatsApp Business chat.
+- A credit card, because Meta charges for each conversation.
+
+With that ready, click **Generate connection link**. This creates a link that you open (**Open link**) or copy (**Copy URL**) to complete the process at Meta; in the meantime, the connection shows as **Pending**, and you can **Regenerate** the link or **Cancel**.
+
+When it's done, the card shows **Connected**, with the number, the name patients see and the status of the message template. From there you can **Reauthorise** or **Disconnect**.
+
+If it shows **Not working**, it means Meta stopped accepting messages from that number. You need to **Reauthorise** the connection with the **same number**. Until it's resolved, reminders go out by email only. If you have any questions, the **Message support** button opens a direct chat.
+
+If your clinic doesn't have the add-on, the card shows a notice instead of the connection options. More information in [Add-ons](/en/add-ons).
+
+### Integration API
+
+It appears for administrators when the clinic has the API add-on. On the card, **Manage API keys** takes you to the list of keys.
+
+<Frame>
+  ![Image](/images/image-518.png)
+</Frame>
+
+An API key is a "key" that lets external systems (n8n, Zapier, your own CRM) read —or also write— the clinic's data. In the list you see the key's **Name**, its **Prefix**, its **Permissions** (read or read and write), **Last used** and **Status**.
+
+To create one:
+
+1. Click **New API key**.
+2. Enter a **Name** that helps you recognize it (for example "n8n production") and choose the **Permissions**: **Read only** or **Read and write**.
+3. Click **Generate**.
+4. The full key is shown. **Copy it right then**: for security reasons it isn't shown again.
+
+Any key can be revoked with **Void** when it's no longer used; it stops working instantly.
+
+---
+
+## Data backup
+
+<Frame>
+  ![Image](/images/image-517.png)
+</Frame>
+
+Only the **clinic owner** sees it. It lets you make copies of the information as Excel files.
+
+1. Find what you want to back up and click **Generate**.
+2. The button changes to **Generating**: leave the screen open for a few moments.
+3. When it's ready, **Download** appears.
+
+The files available in a dental clinic are **Patients**, **Clinical notes**, **Treatment plans**, **Payments** and **Appointments**. In a lab they are **Work orders**, **Treatment plans**, **Clients** and **Collections and invoices**.
+
+---
+
+## Connect my AI
+
+From **Connect my AI** you can use your own **Claude** or **ChatGPT** to look up the clinic's data by asking questions in plain language, for example "how is the month going" or "what appointments do I have tomorrow".
+
+- It's **read only**: the assistant can look things up, but never enter or change anything.
+- **It doesn't access the clinical record**, diagnoses or clinical notes. If it doesn't know something, it tells you instead of making it up.
+- Each person connects **their own account** and signs in with their OCLÜ user, so they only see what their role allows.
+
+The screen shows three things:
+
+1. **Server address** — the link you paste into the assistant (**Copy** button).
+2. **How to connect it** — the steps for **Claude** and for **ChatGPT**, in tabs. Basically: open Connectors in the assistant, add a custom connector, paste the address and authorize access with your OCLÜ user.
+3. **So what can I ask it?** — example questions by area (appointments, finances, stock, lab and more).
+
+> In both Claude and ChatGPT, the connector **starts off in every new chat**. Turn it on before you ask; if the assistant stops answering you in a long conversation, open a new chat and turn it on again.
+
+At the very bottom, **Connected assistants** lists each linked assistant (when it was connected, when it was last used and how many queries it has made). With **Revoke** you cut off access on the spot.

@@ -1,0 +1,176 @@
+---
+title: "How to search and filter patients in the list"
+---
+
+As your clinic grows, the patient list builds up hundreds or thousands of records. OCLÜ has a search box, several filters, tags and a right-click shortcut menu so you can quickly find what you need. This guide shows you every tool in the patient list and when to use each one.
+
+## When to use it
+
+- When a patient arrives or calls and you need to open their record quickly.
+- When you want to check which patients have incomplete details so you can fill them in before their next appointment.
+- When you're auditing your patient base (duplicates, missing details).
+- When you're preparing a campaign and want to filter patients by tag before contacting them.
+- When you need a quick action on a patient (take a payment, view treatment plans, view media) without opening their full record.
+
+## How to get to this section
+
+1. Log in to OCLÜ.
+2. In the left sidebar, click the Patients icon (second icon from the top).
+
+You'll see the full list of patients registered at the clinic.
+
+<Frame>
+  ![Image](/images/image-474.png)
+</Frame>
+
+## The list's tools, one by one
+
+### 1. Search box
+
+The first field at the top left is **Search patients**. Type what you want to find and the list filters instantly.
+
+> The search box works together with the dropdown to its right (**All fields**). See the next point.
+
+### 2. Field filter
+
+Next to the search box there's a dropdown that says **All fields**. It sets which patient field the search applies to:
+
+- **All fields** (default): searches name, phone, email, ID number, etc. It's the broadest option. Useful when you're not sure which of the patient's details you know.
+- Other specific fields (Name, Phone, Email, ID number, Health insurer, Medical record): limit the search to that field only. Useful when you have an exact piece of data and want to avoid false matches.
+
+### 3. Incomplete pill
+
+It's a pill with an orange dot and a number (for example "Incomplete 18"). It shows you how many patients in your base are missing at least one required detail.
+
+Click it to filter the list and see only those patients. It helps you:
+
+- Fill in the missing details one by one.
+- Spot patients who were added quickly (with the bare minimum) and whose record needs filling out before their next visit.
+- Run a bulk send of medical background forms (**More actions → Data update request**).
+
+### 4. Tags filter
+
+A dropdown listing all the tags your clinic has set up (for example "OMINT", "Armonización facial", "primera vez"). Choose one or more to see only the patients they're assigned to.
+
+<Frame>
+  ![Image](/images/image-475.png)
+</Frame>
+
+### 5. Add patient button
+
+Opens a dropdown with **Manually** or **Share link** to register a new patient. There's a dedicated guide: **How to create a patient**.
+
+### 6. Import / Export dropdown
+
+Groups the three bulk upload and download actions:
+
+- **Import patients:** upload several patients at once from an Excel file. Useful for migrating from another system.
+- **Import clinical notes:** bulk upload of clinical notes for patients who already exist in the system.
+- **Export patients:** downloads the list (with the filters applied) to a file.
+
+<Frame>
+  ![Image](/images/image-476.png)
+</Frame>
+
+### 7. More actions dropdown
+
+- **Data update request:** opens the window for the bulk send of medical background update requests to every patient who needs one. There's a guide dedicated to this flow: **How to manage patients with registration, update and medical history links**.
+- **Manage tags:** create, edit or delete the tags available to assign to patients.
+
+<Frame>
+  ![Image](/images/image-477.png)
+</Frame>
+
+### 8. Sorting by column
+
+In the column headers (ID, Name, ID number, MRN) you'll see small up/down arrows. Click the header to sort the list by that column in ascending or descending order.
+
+> This is useful, for example, to sort by MRN and see the codes in order, or by ID to find the most recent patients (high ID) or the oldest ones (low ID).
+
+### 9. Tags column
+
+Shows the tags assigned to each patient right in the list (for example "Armonización facial", "OMINT"), without having to open the record.
+
+### 10. Actions per patient
+
+In the Actions column on the right, each patient has two icons:
+
+- **Open record** (gray arrow): takes you to the patient's full record, just like clicking their name.
+- **Delete** (red icon): deletes the patient. It asks for confirmation. Keep in mind that deleting a patient with appointments, treatment plans or history may not be allowed or may have consequences.
+
+### 11. Right-click shortcut menu
+
+Right-click any row to open a menu with shortcuts, without having to open the record:
+
+- **Open profile** / **Open in a new tab**
+- **View odontogram** / **View media**
+- **Take payment** / **Take payment on account**
+- **View treatment plans** / **Quick treatment plan**
+- **Tags** (with a submenu to assign or remove tags without leaving the list)
+
+<Frame>
+  ![Image](/images/image-478.png)
+</Frame>
+
+## Steps to find a patient
+
+### Case A: I know the name
+
+1. In the **Search patients** field, type the first few letters of the name.
+2. Leave **All fields** or change it to Name if you want to be stricter.
+3. The list filters instantly. Click the right patient.
+
+### Case B: I know the ID number
+
+1. Change the field filter to ID number.
+2. Type the number in the search box.
+3. The list shows you the exact patient (the ID number is unique in the system).
+
+### Case C: I know the internal medical record number
+
+1. Change the field filter to Medical record.
+2. Type the code (for example HC4640).
+3. It shows you the matching patient.
+
+### Case D: I want to see incomplete patients
+
+1. Click the **Incomplete** pill.
+2. The list shows you only those patients.
+3. Work through them one by one filling them in, or use the bulk send from **More actions → Data update request**.
+
+### Case E: I want a quick action without opening the record
+
+1. Right-click the patient.
+2. Choose the action from the menu (for example **Take payment** or **View media**).
+
+## Expected result
+
+The list updates instantly with every filter or search change. Clicking any patient in the list (or the arrow icon) opens their full record.
+
+## Common errors
+
+**The patient doesn't show up when I search:** check that you're searching in the right field (switch to "All fields" to broaden it). If you still can't find them, they may not be in the system yet.
+
+**I typed the exact ID number and it doesn't show up:** the ID number may be saved in a different format from the one you're typing (with or without periods, spaces, etc.). Try different variations or use All fields.
+
+**The Incomplete count isn't what I expected:** the system counts as incomplete any patient missing a required field in Personal details: first name, last name, ID number, date of birth or gender; country code or phone; address, city, state/province or country; and, if they have a health insurer selected, the member number too. A patient added through the quick add in the Calendar (which only asks for first name, last name and phone) will always show up as incomplete until the rest is filled in.
+
+**I can't find the tag I need:** your clinic creates tags from **More actions → Manage tags**. If one is missing, add it there.
+
+**I deleted a patient by mistake:** depending on the setup, the deletion may be unrecoverable. If they had important data, contact support as soon as possible.
+
+## Tips and variations
+
+- **Fastest shortcut:** most days you'll search by name. Leave **All fields** and just type.
+- **To avoid duplicates:** before creating a new patient, search for their ID number in the list. If they show up, don't create them again; open their existing record.
+- **Combine Incomplete with today's list:** look at the patients you have booked today and cross-check them with the Incomplete filter to spot who will arrive without all their details. Let the front desk know so they can complete them before the visit.
+- **Use right-click for anything quick:** taking payments, viewing treatment plans or opening media without opening the full record saves you several clicks in daily use.
+- **Tags for campaigns:** use the Tags filter to build contact lists (for example, all the "primera vez" patients for the month) before a campaign.
+
+## Estimated time
+
+5 to 15 seconds to find a patient you know. 1 to 2 minutes to go through the incomplete list.
+
+## Permissions
+
+Editing and deleting patients, managing tags and accessing the bulk update send require specific permissions. If a button appears disabled, check with your administrator under Administration → Staff → Permissions.

@@ -1,0 +1,341 @@
+---
+title: "Calendar"
+---
+
+The **Calendar** module is the clinic's hub for managing appointments. From here you run the daily schedule, create and change appointments, manage calendar blocks and follow the status of each appointment in real time.
+
+<Frame>
+  ![Image](/images/image-298.png)
+</Frame>
+
+---
+
+## Access and overview
+
+When you open the Calendar module, the first thing you see is the clinic's full calendar. At the top of the screen there are four islands that control how the information is displayed:
+
+### Date and view mode island
+
+<Frame>
+  ![Image](/images/image-299.png)
+</Frame>
+
+It brings together all of the calendar's navigation and display controls. From here you can:
+
+- Pick the date using the dropdown selector.
+- Pick the **view type**: daily or weekly. You can switch it at any time while you use the calendar.
+
+<Frame>
+  ![Image](/images/image-300.png)
+</Frame>
+
+- Choose the **grouping mode**: by clinician or by treatment room. You can switch it at any time while you use the calendar.
+
+<Frame>
+  ![Image](/images/image-301.png)
+</Frame>
+
+The settings icon on this island takes you to the **Preferences** screen, where you can set which of the two views and which of the two grouping modes you want to see by default every time you open the module.
+
+<Frame>
+  ![Image](/images/image-302.png)
+</Frame>
+
+Once you've set your preference and saved it with the **Save changes** button, the Calendar will always open with that default view and grouping, no matter how you left it the last time.
+
+### Clinician or treatment room filter island
+
+Depending on the grouping mode you've selected, this island is called **Clinician** or **Treatment room**. From here you choose which columns to show on the calendar: all clinicians or treatment rooms, or only some of them. The menu drops down and lets you select or deselect each option individually.
+
+If the filter is in **Treatment room** mode, this island has a shortcut in its top-right corner to the **treatment room settings**, the same ones you find under Administration → Clinic → Treatment rooms.
+
+<Frame>
+  ![Image](/images/image-303.png)
+</Frame>
+
+From there you can:
+
+- See the list of treatment rooms you've set up
+- Edit a treatment room's name and enable or disable overlapping appointments for that specific room
+- Add new treatment rooms, giving them a name and saying whether they allow overlapping
+- Delete treatment rooms that have no information recorded
+
+By default the system creates a treatment room called **Box 1**, which you can edit or delete if you aren't going to use it. Overlapping appointments — that is, being able to double-book a slot — is set up separately for each treatment room.
+
+### Appointment statuses island
+
+<Frame>
+  ![Image](/images/image-286.png)
+</Frame>
+
+It shows the statuses available for appointments. The settings icon on this island takes you to the full status management screen.
+
+<Frame>
+  ![Image](/images/image-287.png)
+</Frame>
+
+There you have two tabs: **Appointment statuses** and **Block categories**.
+
+#### Appointment statuses
+
+This is where you'll spend most of your time. It shows a list with these columns:
+
+<Frame>
+  ![Image](/images/image-288.png)
+</Frame>
+
+- **Visible** — Show or hide appointments with this status on the calendar. For example, you can hide cancelled appointments so they don't take up visual space on the schedule, without deleting that appointment's record from the patient's history.
+- **Attended** — Marks which statuses count as an appointment that actually took place, for the pending clinical notes report. A patient confirming an appointment is not the same as the patient actually coming in: turn this on only for the statuses that represent a visit that really happened.
+
+> The image above shows one particular clinic's setup, where only **Confirmed** has "Attended" turned on. It's an example, not the only right way to set it up — each clinic decides which statuses it counts as a completed visit.
+
+From this screen you can also:
+
+- **Search** for a status by name with the search box in the top right.
+- **Edit** or **delete** any status with the icons in the Actions column. If the status has appointments assigned to it, the system warns you and won't let you delete it until you move those appointments to another status:
+
+<Frame>
+  ![Image](/images/image-312.png)
+</Frame>
+
+- **Set the order** in which statuses are displayed, by dragging them inside the window that opens with the **Set order** button:
+
+<Frame>
+  ![Image](/images/image-313.png)
+</Frame>
+
+- **Add a new status** with the **Add status** button in the top left.
+
+##### Creating or editing a status
+
+<Frame>
+  ![Image](/images/image-289.png)
+</Frame>
+
+The form asks for two things: the **status name** and its **color**. The button at the bottom says **Create** when you're adding a new status, and **Save** when you're editing an existing one.
+
+Clicking the color opens the full picker:
+
+<Frame>
+  ![Image](/images/image-290.png)
+</Frame>
+
+There you can pick the shade by moving around the large square, adjust the hue with the vertical bar on the right and the transparency with the bar at the bottom, or type the color code directly. **OK** applies the color you picked, and **Clear** discards it and goes back.
+
+#### Block categories
+
+<Frame>
+  ![Image](/images/image-291.png)
+</Frame>
+
+It works the same way as the statuses tab, but it sets the color used to show **calendar blocks** on the calendar instead of appointments. You can add, edit and delete categories the same way.
+
+### Online bookings island
+
+It only appears if your clinic has the **Online Booking** add-on (see the Add-ons guide). It sums up the appointments patients request on their own from your booking links:
+
+<Frame>
+  ![Image](/images/image-468.png)
+</Frame>
+
+- **No pending requests** (or the number of requests waiting for your answer) — if you have manual approval turned on, click here to see the list and accept or reject each request.
+- **Booking link** — a dropdown that lets you copy any of your active links directly (for example, Instagram link or WhatsApp link), without having to go to Administration.
+- The settings icon takes you to **Administration → Automations → Online booking**, where you set up the links, the clinicians available for booking and the approval rules.
+
+---
+
+### Creating an appointment
+
+There are two ways to create a new appointment:
+
+**From the \+ button** It's in the top right of the calendar. Clicking it opens a full form where all the time and clinician fields have to be filled in manually.
+
+<Frame>
+  ![Image](/images/image-304.png)
+</Frame>
+
+**From an empty slot on the calendar** Click and drag over the time range you want to book, and a window opens with two options: **New appointment** or **Calendar block**.
+
+<Frame>
+  ![Image](/images/image-305.png)
+</Frame>
+
+When you choose New appointment, the same form opens, but with the time range and the clinician for the column and slot you selected already filled in. This is the most practical way to create appointments day to day.
+
+### New appointment form
+
+The form has the following fields:
+
+- **Patient** — A search over the list of registered patients. If you click it without typing anything, it already shows you a list of the most recent patients so you can pick one quickly:
+
+<Frame>
+  ![Image](/images/image-314.png)
+</Frame>
+
+  If the patient isn't in the system, you can add them quickly right from here (see the Quick patient entry section below).
+- **Treatment plan** — If the patient has treatment plans, you can pick one to link it to the appointment.
+- **Assigned clinician** — If you created the appointment by clicking a clinician's column, this field comes filled in with that clinician. If you used the \+ button, it comes empty and you have to pick one manually. Only users with the Doctor role, or Administrators with clinician duties enabled, can be assigned.
+- **Treatment room** — The room where the patient will be seen. _(optional field)_
+- **Status** — The appointment's initial status, chosen from the statuses you've set up.
+- **Appointment type** — **In person** or **Online**. The Online option is only available if the assigned clinician has Google Calendar connected from their profile (see [My profile and settings](/en/mi-perfil)); otherwise it appears disabled, with the explanation when you hover over it.
+- **Time range** — The appointment's start and end time.
+- **Description** — Free text to leave a note about the appointment. If you fill it in, a note icon appears next to the patient's name in the calendar view, showing that there is extra information.
+- **Send email notification now** and **Send WhatsApp notification now** — Optional checkboxes, one for each channel. If the patient has that contact detail on file, saving the appointment automatically sends them a notice with the appointment details.
+
+<Frame>
+  ![Image](/images/image-306.png)
+</Frame>
+
+---
+
+### Quick entry of a new patient
+
+Inside the new appointment form, clicking **Add a new patient** opens a window with the quick entry form. It's the fastest way to register a patient in OCLÜ, and it's designed especially for clinics that see walk-in patients, or for situations where the patient is right there and the appointment has to be recorded straight away.
+
+<Frame>
+  ![Image](/images/image-307.png)
+</Frame>
+
+The required fields are **first name**, **surname**, **phone with country code** and **ID document**. There are also two optional fields: **email** and **referred by**.
+
+Once created, the patient is registered in the system with those details. Later, from the Patients module, you can send them a link to update their details so they fill in the rest of their information. This way you don't interrupt the flow of care at the time of the appointment, and you complete the patient's record afterwards.
+
+---
+
+### Calendar blocks
+
+When you click and drag over an empty slot on the calendar and choose **Calendar block**, a form opens with the following fields:
+
+<Frame>
+  ![Image](/images/image-308.png)
+</Frame>
+
+- **Scope of the block** — **This clinician only** blocks just the selected clinician's schedule; **The whole calendar** blocks every clinician for that time range.
+- **When** — The date and time of the block, which you can change with the **Edit** button.
+- **Category** — The block category that sets its color on the calendar (see "Block categories" above).
+- **Reason for the block** — Optional field. The reason isn't shown in the calendar view, but it is recorded and you can see it by clicking the block.
+
+Blocks appear on the calendar as a taken slot, showing visually that the time range isn't available for new appointments.
+
+<Frame>
+  ![Image](/images/image-309.png)
+</Frame>
+
+---
+
+### Calendar view
+
+<Frame>
+  ![Image](/images/image-310.png)
+</Frame>
+
+The calendar is laid out like this:
+
+- **Horizontal axis (top)** — Day, date and month. In weekly view it shows the days of the week.
+- **Columns** — The names of the clinicians or treatment rooms, depending on the selected filter.
+- **Vertical axis (left)** — Times, divided according to the interval set for the clinic (15, 30 or 45 minutes, 1 hour or 1.5 hours).
+
+Each appointment appears in its time slot and column, showing the patient's name. If the appointment has a description, a note icon appears next to the name — when you hover over it, a small tooltip shows the text of that description. If the patient booked the appointment themselves through Online Booking, a globe icon 🌐 appears instead (or as well); if it's still waiting for your approval, the icon is an hourglass.
+
+<Frame>
+  ![Image](/images/image-292.png)
+</Frame>
+
+Inside the calendar there are two arrows to move forward or back by day or by week, depending on the active view, and the **Today** button to jump straight back to the current day if you've moved far around the calendar.
+
+<Frame>
+  ![Image](/images/image-311.png)
+</Frame>
+
+You can also move and resize appointments directly on the calendar, without opening the details:
+
+- **Move an appointment** — Click and hold on the appointment and drag it to change its time, its column or its clinician, depending on the active view. Before applying the change, the system shows you a confirmation window:
+
+<Frame>
+  ![Image](/images/image-293.png)
+</Frame>
+
+  There you can tick **Notify the patient about the change of time** so they know about the new appointment time. The notice goes out by WhatsApp if the clinic has that integration, or by email if it doesn't. Confirm with **Yes, move it**, or go back without applying anything with **No, cancel**.
+- **Change the duration** — Put the cursor on the bottom edge of the appointment and drag down to make it longer, or drag up to make it shorter.
+
+---
+
+### Appointment details
+
+When you click any appointment, a panel slides out on the right side of the screen with three cards:
+
+#### Booked by the patient
+
+If the appointment came from Online Booking, this card appears first, before the others. It shows which link it was requested from and when, whether the patient is new or already had a record, and how they verified their identity (the code they received by email or WhatsApp). Below that, under "As typed · not verified", you see the details the patient typed in (name, ID document, phone, email), each with a button to copy it.
+
+<Frame>
+  ![Image](/images/image-469.png)
+</Frame>
+
+If the ID document matches a record that already existed but the patient verified the code from a contact that isn't on that record, the card asks you to **Check identity** before giving the patient access to the portal. And if Online Booking created the record from scratch (a new patient), it asks you to confirm the ID document with the **Mark identity as verified** button. Neither check blocks the appointment — they're there so you can confirm the person is who they say they are before working with their record.
+
+#### Summary
+
+<Frame>
+  ![Image](/images/image-294.png)
+</Frame>
+
+It shows the appointment's main details: time, patient and the clinician in charge. In the top right there are two buttons:
+
+- **History** — Opens the appointment's full log: status changes, reschedules, edits and notices sent to the patient, each with who or what triggered it (a user, the system, or an automatic send), the exact date and time, and — for notices — whether delivery could be confirmed.
+
+<Frame>
+  ![Image](/images/image-295.png)
+</Frame>
+
+When the notice went out through manual WhatsApp, the system can't confirm whether it was actually sent (unlike automatic reminders, which do report whether the message was delivered, read or bounced).
+
+- **Reschedule** — Lets you quickly pick a new date, month, year and time range to move the appointment. The only things you can edit when rescheduling are the date and the time. You can't change the patient, the assigned clinician or the linked treatment plan from here. If you need to change any of those, delete the appointment and create a new one.
+
+Further down, in the same card, is **Notify the patient**, with two channels:
+
+**Send email** opens a small window where you choose who to send it to (the patient, with their email already filled in, or another email address) before confirming the send:
+
+<Frame>
+  ![Image](/images/image-315.png)
+</Frame>
+
+> This notice only sends the appointment details, without asking for a reply. The email asking for confirmation is sent by the automation the day before, not by this button.
+
+**WhatsApp** opens a menu with three options:
+
+<Frame>
+  ![Image](/images/image-316.png)
+</Frame>
+
+- **Appointment notice** — Just the appointment details, without asking for a reply.
+- **Ask for confirmation** — Adds the link so the patient can confirm or cancel.
+- **Send confirmation reminder** — For when the patient was already asked to confirm and didn't reply. Unlike the other two, this one is sent by the system directly from the clinic's official number (the other two open your personal WhatsApp so you send it yourself). It's disabled if it isn't time to follow up yet — for example, if the patient was never asked to confirm.
+
+If the patient has already been notified, a label appears under these buttons showing which channel was used and how long ago (for example, "Patient notified by email a day ago").
+
+#### Details
+
+<Frame>
+  ![Image](/images/image-296.png)
+</Frame>
+
+It lets you edit the appointment's **status**, the **assigned treatment room** and the **description**. Changes are saved with the **Save changes** button in the bottom right of the panel.
+
+#### Shortcuts
+
+<Frame>
+  ![Image](/images/image-297.png)
+</Frame>
+
+Shortcuts to sections of the record of the patient linked to that appointment: **Personal details**, **Media**, **Clinical notes**, **Treatment plans**, **Clinical record** and **Lab**. From here the team can quickly get to the information they need without going to the Patients module. For example, the receptionist can go straight to Treatment plans to record the day's payment, and the clinician can go to Clinical notes to review what was done at the previous visit. The settings icon in the top right of this card lets you choose which of these shortcuts are shown.
+
+---
+
+At the bottom of the appointment details panel, next to the **Save changes** button, there is the **Delete appointment** option.
+
+---
+
+## If you don't see some of this
+
+Everything explained in this guide depends on your user's permissions. If a screen or a button is missing, or you can't edit something described here, first check with your clinic's administrator — most likely it's a matter of granting you the right permission. If you still can't after that, write to OCLÜ support and we'll help you.
