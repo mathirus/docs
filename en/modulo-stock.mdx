@@ -1,0 +1,157 @@
+---
+title: "Stock"
+---
+
+The Stock module lets you manage the clinic's inventory of materials and supplies, record products coming in and going out, and manage your suppliers. It is organized into three tabs: **Inventory**, **Movements** and **Suppliers**.
+
+---
+
+## Inventory
+
+This is the module's main tab. The product list shows these columns: name, category, stock, minimum, expiry and status (enabled/disabled).
+
+When you open it you may see two information banners: one explains that the products you add don't affect cash balances, and the other tells you that creating a product automatically records the matching stock-in in the Movements tab.
+
+If any products have reached their minimum stock or will expire within the next 30 days, a notice appears above the list ("Some products need attention.") with one button for each case — click either one and the list is filtered to show you exactly those products.
+
+<Frame>
+  ![Image](/images/image-348.png)
+</Frame>
+
+#### **Available tools**
+
+- **Search** — filters products by name as you type
+- **Filter** — brings together in one place the category filter, "Low stock only" and "Expiring only"
+- **Add product** — a dropdown with two modes: **Individual** (add a single product) or **In the list** (add several at once)
+- **More options** — opens the following actions:
+  - **Import products** — opens a window with instructions for bulk import. You download an Excel template, fill in the fields, and drag the file in or browse for it to upload it. The system processes it automatically and shows the progress
+  - **Add category** — lets you create a new category directly, without going into category management
+  - **Manage categories** — opens a window with the full list of categories, a search by name and a counter. From there you can create, edit and delete categories. The only field needed to create a category is its name. Categories can only be deleted if they have no products associated with them
+  - **Export to Excel** / **Export to PDF** — generate a file of the list you are viewing at that moment
+
+#### **Scanning a barcode**
+
+If you have a barcode reader connected, you can scan at any time while you are on Inventory, without clicking on any field first:
+
+- If the code already belongs to a product in the system, it finds the product and highlights it in the list.
+- If the code isn't registered, the **Add product** form opens directly with the code already filled in, so you can complete the rest of the details.
+
+#### **Actions available for each product**
+
+From each product's actions menu you can:
+
+- **Edit** — change the product's details (expiry and batch number are no longer edited here; see "Batches of a product" below)
+- **Enable / Disable** — a switch to turn the product on or off. If a product is no longer used at the clinic, you can disable it instead of deleting it
+- **Delete** — removes the product from the inventory
+
+### **Adding a product**
+
+When you choose **Individual**, a form opens with the following fields, grouped into sections:
+
+**Identification**
+- **Product name** (required)
+- **Brand** (optional) — free text
+- **Barcode** (optional) — you can scan it with the reader or type it in
+
+**Category and supplier**
+- **Category** (required) — chosen from the list of categories you have created. You need at least one category before you can add a product
+- **Supplier** (optional) — chosen from the list of enabled suppliers
+
+**Prices**
+- **Cost price** (required) — what the product cost the clinic
+- **Sale price** (required) — what the clinic charges for or sells the product at
+- **Currency** (required) — chosen from the currencies set up in the system. Once saved, the currency can't be changed
+
+**Stock and expiry**
+- **Quantity** (required) — the stock available at the time you add the product
+- **Safety stock** (required) — the minimum amount you want to have available. When the product's stock falls to or below it, the product shows up in the "Some products need attention." notice so you know it's time to restock
+- **Batch number** (optional)
+- **Expiry** (optional)
+
+These last two fields belong to the product's first stock-in — every time new stock of this supply comes in, the batch and expiry are entered separately (see the next section).
+
+<Frame>
+  ![Image](/images/image-349.png)
+</Frame>
+
+If you choose **In the list** instead, you can add several products to a pending list and confirm them all together at the end with a single click.
+
+### **Batches of a product**
+
+In the Inventory list, each product has a small arrow on the left that opens its batch panel. The same supply can have several stock-ins with different expiry dates — for example, if one shipment arrived in August and another in September with different expiry dates. Each one is recorded as a separate batch.
+
+<Frame>
+  ![Image](/images/image-350.png)
+</Frame>
+
+For each batch, the panel shows: number, expiry (with an "Expiring" or "Expired" tag when it applies), remaining quantity, supplier and the date it was added. From there you can edit a batch's date and number, or delete it.
+
+The Expiry column in the main list shows the nearest expiry date among all of the product's active batches, plus a badge with the number of batches when there is more than one.
+
+---
+
+## Movements
+
+This tab records every stock-in and stock-out of inventory products. You can enter them manually with the **Stock-in** and **Stock-out** buttons, or they can be created automatically when you scan a barcode (if the product is already registered, scanning opens the window where you choose whether it's a stock-in or a stock-out of that product).
+
+The list shows the following columns:
+
+- **Operation** — Stock-in or Stock-out
+- **Date** — when the movement took place
+- **Product** — the product affected
+- **Quantity** — the units involved, with the corresponding sign
+- **Unit price** — the product's price at the time of the movement
+- **Supplier** — if the movement is linked to a supplier
+- **User** — who recorded the movement
+
+<Frame>
+  ![Image](/images/image-351.png)
+</Frame>
+
+When you record a **stock-in**, you are asked for the details of the batch coming in: quantity, price, supplier, batch number and expiry.
+
+When you record a **stock-out**, if the product has more than one active batch a **Batch** selector appears, with **Automatic (FIFO by expiry)** selected by default — it takes from the batch that expires first. If you prefer, you can choose the specific batch to take it from.
+
+In both cases there is an optional **Comments** field, and each movement's actions menu has a detail button that opens a window with the full information.
+
+The list has a search by product name so you can quickly find specific movements.
+
+---
+
+## Suppliers
+
+This tab shows the list of all the suppliers registered in the system. It has a search by name and a counter with the total number of suppliers.
+
+The list shows: name or legal name, contact (with a direct link to WhatsApp), email, notes and status.
+
+<Frame>
+  ![Image](/images/image-352.png)
+</Frame>
+
+From each supplier's actions menu you can:
+
+- **Edit** — change any of the supplier's details
+- **Enable / Disable** — a switch to turn the supplier on or off. A disabled supplier can't be selected when adding new products. If a supplier already has products associated with it, it can't be deleted, but you can disable it so it can't be selected for new products
+
+#### **Creating a supplier**
+
+When you click **Create supplier**, a form opens with the following fields:
+
+- **Name or legal name** (required) — free text
+- **Email** (optional)
+- **Web** (optional)
+- **Country code and phone** (optional) — with a direct link to WhatsApp from the list
+- **Address** (optional)
+- **Notes** (optional) — a free field usually used for payment terms, delivery times or a direct contact, so you have that reference at hand without opening the details
+
+Once you've filled in the details, click **Create** and the supplier appears in the list.
+
+<Frame>
+  ![Image](/images/image-353.png)
+</Frame>
+
+---
+
+## If you don't see some of this
+
+Everything explained in this guide depends on your user's permissions. If a screen or a button is missing, or you can't edit something described here, first check with your clinic's administrator — most likely it's a matter of granting you the right permission. If you still can't after that, write to OCLÜ support and we'll help you.
