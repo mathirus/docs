@@ -189,7 +189,10 @@
               },
               {
                 "group": "Endpoints",
-                "openapi": "api-reference/openapi.json"
+                "openapi": {
+                  "source": "en/api-reference/openapi.json",
+                  "directory": "en/api-reference"
+                }
               }
             ]
           }

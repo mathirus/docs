@@ -1,0 +1,1886 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "OCLÜ Public API",
+    "description": "API for integrating OCLÜ with external systems (n8n, Make, Zapier, CRMs). Authentication by API key. Dates and times are in the clinic's local time. The API never exposes clinical data.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://{tenant}.oclucrm.com/api/v1",
+      "description": "Replace {tenant} with your clinic's subdomain",
+      "variables": {
+        "tenant": {
+          "default": "your-clinic"
+        }
+      }
+    }
+  ],
+  "security": [
+    {
+      "apiKey": []
+    }
+  ],
+  "paths": {
+    "/me": {
+      "get": {
+        "summary": "Verify connection",
+        "description": "Returns the tenant, the locations the key can access and its permissions.",
+        "tags": [
+          "General"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Me"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/organizations": {
+      "get": {
+        "summary": "List locations",
+        "tags": [
+          "Catalogs"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Organization"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/doctors": {
+      "get": {
+        "summary": "List clinicians",
+        "tags": [
+          "Catalogs"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/PerPage"
+          },
+          {
+            "$ref": "#/components/parameters/Page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaginatedDoctors"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          }
+        }
+      }
+    },
+    "/doctors/{id}/schedules": {
+      "get": {
+        "summary": "Clinician schedules",
+        "tags": [
+          "Catalogs"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/DoctorSchedule"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/doctors/{id}/available-slots": {
+      "get": {
+        "summary": "Available slots",
+        "description": "Free slots for a clinician on a given date, excluding time outside their schedule, lunch breaks and existing appointments.",
+        "tags": [
+          "Availability"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "date",
+            "in": "query",
+            "required": true,
+            "description": "Date DD-MM-YYYY",
+            "schema": {
+              "type": "string",
+              "example": "23-06-2026"
+            }
+          },
+          {
+            "name": "duration",
+            "in": "query",
+            "required": false,
+            "description": "Minutes per appointment",
+            "schema": {
+              "type": "integer",
+              "example": 30
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AvailableSlots"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/services": {
+      "get": {
+        "summary": "List services",
+        "description": "Treatment catalog with prices.",
+        "tags": [
+          "Catalogs"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/PerPage"
+          },
+          {
+            "$ref": "#/components/parameters/Page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Service"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/appointment-statuses": {
+      "get": {
+        "summary": "Appointment statuses",
+        "tags": [
+          "Catalogs"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/AppointmentStatus"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/genders": {
+      "get": {
+        "summary": "Genders",
+        "tags": [
+          "Catalogs"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/countries": {
+      "get": {
+        "summary": "Countries",
+        "tags": [
+          "Catalogs"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/phone-prefixes": {
+      "get": {
+        "summary": "Phone prefixes",
+        "tags": [
+          "Catalogs"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/boxes": {
+      "get": {
+        "summary": "List treatment rooms",
+        "tags": [
+          "Catalogs"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CurrentOrgId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Box"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/OrgRequired"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          }
+        }
+      }
+    },
+    "/appointments": {
+      "get": {
+        "summary": "List appointments",
+        "tags": [
+          "Appointments"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CurrentOrgId"
+          },
+          {
+            "name": "from",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "description": "Start date (DD-MM-YYYY or YYYY-MM-DD)"
+          },
+          {
+            "name": "to",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "doctor_id",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "patient_id",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/PerPage"
+          },
+          {
+            "$ref": "#/components/parameters/Page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaginatedAppointments"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create appointment",
+        "description": "Requires write permission.",
+        "tags": [
+          "Appointments"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CurrentOrgId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AppointmentInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/Appointment"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/ValidationError"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "422": {
+            "$ref": "#/components/responses/BusinessRule"
+          }
+        }
+      }
+    },
+    "/appointments/{id}": {
+      "get": {
+        "summary": "Get an appointment",
+        "tags": [
+          "Appointments"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CurrentOrgId"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/Appointment"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      },
+      "put": {
+        "summary": "Edit / reschedule appointment",
+        "description": "Requires write permission. All fields are optional; changing the date/time reschedules the appointment.",
+        "tags": [
+          "Appointments"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CurrentOrgId"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AppointmentUpdate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/Appointment"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "422": {
+            "$ref": "#/components/responses/BusinessRule"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Cancel appointment",
+        "description": "Requires write permission.",
+        "tags": [
+          "Appointments"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CurrentOrgId"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Cancelled"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/appointments/{id}/history": {
+      "get": {
+        "summary": "Appointment history",
+        "tags": [
+          "Appointments"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CurrentOrgId"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/patients/search": {
+      "get": {
+        "summary": "Search patients by name",
+        "tags": [
+          "Patients"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CurrentOrgId"
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "description": "Minimum 3 characters",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Patient"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/ValidationError"
+          }
+        }
+      }
+    },
+    "/patients/find-by-phone": {
+      "get": {
+        "summary": "Find patient by phone",
+        "tags": [
+          "Patients"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CurrentOrgId"
+          },
+          {
+            "name": "phone",
+            "in": "query",
+            "required": true,
+            "description": "Minimum 6 digits; matches on the last 8",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/Patient"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/patients": {
+      "get": {
+        "summary": "List patients",
+        "tags": [
+          "Patients"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CurrentOrgId"
+          },
+          {
+            "$ref": "#/components/parameters/PerPage"
+          },
+          {
+            "$ref": "#/components/parameters/Page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaginatedPatients"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create patient",
+        "description": "Requires write permission. Contact/identification data only (never clinical).",
+        "tags": [
+          "Patients"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CurrentOrgId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatientInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/Patient"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/ValidationError"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          }
+        }
+      }
+    },
+    "/patients/{id}": {
+      "get": {
+        "summary": "Get a patient",
+        "tags": [
+          "Patients"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CurrentOrgId"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/Patient"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update patient",
+        "description": "Requires write permission. Partial update: send only the fields you want to change. Uses the OCLÜ id (the one returned by the POST). Contact/identification data only (never clinical). The ID document must still be unique. The change is recorded in the patient's history.",
+        "tags": [
+          "Patients"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CurrentOrgId"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatientUpdate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Updated",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/Patient"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/ValidationError"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        }
+      }
+    },
+    "/cashboxes": {
+      "get": {
+        "summary": "List cash boxes and banks",
+        "description": "The location's cash boxes and banks that an expense can be recorded from, with their currency and enabled payment methods.",
+        "tags": [
+          "Expenses"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CurrentOrgId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Cashbox"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/OrgRequired"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          }
+        }
+      }
+    },
+    "/expense-categories": {
+      "get": {
+        "summary": "List expense categories",
+        "description": "The location's expense categories (Rent, Supplies, Salaries...), with their currency.",
+        "tags": [
+          "Expenses"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CurrentOrgId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ExpenseCategory"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/OrgRequired"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          }
+        }
+      }
+    },
+    "/expenses": {
+      "post": {
+        "summary": "Record expense",
+        "description": "Requires write permission. Records an outgoing payment from a cash box or bank, assigned to an expense category, the same as in Treasury → Expenses. The cash box and the category must be in the same currency. To attach the receipt, send the request as multipart/form-data.",
+        "tags": [
+          "Expenses"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/CurrentOrgId"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExpenseInput"
+              }
+            },
+            "multipart/form-data": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ExpenseInput"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "receipt": {
+                        "type": "string",
+                        "format": "binary",
+                        "description": "Receipt: jpg, jpeg, png, webp, heic or pdf, up to 20 MB"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "$ref": "#/components/schemas/Expense"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/ValidationError"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "422": {
+            "description": "Business rule: CASHBOX_NOT_FOUND, EXPENSE_CATEGORY_NOT_FOUND, CURRENCY_MISMATCH, PAYMENT_METHOD_REQUIRED or PAYMENT_METHOD_INVALID",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "apiKey": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "The clinic's API key. Header: Authorization: Bearer oclu_live_..."
+      }
+    },
+    "parameters": {
+      "CurrentOrgId": {
+        "name": "Current-Org-Id",
+        "in": "header",
+        "required": true,
+        "description": "Location ID (see GET /me)",
+        "schema": {
+          "type": "integer",
+          "example": 1
+        }
+      },
+      "PerPage": {
+        "name": "per_page",
+        "in": "query",
+        "description": "Results per page (max. 100)",
+        "schema": {
+          "type": "integer",
+          "default": 50
+        }
+      },
+      "Page": {
+        "name": "page",
+        "in": "query",
+        "schema": {
+          "type": "integer",
+          "default": 1
+        }
+      }
+    },
+    "responses": {
+      "Unauthorized": {
+        "description": "Missing, invalid or revoked API key",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "Forbidden": {
+        "description": "No permission (scope), no access to the location, or add-on not enabled",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "NotFound": {
+        "description": "Not found",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "OrgRequired": {
+        "description": "Missing Current-Org-Id header",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "ValidationError": {
+        "description": "Invalid data",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      },
+      "BusinessRule": {
+        "description": "Business rule (time outside the schedule, overlap, etc.)",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      }
+    },
+    "schemas": {
+      "Error": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          }
+        }
+      },
+      "Me": {
+        "type": "object",
+        "properties": {
+          "tenant": {
+            "type": "string"
+          },
+          "key": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "abilities": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "prefix": {
+                "type": "string"
+              }
+            }
+          },
+          "organizations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Organization"
+            }
+          }
+        }
+      },
+      "Organization": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "start_time": {
+            "type": "string"
+          },
+          "end_time": {
+            "type": "string"
+          },
+          "interval": {
+            "type": "string"
+          },
+          "available_days": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "Doctor": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "specialty": {
+            "type": "string"
+          },
+          "license_number": {
+            "type": "string"
+          },
+          "has_google_calendar": {
+            "type": "boolean"
+          }
+        }
+      },
+      "DoctorSchedule": {
+        "type": "object",
+        "properties": {
+          "day_of_week": {
+            "type": "integer"
+          },
+          "start": {
+            "type": "string"
+          },
+          "end": {
+            "type": "string"
+          },
+          "lunch_start": {
+            "type": "string"
+          },
+          "lunch_end": {
+            "type": "string"
+          },
+          "slot_duration": {
+            "type": "string"
+          },
+          "is_working_day": {
+            "type": "boolean"
+          }
+        }
+      },
+      "Service": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "code": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "string"
+          },
+          "currency_id": {
+            "type": "integer"
+          },
+          "category_id": {
+            "type": "integer"
+          },
+          "allow_discount": {
+            "type": "boolean"
+          },
+          "enabled": {
+            "type": "boolean"
+          }
+        }
+      },
+      "Box": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "color": {
+            "type": "string"
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        }
+      },
+      "AppointmentStatus": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "color": {
+            "type": "string"
+          },
+          "order": {
+            "type": "integer"
+          }
+        }
+      },
+      "AvailableSlots": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "date": {
+                "type": "string"
+              },
+              "doctor_id": {
+                "type": "integer"
+              },
+              "duration_minutes": {
+                "type": "integer"
+              },
+              "schedule": {
+                "type": "object"
+              },
+              "available_slots": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "Appointment": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "start": {
+            "type": "string",
+            "example": "2026-06-23 09:00:00"
+          },
+          "end": {
+            "type": "string"
+          },
+          "duration_minutes": {
+            "type": "integer"
+          },
+          "modality": {
+            "type": "string",
+            "enum": [
+              "presencial",
+              "virtual"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "status": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              }
+            }
+          },
+          "patient": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              }
+            }
+          },
+          "doctor": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              }
+            }
+          },
+          "box_id": {
+            "type": "integer"
+          },
+          "google_meet_link": {
+            "type": "string"
+          }
+        }
+      },
+      "AppointmentInput": {
+        "type": "object",
+        "required": [
+          "doctor_id",
+          "patient_id",
+          "date",
+          "start",
+          "end"
+        ],
+        "properties": {
+          "doctor_id": {
+            "type": "integer"
+          },
+          "patient_id": {
+            "type": "integer"
+          },
+          "date": {
+            "type": "string",
+            "example": "23-06-2026"
+          },
+          "start": {
+            "type": "string",
+            "example": "09:00"
+          },
+          "end": {
+            "type": "string",
+            "example": "09:30"
+          },
+          "modality": {
+            "type": "string",
+            "enum": [
+              "presencial",
+              "virtual"
+            ],
+            "default": "presencial"
+          },
+          "box_id": {
+            "type": "integer",
+            "nullable": true
+          },
+          "appointment_status_id": {
+            "type": "integer"
+          },
+          "description": {
+            "type": "string"
+          },
+          "notificate": {
+            "type": "boolean",
+            "default": false
+          }
+        }
+      },
+      "AppointmentUpdate": {
+        "type": "object",
+        "properties": {
+          "doctor_id": {
+            "type": "integer"
+          },
+          "patient_id": {
+            "type": "integer"
+          },
+          "date": {
+            "type": "string"
+          },
+          "start": {
+            "type": "string"
+          },
+          "end": {
+            "type": "string"
+          },
+          "modality": {
+            "type": "string",
+            "enum": [
+              "presencial",
+              "virtual"
+            ]
+          },
+          "box_id": {
+            "type": "integer"
+          },
+          "appointment_status_id": {
+            "type": "integer"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "Patient": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "external_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          },
+          "full_name": {
+            "type": "string"
+          },
+          "document": {
+            "type": "string"
+          },
+          "document_type": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "birth_date": {
+            "type": "string"
+          },
+          "gender_id": {
+            "type": "integer"
+          },
+          "country_id": {
+            "type": "integer"
+          }
+        }
+      },
+      "PatientInput": {
+        "type": "object",
+        "required": [
+          "name",
+          "lastname",
+          "country_id",
+          "gender_id"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          },
+          "document": {
+            "type": "string"
+          },
+          "document_type": {
+            "type": "string",
+            "enum": [
+              "DNI",
+              "NIE",
+              "PASSPORT",
+              "CIF",
+              "CUIT",
+              "OTHER"
+            ]
+          },
+          "email": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "phone_prefix_id": {
+            "type": "integer"
+          },
+          "birth_date": {
+            "type": "string",
+            "example": "1990-05-20"
+          },
+          "country_id": {
+            "type": "integer"
+          },
+          "gender_id": {
+            "type": "integer"
+          },
+          "external_id": {
+            "type": "string",
+            "maxLength": 100,
+            "description": "Your external identifier. It isn't unique: two POSTs with the same external_id create two patients."
+          }
+        }
+      },
+      "PatientUpdate": {
+        "type": "object",
+        "description": "All fields are optional; only the ones you send are updated. name, lastname, country_id and gender_id can't be emptied.",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          },
+          "document": {
+            "type": "string"
+          },
+          "document_type": {
+            "type": "string",
+            "enum": [
+              "DNI",
+              "NIE",
+              "PASSPORT",
+              "CIF",
+              "CUIT",
+              "OTHER"
+            ]
+          },
+          "email": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "example": "1144556677"
+          },
+          "phone_prefix_id": {
+            "type": "integer"
+          },
+          "birth_date": {
+            "type": "string",
+            "example": "1990-05-20"
+          },
+          "country_id": {
+            "type": "integer"
+          },
+          "gender_id": {
+            "type": "integer"
+          },
+          "external_id": {
+            "type": "string",
+            "maxLength": 100,
+            "example": "CRM-12345"
+          }
+        }
+      },
+      "PaginatedDoctors": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Doctor"
+            }
+          },
+          "meta": {
+            "$ref": "#/components/schemas/PageMeta"
+          }
+        }
+      },
+      "PaginatedAppointments": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Appointment"
+            }
+          },
+          "meta": {
+            "$ref": "#/components/schemas/PageMeta"
+          }
+        }
+      },
+      "PaginatedPatients": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Patient"
+            }
+          },
+          "meta": {
+            "$ref": "#/components/schemas/PageMeta"
+          }
+        }
+      },
+      "PageMeta": {
+        "type": "object",
+        "properties": {
+          "current_page": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "total": {
+            "type": "integer"
+          },
+          "last_page": {
+            "type": "integer"
+          }
+        }
+      },
+      "Cashbox": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 1
+          },
+          "name": {
+            "type": "string",
+            "example": "Banco ARS"
+          },
+          "type": {
+            "type": "string",
+            "example": "Cajas y Bancos"
+          },
+          "currency_id": {
+            "type": "integer",
+            "example": 1
+          },
+          "currency_code": {
+            "type": "string",
+            "example": "ARS"
+          },
+          "payment_methods": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer",
+                  "example": 4
+                },
+                "name": {
+                  "type": "string",
+                  "example": "Transferencia bancaria"
+                }
+              }
+            }
+          }
+        }
+      },
+      "ExpenseCategory": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 6
+          },
+          "name": {
+            "type": "string",
+            "example": "Servicios"
+          },
+          "currency_id": {
+            "type": "integer",
+            "example": 1
+          },
+          "currency_code": {
+            "type": "string",
+            "example": "ARS"
+          }
+        }
+      },
+      "ExpenseInput": {
+        "type": "object",
+        "required": [
+          "cashbox_id",
+          "expense_category_id",
+          "amount",
+          "date"
+        ],
+        "properties": {
+          "cashbox_id": {
+            "type": "integer",
+            "description": "Cash box or bank ID (GET /cashboxes)",
+            "example": 1
+          },
+          "expense_category_id": {
+            "type": "integer",
+            "description": "Expense category ID (GET /expense-categories). Same currency as the cash box.",
+            "example": 6
+          },
+          "amount": {
+            "type": "number",
+            "description": "Amount, greater than 0, in the cash box's currency",
+            "example": 1500.5
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "Expense date (YYYY-MM-DD)",
+            "example": "2026-09-30"
+          },
+          "payment_method_id": {
+            "type": "integer",
+            "description": "Required if the cash box has enabled payment methods; it must be one of them",
+            "example": 4
+          },
+          "comment": {
+            "type": "string",
+            "maxLength": 1000,
+            "example": "Luz de septiembre"
+          },
+          "cotization": {
+            "type": "number",
+            "description": "Optional. If not sent, OCLÜ's exchange rate for the day is used",
+            "example": 1452.25
+          }
+        }
+      },
+      "Expense": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 21
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "example": "2026-09-30"
+          },
+          "amount": {
+            "type": "number",
+            "example": 1500.5
+          },
+          "currency_code": {
+            "type": "string",
+            "example": "ARS"
+          },
+          "cotization": {
+            "type": "number",
+            "example": 1452.25
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true,
+            "example": "Luz de septiembre"
+          },
+          "has_receipt": {
+            "type": "boolean",
+            "example": false
+          },
+          "expense_category": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              }
+            }
+          },
+          "cashbox": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              }
+            }
+          },
+          "payment_method_id": {
+            "type": "integer",
+            "nullable": true,
+            "example": 4
+          },
+          "created_at": {
+            "type": "string",
+            "example": "2026-09-30 16:02:18"
+          }
+        }
+      }
+    }
+  }
+}
